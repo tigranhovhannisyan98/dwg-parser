@@ -3,5 +3,6 @@
 !codes/**
 !utils/
 !utils/**
+utils/hin_staff/
 !.gitignore
 
