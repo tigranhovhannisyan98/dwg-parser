@@ -6,17 +6,7 @@ extract_plan_all_inserts.py
 Usage:
 python3 extract_plan_all_inserts.py \
   --dxf out/good.dxf \
-  --img ~/Downloads/MEL_5152_EG_ELT051_A_Z_page-0001.jpg \
-  --out annotated.png \
-  --json out.json \
   --calib '282.14,1169.69:885,588;282.14,513:885,4460;522.14,820.16:2300,2650' \
-  --radius 24 \
-  --assoc_max_dist 300 \
-  --label_assoc_max_dist 60 \
-  --label_layer_regex 'TXT|Beschrift|Label|Text' \
-  --label_name_regex  'Bauteilbeschrift|Beschrift|Label|Text' \
-  --device_prefixes 'Steckdosenverteiler_' \
-  --category_filter 'electrical'
 """
 import argparse, json, math, os, re, sys
 from collections import Counter, defaultdict
@@ -293,111 +283,6 @@ def get_entity_rgb(e,layer_table):
     try: return aci2rgb(aci if aci!=0 else 7)
     except Exception: return (200,200,200)
 
-def rgb_to_hsv(rgb):
-    r,g,b=[c/255.0 for c in rgb]; mx,mn=max(r,g,b),min(r,g,b); df=mx-mn
-    if df==0: h=0.0
-    elif mx==r: h=(60*((g-b)/df)+360)%360
-    elif mx==g: h=(60*((b-r)/df)+120)%360
-    else: h=(60*((r-g)/df)+240)%360
-    s=0.0 if mx==0 else df/mx; v=mx
-    return h,s,v
-
-def rgb_to_hsv_deg(rgb):
-    r,g,b = (int(rgb[0])/255.0, int(rgb[1])/255.0, int(rgb[2])/255.0)
-    h,s,v = colorsys.rgb_to_hsv(r,g,b)  # h in [0,1)
-    return (h * 360.0, s, v)
-
-def categorize(layer_name, rgb):
-    ln = (layer_name or "").lower()
-
-    # 1) Early exits for non-device layers
-    if "xref" in ln or "vorplanung" in ln or "novaobj" in ln:
-        return "xref"
-    if "defpoints" in ln or "nicht plotten" in ln or "hilfslinie" in ln or "offen" in ln:
-        return "nonplot"
-    if "schraffur" in ln:
-        return "hatch"
-    if "txt" in ln or ln.endswith("-txt") or ln.endswith("_txt"):
-        return "annotation"
-
-    # 2) Domain tokens (project-specific abbreviations first)
-    TOKENS = [
-        # power / electrical
-        ("_nshv_",         "power_main_lv"),
-        ("_nsv_",          "power_normal"),
-        ("_sv_",           "power_emergency"),
-        ("_verteiler",     "power_distribution"),
-        ("_tableau",       "power_distribution"),
-        ("_steckdose",     "power_outlet"),
-        ("_schalter",      "power_switch"),
-        ("_bwm",           "power_sensor"),   # Bewegungsmelder (motion sensor on power)
-
-        # lighting
-        ("_bel_",          "lighting"),
-        ("_sibe_",         "emergency_lighting"),
-
-        # fire + smoke
-        ("_bma_",          "fire_alarm"),
-        ("brandmelde",     "fire_alarm"),
-        ("_rwa_",          "smoke_heat_exhaust"),
-        ("_sirene",        "fire_alarm"),
-        ("_ras",           "fire_alarm"),     # aspirating smoke (Rauchansaugsystem)
-
-        # data / low-voltage systems
-        ("_edv_",          "data_it"),
-        ("_zks_",          "access_control"),
-        ("_vid_",          "video_cctv"),
-        ("_kt_",           "cable_tray"),
-        ("_lra_",          "nurse_call"),
-        ("_ebs_",          "grounding"),
-
-        # generic electrical catch-alls
-        ("ade_et_",        "electrical"),
-        ("starkstrom",     "electrical"),
-    ]
-    for key, cat in TOKENS:
-        if key in ln:
-            return cat
-
-    # 3) Broader German words (if any office uses full words)
-    HINTS = {
-        "beleuchtung": "lighting",
-        "sicherheitsbeleuchtung": "emergency_lighting",
-        "sicherheitstechnik": "security",
-        "lichtruf": "nurse_call",
-        "rwa": "smoke_heat_exhaust",
-        "brandmelde": "fire_alarm",
-        "bma": "fire_alarm",
-        "edv": "data_it",
-        "wlan": "data_it", "daten": "data_it", "netzwerk": "data_it", "telefon": "data_it", "ip": "data_it",
-    }
-    for k, v in HINTS.items():
-        if k in ln:
-            return v
-
-    # 4) Color fallback (HSV heuristics)
-    PROTOS = {
-    "fire_alarm":          0,    # red
-    "warning":            30,    # orange (SV / some controls)
-    "emergency_lighting": 120,   # green (SIBE)
-    "data_it":            220,   # blue (EDV)
-    "electrical":         300,   # magenta (NSV family)
-    }
-    sat_min = 0.25   # too gray/white/black? don't trust color
-    tol     = 35
-    h,s,_ = rgb_to_hsv_deg(rgb)
-    if s < sat_min:
-        return None  # too gray to trust
-    best_cat, best_d = None, 1e9
-    for cat, h0 in PROTOS.items():
-        d = min(abs(h - h0), 360 - abs(h - h0))  # circular hue distance
-        if d < best_d:
-            best_cat, best_d = cat, d
-    if best_d <= tol:
-        return best_cat
-    else:
-        return "other"
-
 # ------------- text cleaning -------------
 
 def clean_text_basic(t):
@@ -437,9 +322,8 @@ def collect_texts(msp,layer_table,M):
         #change pos to img pos
         X,Y = apply_M(M,x,y)
         rgb = get_entity_rgb(e,layer_table)
-        cat = categorize(e.dxf.layer,rgb)
         out.append({"id":f"T{tid}","source":"base_text","kind":"TEXT","content":s,
-                    "layer":e.dxf.layer,"rgb":rgb,"category":cat,
+                    "layer":e.dxf.layer,"rgb":rgb,
                     "pos_dxf":[x,y],"pos_img":[X,Y]}); tid+=1
     for e in msp.query("MTEXT"):
         s=mtext_to_plain(e)
@@ -447,9 +331,8 @@ def collect_texts(msp,layer_table,M):
         x,y = float(e.dxf.insert[0]),float(e.dxf.insert[1])
         X,Y = apply_M(M,x,y)
         rgb = get_entity_rgb(e,layer_table)
-        cat = categorize(e.dxf.layer,rgb)
         out.append({"id":f"T{tid}","source":"base_mtext","kind":"MTEXT","content":s,
-                    "layer":e.dxf.layer,"rgb":rgb,"category":cat,
+                    "layer":e.dxf.layer,"rgb":rgb,
                     "pos_dxf":[x,y],"pos_img":[X,Y]}); tid+=1
     return out
 
@@ -471,8 +354,6 @@ def collect_items(msp, layer_table, M):
         x,y = float(e.dxf.insert[0]),float(e.dxf.insert[1])
         X,Y = apply_M(M,x,y)
         rgb = get_entity_rgb(e, layer_table)
-        #???
-        cat = categorize(e.dxf.layer, rgb)
 
         #print(f"elem: name={name} layer={layer} text={ttext} ins={tuple(e.dxf.insert)} matrix={wx, wy}")
 #TODO ete inqe ekel mtel a uje txt poxvel a heto vor sxal el lini meje pahum a txt infon
@@ -624,35 +505,23 @@ def gather_together(elements, texts):
 # ------------- main -------------
 
 def main():
-    ap=argparse.ArgumentParser()
+    ap = argparse.ArgumentParser()
     ap.add_argument("--dxf",required=True)
-    ap.add_argument("--img",required=True)
-    ap.add_argument("--out",required=True)
-    ap.add_argument("--json",required=True)
     ap.add_argument("--calib",required=True)
-    ap.add_argument("--radius",type=int,default=22)
-    ap.add_argument("--assoc_max_dist",type=float,default=300.0, help="DXF units for ALL associations (items ↔ texts)")
-    ap.add_argument("--label_assoc_max_dist",type=float,default=60.0, help="DXF units for label→device pairing")
-    ap.add_argument("--label_layer_regex",default=r"TXT|Beschrift|Label|Text")
-    ap.add_argument("--label_name_regex", default=r"Bauteilbeschrift|Beschrift|Label|Text")
-    ap.add_argument("--device_prefixes", default="Steckdosenverteiler_")  # comma-separated; empty = all items
-    ap.add_argument("--category_filter", default="")  # e.g., 'electrical'
-    ap.add_argument("--require_category_match", action="store_true",
-                    help="Only keep ALL associations where item.category == text.category")
-    args=ap.parse_args()
+    args = ap.parse_args()
 
     # DXF
     tk = time.time()
     try:
-        doc=ezdxf.readfile(args.dxf)
+        doc = ezdxf.readfile(args.dxf)
     except (IOError,DXFStructureError) as e:
         print(f"Failed to read DXF: {e}", file=sys.stderr); sys.exit(1)
-    print("Loaded: ", time.time()-tk)
-    msp=doc.modelspace()
+    
+    print("Loaded: ", time.time() - tk)
+    msp = doc.modelspace()
 
     # Transform depends on values map the values
-    M=fit_transform(parse_calib(args.calib))
-    #print("Transformation: ", M)
+    M = fit_transform(parse_calib(args.calib))
 
     # Layers/colors extract layers info from doc
     layer_table = load_layer_colors(doc)
@@ -660,7 +529,6 @@ def main():
 
     # Collect base
     base_texts = collect_texts(msp, layer_table, M)
-    #print("base_text: ", base_texts)
     items      = collect_items(msp, layer_table, M)
     for i, v in items.items():
         print('item:', i, v)
