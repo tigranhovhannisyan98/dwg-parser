@@ -1,0 +1,9 @@
+dwg -> small_dwg (vitor)
+small_dwg -> dxf odafileconverter
+dxf ->v3.py -> out.json
+
+v3.py
+
+1. extracts all layers (tarber layerner kan xref, logo, items) and their colors
+2. extracts all texts, mtexts with respective rgb and positions (from modelspace, modelspace is the place which contains the drawings)
+

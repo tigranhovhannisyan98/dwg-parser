@@ -1,0 +1,6990 @@
+{
+  "B4": {
+    "name": "B14_A01KSY2BXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F01 B14 "
+  },
+  "F3": {
+    "name": "B14_A01KSY2EXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F01 B14 "
+  },
+  "12E": {
+    "name": "B14_A01KSY2HXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F02 B14 "
+  },
+  "169": {
+    "name": "B14_A01KSY2KXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F02 B14 "
+  },
+  "1A4": {
+    "name": "S12_A01KSY3HXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "LPS01-01-03 S12 "
+  },
+  "1E5": {
+    "name": "S12_A01KSY3KXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-1-02-03 S12 "
+  },
+  "221": {
+    "name": "S12_A01KSY3NXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-1-02-01 S12 "
+  },
+  "25D": {
+    "name": "S12_A01KSY3QXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-1-02-03 S12 "
+  },
+  "299": {
+    "name": "S12_A01KSY3TXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S12 US03-3-02-05 "
+  },
+  "2D5": {
+    "name": "S12_A01KSY3WXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S12 US03-4-01-02 "
+  },
+  "311": {
+    "name": "S12_A01KSY3ZXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S12 US03-2-01-04 "
+  },
+  "34D": {
+    "name": "S12_A01KSY42XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-2-02-01 S12 "
+  },
+  "389": {
+    "name": "S12_A01KSY4HXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-01-03 S12 "
+  },
+  "3C5": {
+    "name": "S07_A01KSY9GXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-1-01-02 S07 "
+  },
+  "408": {
+    "name": "S07_A01KSY9JXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "1,8 m US03-1-01-02 S07 "
+  },
+  "450": {
+    "name": "S07_A01KSY9NXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-01-02 S07 "
+  },
+  "493": {
+    "name": "S07_A01KSY9QXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-2-02-05 S07 "
+  },
+  "4D6": {
+    "name": "S07_A01KSY9TXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-2-01-02 S07 "
+  },
+  "519": {
+    "name": "S07_A01KSY9WXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 LPS01-02-05 Warnschild "
+  },
+  "55C": {
+    "name": "S07_A01KSYA5XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 LPS01-02-01 "
+  },
+  "59F": {
+    "name": "E-Verteiler_A01KSYA8XE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "US02-2"
+  },
+  "5C5": {
+    "name": "E-Verteiler_A01KSYA9XE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "LPS02"
+  },
+  "5E7": {
+    "name": "E-Verteiler_A01KSYAAXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "US02-1"
+  },
+  "60A": {
+    "name": "E-Verteiler_A01KSYABXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "US03-2"
+  },
+  "62B": {
+    "name": "E-Verteiler_A01KSYACXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "LPS03"
+  },
+  "64E": {
+    "name": "E-Verteiler_A01KSYADXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "US03-1"
+  },
+  "670": {
+    "name": "E-Verteiler_A01KSYAEXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "US03-3"
+  },
+  "692": {
+    "name": "E-Verteiler_A01KSYAFXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "US03-4"
+  },
+  "90B": {
+    "name": "Einspeisestück_A01KSYAVXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-00.4 03F02 4,2 m "
+  },
+  "DE7": {
+    "name": "Einspeisestück_A01KSYBTXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-00.5 03F01 4,2 m "
+  },
+  "E10": {
+    "name": "Einspeisestück_A01KSYBXXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-00.6 03F02 4,2 m "
+  },
+  "F2A": {
+    "name": "S02_A01KSYD1XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-05 S02 "
+  },
+  "F71": {
+    "name": "S02_A01KSYD4XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-05 S02 "
+  },
+  "FB4": {
+    "name": "S02_A01KSYD7XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-06 S02 "
+  },
+  "FF7": {
+    "name": "S02_A01KSYDAXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-07 S02 "
+  },
+  "103A": {
+    "name": "S02_A01KSYDDXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-13 S02 "
+  },
+  "17AD": {
+    "name": "Einspeisestück_A01KSYEQXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.02 03F02 4,2 m "
+  },
+  "188F": {
+    "name": "S02_A01KSYGWXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-03 S02 "
+  },
+  "18D2": {
+    "name": "S02_A01KSYGZXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-03 S02 "
+  },
+  "1915": {
+    "name": "S02_A01KSYH2XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-04 S02 "
+  },
+  "1958": {
+    "name": "S02_A01KSYH5XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-10 S02 "
+  },
+  "199B": {
+    "name": "S02_A01KSYH8XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-11 S02 "
+  },
+  "19DE": {
+    "name": "S02_A01KSYHBXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-09 S02 "
+  },
+  "1A21": {
+    "name": "S02_A01KSYHEXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-10 S02 "
+  },
+  "1A64": {
+    "name": "S02_A01KSYHHXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-01 S02 "
+  },
+  "1AA7": {
+    "name": "S02_A01KSYHKXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-02 S02 "
+  },
+  "1AEA": {
+    "name": "S02_A01KSYHNXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-02 S02 "
+  },
+  "1B2D": {
+    "name": "S02_A01KSYHQXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-09 S02 "
+  },
+  "1B70": {
+    "name": "S02_A01KSYHTXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-08 S02 "
+  },
+  "1BB3": {
+    "name": "S02_A01KSYHWXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-08 S02 "
+  },
+  "1BF6": {
+    "name": "S02_A01KSYHZXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-07 S02 "
+  },
+  "1C39": {
+    "name": "S02_A01KSYI2XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-12 S02 "
+  },
+  "1C7C": {
+    "name": "S02_A01KSYI5XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-13 S02 "
+  },
+  "1CBF": {
+    "name": "S02_A01KSYI8XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-03-11 S02 "
+  },
+  "1D02": {
+    "name": "S02_A01KSYIBXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS01-04-12 S02 "
+  },
+  "1D6D": {
+    "name": "Einspeisestück_A01KSYIFXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.14 03F01 4,2 m "
+  },
+  "1D9B": {
+    "name": "Einspeisestück_A01KSYILXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51.0.15 03F01 3 m "
+  },
+  "1DEC": {
+    "name": "S02_A01KSYIQXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 LPS01-04-01 "
+  },
+  "1E2F": {
+    "name": "S07_A01KSYJ4XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-1-02-01 S07 "
+  },
+  "1E72": {
+    "name": "S07_A01KSYJAXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-02-04 S07 "
+  },
+  "1EB5": {
+    "name": "S07_A01KSYJDXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 LPS03-01-01 "
+  },
+  "1EF8": {
+    "name": "S07_A01KSYJGXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "LPS01-01-05 S07 "
+  },
+  "1F3B": {
+    "name": "S07_A01KSYJJXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-02-01 S07 "
+  },
+  "1FA6": {
+    "name": "Einspeisestück_A01KSYNFXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.13 03F02 4,2 m "
+  },
+  "1FCF": {
+    "name": "Einspeisestück_A01KSYNJXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.12 03F01 4,2 m "
+  },
+  "1FF8": {
+    "name": "S07_A01KSZ9AXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 US03-4-02-02 "
+  },
+  "203B": {
+    "name": "S07_A01KSZ9JXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-01-04 1,8 m "
+  },
+  "207E": {
+    "name": "S07_A01KSZ9RXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-2-01-05 S07 "
+  },
+  "20C1": {
+    "name": "S07_A01KSZB8XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 LPS03-02-01 "
+  },
+  "2154": {
+    "name": "S04_A01KSZC7XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S04 "
+  },
+  "2200": {
+    "name": "S02_A01KSZDGXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-01-09 "
+  },
+  "2243": {
+    "name": "S02_A01KSZDJXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-02-09 "
+  },
+  "2286": {
+    "name": "S02_A01KSZDMXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-01-08 "
+  },
+  "22C9": {
+    "name": "S02_A01KSZDPXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-02-08 "
+  },
+  "230C": {
+    "name": "S02_A01KSZDSXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-02-07 "
+  },
+  "234F": {
+    "name": "S02_A01KSZDVXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-01-07 "
+  },
+  "2392": {
+    "name": "S02_A01KSZDYXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-02-06 "
+  },
+  "23D5": {
+    "name": "S02_A01KSZE1XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 US03-3-01-06 "
+  },
+  "2558": {
+    "name": "S04_A01KSZECXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S04 US02-1-02-02 "
+  },
+  "2DA2": {
+    "name": "S10_A01KT0PGXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS01-02-06 "
+  },
+  "3007": {
+    "name": "S10_A01KT0PJXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS01-02-02 "
+  },
+  "326C": {
+    "name": "S10_A01KT0PMXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS01-01-02 "
+  },
+  "34D1": {
+    "name": "S10_A01KT0PRXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS01-01-04 "
+  },
+  "3736": {
+    "name": "S10_A01KT0PUXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS01-02-03 "
+  },
+  "399B": {
+    "name": "S10_A01KT0QFXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "LPS01-01-06 S10 "
+  },
+  "3C00": {
+    "name": "S10_A01KT0QNXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US02-1-01-01 "
+  },
+  "3E65": {
+    "name": "S10_A01KT0QQXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-1-01-01 "
+  },
+  "40CA": {
+    "name": "S10_A01KT0QZXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-3-02-03 "
+  },
+  "4384": {
+    "name": "Einspeisestück_A01KT0RMXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51.0.16 03F02 3 m "
+  },
+  "43AD": {
+    "name": "S10_A01KT0S3XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-01-05 S10 "
+  },
+  "4612": {
+    "name": "S10_A01KT0SJXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-3-02-02 S10 "
+  },
+  "4877": {
+    "name": "S10_A01KT0SVXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-4-02-01 "
+  },
+  "4ADC": {
+    "name": "S10_A01KT0TBXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-4-01-01 "
+  },
+  "4D41": {
+    "name": "S10_A01KT0TEXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-3-01-01 "
+  },
+  "4FA6": {
+    "name": "S10_A01KT0U0XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-2-02-04 "
+  },
+  "520B": {
+    "name": "S10_A01KT0UBXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US02-2-01-01 "
+  },
+  "5470": {
+    "name": "S07_A01KT0UQXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 LPS02-02-01 "
+  },
+  "54B3": {
+    "name": "S07_A01KT0UTXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S07 LPS02-01-01 "
+  },
+  "5500": {
+    "name": "Einspeisestück_A01KT0XWXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-00.7 03F01 5,3 m "
+  },
+  "555B": {
+    "name": "S02_A01KT0Y7XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S02 LPS03-02-03 "
+  },
+  "5774": {
+    "name": "Einspeisestück_A01KT0ZLXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-00.9 03F01 5,3 m "
+  },
+  "5851": {
+    "name": "Einspeisestück_A01KT10FXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-00.8 03F01 5,3 m "
+  },
+  "58B1": {
+    "name": "S02_A01KT10TXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "LPS03-01-03 S02 "
+  },
+  "58F4": {
+    "name": "S10_A01KT12LXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-2-02-06 "
+  },
+  "5B54": {
+    "name": "S10_A01KT12OXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-1-02-02 "
+  },
+  "5DB9": {
+    "name": "S10_A01KT12RXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "LPS03-02-02 S10 "
+  },
+  "6019": {
+    "name": "S10_A01KT12UXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS01-01-01 "
+  },
+  "64A9": {
+    "name": "S10_A01KT12XXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "LPS01-02-04 S10 "
+  },
+  "6939": {
+    "name": "S11_A01KT130XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S11 LPS01-03-04 "
+  },
+  "6B9E": {
+    "name": "S11_A01KT133XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S11 LPS01-04-06 "
+  },
+  "6E03": {
+    "name": "S10_A01KT136XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 US03-1-01-03 "
+  },
+  "7293": {
+    "name": "S10_A01KT139XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-2-02-02 S10 "
+  },
+  "7723": {
+    "name": "S10_A01KT13CXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S10 LPS03-01-02 "
+  },
+  "7988": {
+    "name": "S04_A01KT14IXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "US03-2-01-06 S04 "
+  },
+  "79F3": {
+    "name": "B14_A01KT16JXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F01 B14 "
+  },
+  "7A2E": {
+    "name": "B14_A01KT16MXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F01 B14 "
+  },
+  "7A91": {
+    "name": "S04_A01KT170XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S04 "
+  },
+  "7AD4": {
+    "name": "S04_A01KT17FXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S04 US03-2-01-01 "
+  },
+  "7B17": {
+    "name": "S04_A01KT17QXE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "US03-2-01-02 S04 "
+  },
+  "7B5A": {
+    "name": "S04_A01KT183XE",
+    "layer": "ADE_ET_SIBE_Decke",
+    "txt": "S04 US02-1-01-03 "
+  },
+  "7DFF": {
+    "name": "A1_A01KT1PQXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "A1 05F02 (EV 51_00.3) 5,5 m "
+  },
+  "7E56": {
+    "name": "S12_A01KT1QHXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US02-1-01-04 S12 "
+  },
+  "7ED8": {
+    "name": "E-Verteiler_A01KT1SJXE",
+    "layer": "ADE_ET_SIBE_Zentrale",
+    "txt": "LPS01"
+  },
+  "7FAE": {
+    "name": "Einspeisestück_A01KT1XDXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.03 03F01 4,2 m "
+  },
+  "8027": {
+    "name": "Einspeisestück_A01KT1XJXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51.0.17 03F01 4,2 m "
+  },
+  "81A4": {
+    "name": "B14_A01KT24MXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F01 B14 "
+  },
+  "81DF": {
+    "name": "S12_A01KT24WXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "LPS01-01-07 S12 "
+  },
+  "821B": {
+    "name": "S12_A01KT24ZXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S12 US03-2-02-02 "
+  },
+  "8257": {
+    "name": "S12_A01KT252XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S12 US03-2-02-01 "
+  },
+  "8293": {
+    "name": "Einspeisestück_A01KT259XE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51.0.20 03F02 4,2 m "
+  },
+  "82BC": {
+    "name": "Einspeisestück_A01KT25DXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51.0.19 03F01 4,2 m "
+  },
+  "82E5": {
+    "name": "Einspeisestück_A01KT25HXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.11 03F02 4,2 m "
+  },
+  "835E": {
+    "name": "Einspeisestück_A01KT25NXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51-0.10 03F01 "
+  },
+  "8382": {
+    "name": "Einspeisestück_A01KT25QXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "Lichtband 51.0.18 03F02 4,2 m "
+  },
+  "83AB": {
+    "name": "B14_A01KT25UXE",
+    "layer": "ADE_ET_BEL_Wand",
+    "txt": "02F01 B14 "
+  },
+  "83E6": {
+    "name": "Einspeisestück_A01KT25XXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,6 m 03F01 Lichtband 51-0.12 "
+  },
+  "840F": {
+    "name": "Einspeisestück_A01KT261XE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,6 m 03F02 Lichtband 51-0.13 "
+  },
+  "8438": {
+    "name": "Einspeisestück_A01KT265XE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,6 m 03F01 Lichtband 51-0.14 "
+  },
+  "8461": {
+    "name": "Einspeisestück_A01KT269XE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,6 m 03F01 Lichtband 51-0.16 "
+  },
+  "848A": {
+    "name": "Einspeisestück_A01KT26DXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,6 m 03F02 Lichtband 51-0.17 "
+  },
+  "84B3": {
+    "name": "Einspeisestück_A01KT26HXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,2 m Lichtband 51-0.01 03F01 "
+  },
+  "8586": {
+    "name": "Einspeisestück_A01KT2TEXE",
+    "layer": "ADE_ET_BEL_Lichtschiene-Anschluss",
+    "txt": "4,6 m 03F02 Lichtband 51-0.15 "
+  },
+  "882F": {
+    "name": "S10_A01KT35YXE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "US03-4-01-03 S10 "
+  },
+  "8A94": {
+    "name": "S12_A01KT363XE",
+    "layer": "ADE_ET_SIBE_Wand",
+    "txt": "S12 US03-4-02-03 "
+  },
+  "8DD2": {
+    "name": "B17_A01KSYC5XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8DFE": {
+    "name": "B17_A01KSYC7XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8E27": {
+    "name": "B17_A01KSYC9XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8E50": {
+    "name": "B17_A01KSYCBXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8E79": {
+    "name": "B17_A01KSYCDXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8EA2": {
+    "name": "B17_A01KSYCFXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8ECB": {
+    "name": "B17_A01KSYCHXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8EF4": {
+    "name": "B17_A01KSYCJXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8F1D": {
+    "name": "B17_A01KSYCLXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8F46": {
+    "name": "B17_A01KSYCNXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8F6F": {
+    "name": "B17_A01KSYCPXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8F98": {
+    "name": "B17_A01KSYCRXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8FC1": {
+    "name": "B17_A01KSYCTXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "8FEA": {
+    "name": "B17_A01KSYCVXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "9013": {
+    "name": "B17_A01KSYCXXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "903C": {
+    "name": "B17_A01KSYCZXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "9065": {
+    "name": "B2_A01KSYEUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "908E": {
+    "name": "B2_A01KSYEWXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "90B7": {
+    "name": "B2_A01KSYEYXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "90E0": {
+    "name": "B2_A01KSYF0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9109": {
+    "name": "B2_A01KSYF2XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9132": {
+    "name": "B2_A01KSYF4XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "915B": {
+    "name": "B2_A01KSYF6XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9184": {
+    "name": "B2_A01KSYF8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "91AD": {
+    "name": "B2_A01KSYFAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "91D6": {
+    "name": "B2_A01KSYFCXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "91FF": {
+    "name": "B2_A01KSYFEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9228": {
+    "name": "B2_A01KSYFGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9251": {
+    "name": "B2_A01KSYFIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "927A": {
+    "name": "B2_A01KSYFKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "92A3": {
+    "name": "B2_A01KSYFMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "92CC": {
+    "name": "B2_A01KSYFOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "92F5": {
+    "name": "B2_A01KSYFQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "931E": {
+    "name": "B2_A01KSYFSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9347": {
+    "name": "B2_A01KSYFUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9370": {
+    "name": "B2_A01KSYFWXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9399": {
+    "name": "B2_A01KSYFYXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "93C2": {
+    "name": "B2_A01KSYG0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "93EB": {
+    "name": "B2_A01KSYG2XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9414": {
+    "name": "B2_A01KSYG4XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "943D": {
+    "name": "B2_A01KSYG6XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9466": {
+    "name": "B2_A01KSYG8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "948F": {
+    "name": "B2_A01KSYGAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "94B8": {
+    "name": "B2_A01KSYGCXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "94E1": {
+    "name": "B2_A01KSYGEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "950A": {
+    "name": "B2_A01KSYGGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9533": {
+    "name": "B2_A01KSYGIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "955C": {
+    "name": "B2_A01KSYGKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9585": {
+    "name": "B2_A01KSYGMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "95AE": {
+    "name": "B2_A01KSYGOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "95D7": {
+    "name": "B2_A01KSYGQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9600": {
+    "name": "B2_A01KSYGSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9629": {
+    "name": "B2_A01KSYGUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9652": {
+    "name": "B17_A01KSYIJXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "967B": {
+    "name": "B2_A01KSZCAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "96A4": {
+    "name": "B2_A01KSZCCXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "96CD": {
+    "name": "B2_A01KSZCEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "96F6": {
+    "name": "B2_A01KSZCGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "971F": {
+    "name": "B2_A01KSZCIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9748": {
+    "name": "B2_A01KSZCKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9771": {
+    "name": "B2_A01KSZCMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "979A": {
+    "name": "B2_A01KSZCOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "97C3": {
+    "name": "B2_A01KSZCQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "97EC": {
+    "name": "B2_A01KSZCSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9815": {
+    "name": "B2_A01KSZCUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "983E": {
+    "name": "B2_A01KSZCWXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9867": {
+    "name": "B2_A01KSZCYXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9890": {
+    "name": "B2_A01KSZD0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "98B9": {
+    "name": "B2_A01KSZD2XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "98E2": {
+    "name": "B2_A01KSZD4XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "990B": {
+    "name": "B2_A01KSZD6XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9934": {
+    "name": "B2_A01KSZD8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "995D": {
+    "name": "B2_A01KSZDAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9986": {
+    "name": "B2_A01KSZDCXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "99AF": {
+    "name": "B2_A01KSZDEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9B20": {
+    "name": "B2_A01KT0ECXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9B49": {
+    "name": "B2_A01KT0EEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9B72": {
+    "name": "B2_A01KT0EGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9B9B": {
+    "name": "B2_A01KT0EIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9BC4": {
+    "name": "B2_A01KT0EKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9BED": {
+    "name": "B2_A01KT0EMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9C16": {
+    "name": "B2_A01KT0EOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9C3F": {
+    "name": "B2_A01KT0EQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9C68": {
+    "name": "B2_A01KT0ESXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9C91": {
+    "name": "B2_A01KT0EUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9CBA": {
+    "name": "B2_A01KT0EWXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9CE3": {
+    "name": "B2_A01KT0EYXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9D0C": {
+    "name": "B2_A01KT0F0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9D35": {
+    "name": "B2_A01KT0F2XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9D5E": {
+    "name": "B2_A01KT0F4XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9D87": {
+    "name": "B2_A01KT0F6XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9DB0": {
+    "name": "B2_A01KT0F8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9DD9": {
+    "name": "B2_A01KT0FAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9E02": {
+    "name": "B2_A01KT0FCXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9E2B": {
+    "name": "B2_A01KT0FEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9E54": {
+    "name": "B2_A01KT0FGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9E7D": {
+    "name": "B2_A01KT0FIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9EA6": {
+    "name": "B2_A01KT0FKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9ECF": {
+    "name": "B2_A01KT0FMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9EF8": {
+    "name": "B2_A01KT0FOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9F21": {
+    "name": "B2_A01KT0FQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9F4A": {
+    "name": "B2_A01KT0FSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "9F73": {
+    "name": "B17_A01KT0RJXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "9F9C": {
+    "name": "B16_A01KT0XQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "9FC5": {
+    "name": "B16_A01KT0XTXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "9FEE": {
+    "name": "B13_A01KT0Y1XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 B13 02F03 "
+  },
+  "A099": {
+    "name": "B16_A01KT0YDXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A0C2": {
+    "name": "B13_A01KT0YGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 "
+  },
+  "A16D": {
+    "name": "B16_A01KT0YKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A196": {
+    "name": "B16_A01KT0YMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A1BF": {
+    "name": "B13_A01KT0YRXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F03 B13 "
+  },
+  "A26A": {
+    "name": "B16_A01KT0YUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A293": {
+    "name": "B13_A01KT0Z1XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 B13 02F03 "
+  },
+  "A33E": {
+    "name": "B16_A01KT0Z8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A367": {
+    "name": "B13_A01KT0ZBXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 "
+  },
+  "A412": {
+    "name": "B16_A01KT0ZJXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A43B": {
+    "name": "B16_A01KT0ZPXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A464": {
+    "name": "B13_A01KT0ZRXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 B13 02F03 "
+  },
+  "A50F": {
+    "name": "B16_A01KT0ZVXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A538": {
+    "name": "B13_A01KT0ZXXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 "
+  },
+  "A5E3": {
+    "name": "B16_A01KT101XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A60C": {
+    "name": "B13_A01KT103XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 "
+  },
+  "A6B7": {
+    "name": "B16_A01KT106XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A6E0": {
+    "name": "B16_A01KT108XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A709": {
+    "name": "B16_A01KT10CXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A732": {
+    "name": "B13_A01KT10OXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F03 "
+  },
+  "A7DD": {
+    "name": "B16_A01KT10RXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B16 "
+  },
+  "A806": {
+    "name": "B13_A01KT1GEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F02 B13 02F02 "
+  },
+  "A8B1": {
+    "name": "B13_A01KT1GRXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B13 B13 02F02 "
+  },
+  "A95C": {
+    "name": "B13_A01KT1H0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F02 "
+  },
+  "AA07": {
+    "name": "B13_A01KT1H5XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B13 "
+  },
+  "AAB2": {
+    "name": "B13_A01KT1H8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B13 02F02 "
+  },
+  "AB5D": {
+    "name": "B11_A01KT1NHXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "AB86": {
+    "name": "B11_A01KT1NKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "ABAF": {
+    "name": "B11_A01KT1NNXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "ABD8": {
+    "name": "B11_A01KT1NSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F02 "
+  },
+  "AC01": {
+    "name": "B11_A01KT1NVXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F02 "
+  },
+  "AC2A": {
+    "name": "B11_A01KT1NZXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B11 "
+  },
+  "AC53": {
+    "name": "B11_A01KT1O2XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 B11 02F02 "
+  },
+  "AC7C": {
+    "name": "B11_A01KT1O8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": ""
+  },
+  "ACA5": {
+    "name": "B11_A01KT1OBXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": ""
+  },
+  "ACCE": {
+    "name": "B11_A01KT1OFXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": ""
+  },
+  "ACF7": {
+    "name": "B11_A01KT1OIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": ""
+  },
+  "AD20": {
+    "name": "B12_A01KT1QEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B12 05F01 "
+  },
+  "AD51": {
+    "name": "B12_A01KT1QKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B12 05F01 "
+  },
+  "AD82": {
+    "name": "B12_A01KT1QNXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B12 06F01 "
+  },
+  "ADB3": {
+    "name": "B12_A01KT1QQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B12 06F01 "
+  },
+  "ADE4": {
+    "name": "B17_A01KT1X3XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AE0D": {
+    "name": "B17_A01KT1X5XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AE36": {
+    "name": "B17_A01KT1X9XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 B17 "
+  },
+  "AE5F": {
+    "name": "B17_A01KT1XBXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AE88": {
+    "name": "B2_A01KT1ZXXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "AEB1": {
+    "name": "B17_A01KT212XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AEDA": {
+    "name": "B17_A01KT214XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AF03": {
+    "name": "B17_A01KT216XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AF2C": {
+    "name": "B17_A01KT218XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AF55": {
+    "name": "B17_A01KT21AXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AF7E": {
+    "name": "B17_A01KT21CXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AFA7": {
+    "name": "B17_A01KT21EXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AFD0": {
+    "name": "B17_A01KT21GXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "AFF9": {
+    "name": "B17_A01KT21IXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B022": {
+    "name": "B17_A01KT21KXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B04B": {
+    "name": "B17_A01KT21MXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B074": {
+    "name": "B17_A01KT21OXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B09D": {
+    "name": "B17_A01KT21QXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B0C6": {
+    "name": "B17_A01KT21SXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B0EF": {
+    "name": "B17_A01KT21UXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B118": {
+    "name": "B17_A01KT21WXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B141": {
+    "name": "B17_A01KT21YXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B16A": {
+    "name": "B17_A01KT220XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B193": {
+    "name": "B17_A01KT222XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B1BC": {
+    "name": "B17_A01KT224XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B1E5": {
+    "name": "B17_A01KT226XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B20E": {
+    "name": "B17_A01KT228XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B237": {
+    "name": "B17_A01KT22AXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B260": {
+    "name": "B17_A01KT22CXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B289": {
+    "name": "B17_A01KT22EXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B2B2": {
+    "name": "B17_A01KT22GXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B2DB": {
+    "name": "B17_A01KT22IXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B304": {
+    "name": "B17_A01KT22KXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B32D": {
+    "name": "B17_A01KT22MXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B356": {
+    "name": "B17_A01KT22OXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B37F": {
+    "name": "B17_A01KT22QXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B3A8": {
+    "name": "B17_A01KT22SXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B3D1": {
+    "name": "B17_A01KT22UXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B3FA": {
+    "name": "B17_A01KT22WXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B423": {
+    "name": "B17_A01KT22YXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B44C": {
+    "name": "B17_A01KT230XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B475": {
+    "name": "B17_A01KT232XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B49E": {
+    "name": "B17_A01KT234XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B4C7": {
+    "name": "B17_A01KT236XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B17 "
+  },
+  "B4F0": {
+    "name": "B2_A01KT238XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "B519": {
+    "name": "B2_A01KT23AXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "B542": {
+    "name": "B2_A01KT23CXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "B56B": {
+    "name": "B2_A01KT23EXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B2 "
+  },
+  "B594": {
+    "name": "B14_A01KT2SHXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B14 02F03 "
+  },
+  "B5BD": {
+    "name": "B11_A01KT36QXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "B5E6": {
+    "name": "B11_A01KT36TXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "B60F": {
+    "name": "B11_A01KT36WXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "B638": {
+    "name": "B11_A01KT36ZXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B11 02F01 "
+  },
+  "B661": {
+    "name": "B30_A01KT3D6XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 B30 02F01 "
+  },
+  "B69F": {
+    "name": "B30_A01KT3D9XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B6DD": {
+    "name": "B30_A01KT3DCXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B71B": {
+    "name": "B30_A01KT3DFXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B759": {
+    "name": "B30_A01KT3DIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B797": {
+    "name": "B30_A01KT3DLXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B7D5": {
+    "name": "B30_A01KT3DOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B813": {
+    "name": "B30_A01KT3DRXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "B851": {
+    "name": "B30_A01KT3DUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 B30 02F02 B30 02F03 "
+  },
+  "B88F": {
+    "name": "B30_A01KT3DXXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 B30 02F02 B30 02F02 "
+  },
+  "B8CD": {
+    "name": "B30_A01KT3E0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "B90B": {
+    "name": "B30_A01KT3E3XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 B30 02F02 "
+  },
+  "B949": {
+    "name": "B30_A01KT3E6XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "B987": {
+    "name": "B30_A01KT3E9XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "B9C5": {
+    "name": "B30_A01KT3ECXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "BA03": {
+    "name": "B30_A01KT3EFXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "BA41": {
+    "name": "B30_A01KT3EIXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BA7F": {
+    "name": "B30_A01KT3ELXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BABD": {
+    "name": "B30_A01KT3EOXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BAFB": {
+    "name": "B30_A01KT3ERXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BB39": {
+    "name": "B30_A01KT3EUXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 B30 02F03 B30 02F03 "
+  },
+  "BB77": {
+    "name": "B30_A01KT3EXXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BBB5": {
+    "name": "B30_A01KT3F0XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BBF3": {
+    "name": "B30_A01KT3F3XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BC31": {
+    "name": "B30_A01KT3F7XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 B30 02F01 "
+  },
+  "BC6F": {
+    "name": "B30_A01KT3FAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 B30 02F02 "
+  },
+  "BCAD": {
+    "name": "B30_A01KT3FDXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BCEB": {
+    "name": "B30_A01KT3FGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "BD29": {
+    "name": "B30_A01KT3FJXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B30 B30 02F02 "
+  },
+  "BD67": {
+    "name": "B30_A01KT3FMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 B30 02F03 "
+  },
+  "BDA5": {
+    "name": "B30_A01KT3FPXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B30 "
+  },
+  "BDE3": {
+    "name": "B30_A01KT3FSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BE21": {
+    "name": "B30_A01KT3FVXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B30 B30 02F02 "
+  },
+  "BE5F": {
+    "name": "B30_A01KT3FYXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 02F02 B30 "
+  },
+  "BE9D": {
+    "name": "B30_A01KT3G1XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 B30 02F03 "
+  },
+  "BEDB": {
+    "name": "B30_A01KT3G4XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "BF19": {
+    "name": "B30_A01KT3G7XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 B30 02F03 "
+  },
+  "BF57": {
+    "name": "B30_A01KT3GAXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 02F01 B30 "
+  },
+  "BF95": {
+    "name": "B30_A01KT3GDXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "BFD3": {
+    "name": "B30_A01KT3GGXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F02 "
+  },
+  "C011": {
+    "name": "B30_A01KT3GJXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 02F01 B30 "
+  },
+  "C04F": {
+    "name": "B30_A01KT3GMXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "C08D": {
+    "name": "B30_A01KT3GPXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C0CB": {
+    "name": "B30_A01KT3GSXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C109": {
+    "name": "B30_A01KT3GVXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C147": {
+    "name": "B30_A01KT3GYXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "C185": {
+    "name": "B30_A01KT3H1XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "02F02 B30 "
+  },
+  "C1C3": {
+    "name": "B30_A01KT3H4XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F03 "
+  },
+  "C201": {
+    "name": "B30_A01KT3J5XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C23F": {
+    "name": "B30_A01KT3J8XE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C27D": {
+    "name": "B30_A01KT3JBXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C2BB": {
+    "name": "B30_A01KT3JEXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 B30 02F01 "
+  },
+  "C2F9": {
+    "name": "B30_A01KT3JHXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 B30 02F01 "
+  },
+  "C337": {
+    "name": "B30_A01KT3JKXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 B30 02F01 "
+  },
+  "C375": {
+    "name": "B30_A01KT3JNXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C3B3": {
+    "name": "B30_A01KT3JQXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C3F1": {
+    "name": "B30_A01KT3JTXE",
+    "layer": "ADE_ET_BEL_Decke",
+    "txt": "B30 02F01 "
+  },
+  "C5A6": {
+    "name": "Auslass 400 V_A01U1C5SKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "HV51_00.1 | Aufzug BT5.1 FA51_00.1 "
+  },
+  "C5CE": {
+    "name": "Elektroschloss_A01U1C5YKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "C5DF": {
+    "name": [
+      "Ableitung_A01U1C66KH",
+      "Rauchansaugsystem_A01U1C5ZKH",
+      "Ableitung_A01U1C67KH"
+    ],
+    "layer": "ADE_ET_BMA_RAS",
+    "txt": "RAS 04/004 "
+  },
+  "C5EF": {
+    "name": "Netzteil inkl. Akku_A01U1C61KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": ""
+  },
+  "C61D": {
+    "name": "Auslass 230 V_A01U1C62KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "RAS 26F01 "
+  },
+  "C62E": {
+    "name": "Ansaugstutzen RAS_A01U1C65KH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": ""
+  },
+  "C679": {
+    "name": "Elektroschloss_A01U1C68KH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "C689": {
+    "name": "Elektroschloss_A01U1C6LKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "C699": {
+    "name": "1xAP-SD_ SchuKo_A01U1C8QKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C6AD": {
+    "name": "1xAP-SD_ SchuKo_A01U1C8SKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C6BF": {
+    "name": "Taster_ AP_ 1S_A01U1C8UKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "C6D1": {
+    "name": "1xAP-SD_ SchuKo_A01U1C8VKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C6E3": {
+    "name": "Taster_ AP_ 1S_A01U1C8XKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "C6F4": {
+    "name": "Druckknopfmelder_A01U1C8YKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "04/010 in Hydrant "
+  },
+  "C70B": {
+    "name": "1xAP-SD_ SchuKo_A01U1C91KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C71D": {
+    "name": "Druckknopfmelder_A01U1C93KH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "04/011 in Hydrant "
+  },
+  "C733": {
+    "name": "1xAP-SD_ SchuKo_A01U1C96KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C745": {
+    "name": "Druckknopfmelder_A01U1C98KH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/007 in Hydrant "
+  },
+  "C75A": {
+    "name": "1xAP-SD_ SchuKo_A01U1C9BKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C76C": {
+    "name": "1xAP-SD_ SchuKo_A01U1C9DKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C77E": {
+    "name": "Druckknopfmelder_A01U1C9FKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "in Hydrant 03/022 "
+  },
+  "C793": {
+    "name": "1xAP-SD_ SchuKo_A01U1C9IKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C7A5": {
+    "name": "1xAP-SD_ SchuKo_A01U1C9KKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "C7B7": {
+    "name": "Druckknopfmelder_A01U1C9MKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "in Hydrant 03/019 "
+  },
+  "C7CC": {
+    "name": "Druckknopfmelder_A01U1C9PKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/016 in Hydrant "
+  },
+  "C7E1": {
+    "name": "Druckknopfmelder_A01U1CAJKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/031 "
+  },
+  "C7F1": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1CAXKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 03/001 "
+  },
+  "C804": {
+    "name": "1xAP-SD_ SchuKo_A01U1CBCKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "C816": {
+    "name": "Druckknopfmelder_A01U1CBEKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "04/005 "
+  },
+  "C826": {
+    "name": "Taster_ AP_ 1S_A01U1CBGKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "C837": {
+    "name": "Elektroschloss_A01U1CBHKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "C847": {
+    "name": "Mulitnsensormelder mit integr. Sirene_A01U1CBIKH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": "04/007 "
+  },
+  "C8A4": {
+    "name": [
+      "069 Multisensormelder (Kombination RMO WMD)_A01U1CBKKH",
+      "Schaltkreis_A01U1CBLKH"
+    ],
+    "layer": "ADE_ET_BMA_Brandmelder-ZWD",
+    "txt": "ZWB 04/006 "
+  },
+  "C8AE": {
+    "name": "Steckdosenverteiler_A01U1CBQKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 3 1F4 "
+  },
+  "CD89": {
+    "name": "Steckdosenverteiler_A01U1CBSKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 3 1F6 "
+  },
+  "D262": {
+    "name": "Steckdosenverteiler_A01U1CBUKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 2 1F4 "
+  },
+  "DC24": {
+    "name": [
+      "Steckdosenverteiler_A01U1CBWKH",
+      "Bauteilbeschriftung_A01U1CBXKH"
+    ],
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 2 1F7 "
+  },
+  "DC2A": {
+    "name": "Steckdosenverteiler_A01U1CBYKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 2 1F4 "
+  },
+  "E10E": {
+    "name": "Steckdosenverteiler_A01U1CC0KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 2 1F6 "
+  },
+  "E5F2": {
+    "name": "Steckdosenverteiler_A01U1CC2KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 2 1F7 "
+  },
+  "EAD6": {
+    "name": "Steckdosenverteiler_A01U1CC4KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 2 1F5 "
+  },
+  "EFBA": {
+    "name": "Steckdosenverteiler_A01U1CC6KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F5 "
+  },
+  "F493": {
+    "name": "Steckdosenverteiler_A01U1CC8KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F6 "
+  },
+  "F96C": {
+    "name": "Steckdosenverteiler_A01U1CCAKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F6 "
+  },
+  "FE45": {
+    "name": "Steckdosenverteiler_A01U1CCCKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F7 "
+  },
+  "1031E": {
+    "name": "Steckdosenverteiler_A01U1CCEKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F4 "
+  },
+  "107F7": {
+    "name": "Steckdosenverteiler_A01U1CCGKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F5 "
+  },
+  "10CD0": {
+    "name": "Steckdosenverteiler_A01U1CCIKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F4 "
+  },
+  "111A9": {
+    "name": "Steckdosenverteiler_A01U1CCKKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F5 "
+  },
+  "11682": {
+    "name": "Steckdosenverteiler_A01U1CCTKH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F5 "
+  },
+  "11B5B": {
+    "name": "Druckknopfmelder_A01U1CE0KH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/005 in Hydrant "
+  },
+  "11B70": {
+    "name": "Druckknopfmelder_A01U1CMYKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/002 "
+  },
+  "11B80": {
+    "name": "1xAP-SD_ SchuKo_A01U1CN0KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "11BE3": {
+    "name": "optisch akustischer Signalgeber_A01U1CR8KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S002/3 "
+  },
+  "11BF5": {
+    "name": "optisch akustischer Signalgeber_A01U1CRAKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S002/4 an KT "
+  },
+  "11C23": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CRRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.01 an KT "
+  },
+  "11C39": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CRUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.02 an KT "
+  },
+  "11C4D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CRXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.03 an KT "
+  },
+  "11C61": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CS0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.06 an KT "
+  },
+  "11C75": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CS3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.04 an KT "
+  },
+  "11C89": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CS6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.05 an KT "
+  },
+  "11C9D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CS9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.07 an KT "
+  },
+  "11CB1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.09 an KT "
+  },
+  "11CC5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.08 an KT "
+  },
+  "11CD9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.12 an KT "
+  },
+  "11CED": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.11 an KT "
+  },
+  "11D01": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.10 an KT "
+  },
+  "11D15": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.15 an KT "
+  },
+  "11D29": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.13 an KT "
+  },
+  "11D3D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CSXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.14 an KT "
+  },
+  "11D51": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CT0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.16 an KT "
+  },
+  "11D65": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CT3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.17 an KT "
+  },
+  "11D79": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CT6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.18 an KT "
+  },
+  "11D8D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CT9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.19 an KT "
+  },
+  "11DA1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.21 an KT "
+  },
+  "11DB5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.20 an KT "
+  },
+  "11DC9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.01 an KT "
+  },
+  "11DDD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.02 an KT "
+  },
+  "11DF1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.03 an KT "
+  },
+  "11E05": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.04 an KT "
+  },
+  "11E19": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.06 an KT "
+  },
+  "11E2D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CTXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.05 an KT "
+  },
+  "11E41": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CU0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 25.09 an KT "
+  },
+  "11E55": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CU3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.08 an KT "
+  },
+  "11E69": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CU6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.07 an KT "
+  },
+  "11E7D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CU9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.11 an KT "
+  },
+  "11E91": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CUCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.10 an KT "
+  },
+  "11EA5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CUFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.12 an KT "
+  },
+  "11EB9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CUIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.07 an KT "
+  },
+  "11ECD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CULKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.06 an KT "
+  },
+  "11EE1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CUOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.05 an KT "
+  },
+  "11EF5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CURKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.08 an KT "
+  },
+  "11F09": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CUUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.10 an KT "
+  },
+  "11F1D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CUXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.09 an KT "
+  },
+  "11F31": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CV0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.12 an KT "
+  },
+  "11F45": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CV3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.11 an KT "
+  },
+  "11F59": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CV6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.13 an KT "
+  },
+  "11F6D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CV9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 an KT 22.16 "
+  },
+  "11F81": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.15 an KT "
+  },
+  "11F95": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 an KT 22.14 "
+  },
+  "11FA9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.17 an KT "
+  },
+  "11FBD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.18 an KT "
+  },
+  "11FD1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.19 an KT "
+  },
+  "11FE5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.21 an KT "
+  },
+  "11FF9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.20 an KT "
+  },
+  "1200D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CVXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.19 an KT "
+  },
+  "12021": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CW0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.23 an KT "
+  },
+  "12035": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CW3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.24 an KT "
+  },
+  "12049": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CW6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.22 an KT "
+  },
+  "1205D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CW9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.01 an KT "
+  },
+  "12071": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.02 an KT "
+  },
+  "12085": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.03 an KT "
+  },
+  "12099": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.07 an KT "
+  },
+  "120AD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.09 an KT "
+  },
+  "120C1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.08 an KT "
+  },
+  "120D5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.06 an KT "
+  },
+  "120E9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.05 an KT "
+  },
+  "120FD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CWXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.04 an KT "
+  },
+  "12111": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CX0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.23 an KT "
+  },
+  "12125": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CX3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.09 an KT "
+  },
+  "12139": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CX6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.02 an KT "
+  },
+  "1214D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CX9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.15 an KT "
+  },
+  "12161": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.24 an KT "
+  },
+  "12175": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.03 an KT "
+  },
+  "12189": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.08 an KT "
+  },
+  "1219D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.14 an KT "
+  },
+  "121B1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.22 an KT "
+  },
+  "121C5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.01 an KT "
+  },
+  "121D9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.05 an KT "
+  },
+  "121ED": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CXXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.07 an KT "
+  },
+  "12201": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CY0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.06 an KT "
+  },
+  "12215": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CY3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.04 an KT "
+  },
+  "12229": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CY6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.16 an KT "
+  },
+  "1223D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CY9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.18 an KT "
+  },
+  "12251": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.17 an KT "
+  },
+  "12265": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.11 an KT "
+  },
+  "12279": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.12 an KT "
+  },
+  "1228D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.10 an KT "
+  },
+  "122A1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.10 an KT "
+  },
+  "122B5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.18 an KT "
+  },
+  "122C9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.15 an KT "
+  },
+  "122DD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CYXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.13 an KT "
+  },
+  "122F1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZ0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.12 an KT "
+  },
+  "12305": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZ3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.14 an KT "
+  },
+  "12319": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZ6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.16 an KT "
+  },
+  "1232D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZ9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.17 an KT "
+  },
+  "12341": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.11 an KT "
+  },
+  "12355": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.07 an KT "
+  },
+  "12369": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.19 an KT "
+  },
+  "1237D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZLKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.08 an KT "
+  },
+  "12391": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZOKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.09 an KT "
+  },
+  "123A5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.06 an KT "
+  },
+  "123B9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.20 an KT "
+  },
+  "123CD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1CZXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.15 an KT "
+  },
+  "123E1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D00KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.17 an KT "
+  },
+  "123F5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D03KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.16 an KT "
+  },
+  "12409": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D06KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.14 an KT "
+  },
+  "1241D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D09KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.11 an KT "
+  },
+  "12431": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.19 an KT "
+  },
+  "12445": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.23 an KT "
+  },
+  "12459": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.09 an KT "
+  },
+  "1246D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.20 an KT "
+  },
+  "12481": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.18 an KT "
+  },
+  "12495": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.21 an KT "
+  },
+  "124A9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.10 an KT "
+  },
+  "124BD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D0XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.22 an KT "
+  },
+  "124D1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D10KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.12 an KT "
+  },
+  "124E5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D13KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.13 an KT "
+  },
+  "124F9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D16KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.01 an KT "
+  },
+  "1250D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D19KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.10 an KT "
+  },
+  "12521": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.22 an KT "
+  },
+  "12535": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.11 an KT "
+  },
+  "12549": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.05 an KT "
+  },
+  "1255D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.21 an KT "
+  },
+  "12571": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.23 an KT "
+  },
+  "12585": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.06 an KT "
+  },
+  "12599": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.03 an KT "
+  },
+  "125AD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D1XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.02 an KT "
+  },
+  "125C1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D20KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.08 an KT "
+  },
+  "125D5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D23KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.07 an KT "
+  },
+  "125E9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D26KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.04 an KT "
+  },
+  "125FD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D29KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.09 an KT "
+  },
+  "12611": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.24 an KT "
+  },
+  "12625": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.03 an KT "
+  },
+  "12639": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.02 an KT "
+  },
+  "1264D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.05 an KT "
+  },
+  "12661": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.01 an KT "
+  },
+  "12675": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.04 an KT "
+  },
+  "12689": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 20.24 an KT "
+  },
+  "1269D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D2XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.12 an KT "
+  },
+  "126B1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D30KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.13 an KT "
+  },
+  "126C5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D33KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.14 an KT "
+  },
+  "126D9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D36KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.16 an KT "
+  },
+  "126ED": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D39KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.17 an KT "
+  },
+  "12701": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.15 an KT "
+  },
+  "12715": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.19 an KT "
+  },
+  "12729": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.18 an KT "
+  },
+  "1273D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.20 an KT "
+  },
+  "12751": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.23 an KT "
+  },
+  "12765": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.22 an KT "
+  },
+  "12779": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.21 an KT "
+  },
+  "1278D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D3XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.02 an KT "
+  },
+  "127A1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D40KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.01 an KT "
+  },
+  "127B5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D43KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 16.24 an KT "
+  },
+  "127C9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D46KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.04 an KT "
+  },
+  "127DD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D49KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.05 an KT "
+  },
+  "127F1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.03 an KT "
+  },
+  "12805": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.08 an KT "
+  },
+  "12819": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.07 an KT "
+  },
+  "1282D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.06 an KT "
+  },
+  "12841": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.11 an KT "
+  },
+  "12855": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.10 an KT "
+  },
+  "12869": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.09 an KT "
+  },
+  "1287D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.12 an KT "
+  },
+  "12891": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D50KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.14 an KT "
+  },
+  "128A5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D53KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.13 an KT "
+  },
+  "128B9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D56KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.17 an KT "
+  },
+  "128CD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D59KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.16 an KT "
+  },
+  "128E1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.15 an KT "
+  },
+  "128F5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.02 an KT "
+  },
+  "12909": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.01 an KT "
+  },
+  "1291D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.03 an KT "
+  },
+  "12931": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.13 an KT "
+  },
+  "12945": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.14 an KT "
+  },
+  "12959": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.16 an KT "
+  },
+  "1296D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D5XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.15 an KT "
+  },
+  "12981": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D60KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.17 an KT "
+  },
+  "12995": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D63KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.18 an KT "
+  },
+  "129A9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D66KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.19 an KT "
+  },
+  "129BD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D69KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.20 an KT "
+  },
+  "129D1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.01 an KT "
+  },
+  "129E5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.23 an KT "
+  },
+  "129F9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.03 an KT "
+  },
+  "12A0D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.24 an KT "
+  },
+  "12A21": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.02 an KT "
+  },
+  "12A35": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.04 an KT "
+  },
+  "12A49": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.21 an KT "
+  },
+  "12A5D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D6XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.22 an KT "
+  },
+  "12A71": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D70KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.02 an KT "
+  },
+  "12A85": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D73KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.01 an KT "
+  },
+  "12A99": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D76KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.06 an KT "
+  },
+  "12AAD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D79KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.05 an KT "
+  },
+  "12AC1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.03 an KT "
+  },
+  "12AD5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.04 an KT "
+  },
+  "12AE9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.12 an KT "
+  },
+  "12AFD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.07 an KT "
+  },
+  "12B11": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.10 an KT "
+  },
+  "12B25": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.09 an KT "
+  },
+  "12B39": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.11 an KT "
+  },
+  "12B4D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D7XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.08 an KT "
+  },
+  "12B61": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D80KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.14 an KT "
+  },
+  "12B75": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D83KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.24 an KT "
+  },
+  "12B89": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D86KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.22 an KT "
+  },
+  "12B9D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D89KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.17 an KT "
+  },
+  "12BB1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8CKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.16 an KT "
+  },
+  "12BC5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.15 an KT "
+  },
+  "12BD9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8IKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.19 an KT "
+  },
+  "12BED": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8LKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.21 an KT "
+  },
+  "12C01": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8OKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.18 an KT "
+  },
+  "12C15": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8RKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.13 an KT "
+  },
+  "12C29": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8UKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.23 an KT "
+  },
+  "12C3D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D8XKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.20 an KT "
+  },
+  "12C51": {
+    "name": "E-Verteiler_A01U1DAXKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "12C86": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DCHKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/013 "
+  },
+  "12C94": {
+    "name": "Druckknopfmelder_A01U1DCJKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/015 "
+  },
+  "12CA9": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DCMKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 03/003 "
+  },
+  "12CBC": {
+    "name": "Druckknopfmelder_A01U1DCPKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/004 "
+  },
+  "12CCC": {
+    "name": "Druckknopfmelder_A01U1DCRKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/011 "
+  },
+  "12CDC": {
+    "name": "1xAP-SD_ SchuKo_A01U1DCTKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "12CEE": {
+    "name": "RWA-Zentrale_A01U1DCVKH",
+    "layer": "ADE_ET_RWA_Zentrale",
+    "txt": "RWA-Z "
+  },
+  "12CF8": {
+    "name": "Auslass 230 V_A01U1DCWKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "RWA 22F01 "
+  },
+  "12D09": {
+    "name": "RWA-Taster_A01U1DCZKH",
+    "layer": "ADE_ET_RWA_Taster",
+    "txt": ""
+  },
+  "12D2C": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DKQKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DD0KH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/036 NSHV "
+  },
+  "12D3F": {
+    "name": "RWA-Taster_A01U1DD3KH",
+    "layer": "ADE_ET_RWA_Taster",
+    "txt": ""
+  },
+  "12D61": {
+    "name": "Auslass 230 V_A01U1DD4KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F04 RWA "
+  },
+  "12D72": {
+    "name": "RWA-Zentrale_A01U1DD7KH",
+    "layer": "ADE_ET_RWA_Zentrale",
+    "txt": "RWA-Z "
+  },
+  "12D7B": {
+    "name": "Druckknopfmelder_A01U1DDBKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/010 in Hydrant "
+  },
+  "12D90": {
+    "name": "Druckknopfmelder_A01U1DDEKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/015 in Hydrant "
+  },
+  "12DA5": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DDKKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 05/017 "
+  },
+  "12DB8": {
+    "name": "Druckknopfmelder_A01U1DDNKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/018 "
+  },
+  "12DC8": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DF9KH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DDSKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR SiBe 04/028 "
+  },
+  "12DDB": {
+    "name": "Druckknopfmelder_A01U1DDVKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "in Hydrant 04/027 "
+  },
+  "12DF0": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DDYKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR SiBe 04/021 "
+  },
+  "12E03": {
+    "name": "Auslass RWA-Motor_A01U1DE1KH",
+    "layer": "ADE_ET_RWA_Motor",
+    "txt": "M M1.3 "
+  },
+  "12E10": {
+    "name": "Auslass RWA-Motor_A01U1DE3KH",
+    "layer": "ADE_ET_RWA_Motor",
+    "txt": "M M1.2 "
+  },
+  "12E1B": {
+    "name": "Auslass RWA-Motor_A01U1DE5KH",
+    "layer": "ADE_ET_RWA_Motor",
+    "txt": "M M1.1 "
+  },
+  "12E26": {
+    "name": "Druckknopfmelder_A01U1DE7KH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/012 "
+  },
+  "12E36": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DE9KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 05/011 "
+  },
+  "12EA3": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DEYKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DEZKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 04/009 Sirene "
+  },
+  "12EE3": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DF2KH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DF3KH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sirene 04/012 "
+  },
+  "12F23": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DFAKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 04/029 Sirene "
+  },
+  "12F63": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DFDKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DFEKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/021 Sirene "
+  },
+  "12FA3": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DFHKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DFIKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/038 Sirene "
+  },
+  "12FB6": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DKFKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DKCKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sirene 03/012 "
+  },
+  "12FF6": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DEXKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DKGKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/002 Sirene "
+  },
+  "13009": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DKMKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DKJKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/048 Sirene "
+  },
+  "13049": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1DKNKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sirene 03/037 "
+  },
+  "130B6": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DKRKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DKSKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sirene 05/006 "
+  },
+  "130C9": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DKYKH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DKVKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 05/009 Sirene "
+  },
+  "13109": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1DL2KH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1DKZKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sirene 05/013 "
+  },
+  "13159": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1E18KH",
+      "Schaltkreis_A01U1E19KH",
+      "1xAP-SD_ SchuKo_A01U1E1CKH",
+      "AP-SD_ Drehstrom_A01U1FDUKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 13F02 Staplerladestation "
+  },
+  "13175": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EG9KH",
+      "Schaltkreis_A01U1E1DKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A Staplerladestation 12F04 "
+  },
+  "13191": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1E1GKH",
+      "Schaltkreis_A01U1E1HKH",
+      "1xAP-SD_ SchuKo_A01U1E1KKH",
+      "1xAP-SD_ SchuKo_A01U1E2GKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 13F02 Staplerladestation "
+  },
+  "131AD": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1E24KH",
+      "Schaltkreis_A01U1E1LKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 13F01 Staplerladestation "
+  },
+  "131C9": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1E1OKH",
+      "Schaltkreis_A01U1E1PKH",
+      "1xAP-SD_ SchuKo_A01U1E1SKH",
+      "1xAP-SD_ SchuKo_A01U1E1WKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F02 Staplerladestation "
+  },
+  "131E5": {
+    "name": "Schaltkreis_A01U1E1TKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F01 Staplerladestation "
+  },
+  "13201": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1E20KH",
+      "Schaltkreis_A01U1E1XKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F03 Staplerladestation "
+  },
+  "1321D": {
+    "name": "Schaltkreis_A01U1E21KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F04 Staplerladestation "
+  },
+  "1323C": {
+    "name": "Schaltkreis_A01U1E25KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 14F01 Staplerladestation "
+  },
+  "1325B": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1E28KH",
+      "Schaltkreis_A01U1E29KH",
+      "1xAP-SD_ SchuKo_A01U1E2CKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 14F02 Staplerladestation "
+  },
+  "13277": {
+    "name": "Schaltkreis_A01U1E2DKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 13F04 Staplerladestation "
+  },
+  "13293": {
+    "name": "Schaltkreis_A01U1E2HKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 13F03 Staplerladestation "
+  },
+  "132A2": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1E2KKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.01/02 "
+  },
+  "132B0": {
+    "name": "Geräteanschluß 230 V_A01U1E2MKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Einspeisung KSS 20F02 "
+  },
+  "132C1": {
+    "name": "Geräteanschluß 230 V_A01U1E2PKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Einspeisung KSS 20F04 "
+  },
+  "132D2": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1E2SKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.07/10 "
+  },
+  "132E0": {
+    "name": "Geräteanschluß 230 V_A01U1E2UKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Einspeisung KSS 20F03 "
+  },
+  "132F1": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1E2XKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 "
+  },
+  "132FA": {
+    "name": "Elektromagnetischer Türöffner_A01U1E4MKH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ06 "
+  },
+  "1330C": {
+    "name": "Magnetkontakt_A01U1E4OKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK17 "
+  },
+  "13318": {
+    "name": "Türcontroller_A01U1E4QKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM16 "
+  },
+  "13329": {
+    "name": "Kartenleser Zutritt Anlage_A01U1E4SKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS06 "
+  },
+  "1333C": {
+    "name": "Kartenleser Zutritt Anlage_A01U1E4UKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS05 "
+  },
+  "1334F": {
+    "name": "Türcontroller_A01U1E4WKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM15 "
+  },
+  "1335F": {
+    "name": "Magnetkontakt_A01U1E4YKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK15 "
+  },
+  "13369": {
+    "name": "Elektromagnetischer Türöffner_A01U1E50KH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ05 "
+  },
+  "13379": {
+    "name": "Auslass 230 V_A01U1E52KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F02 "
+  },
+  "1338A": {
+    "name": "Elektromagnetischer Türöffner_A01U1E55KH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ04 "
+  },
+  "1339A": {
+    "name": "Kartenleser Zutritt Anlage_A01U1E57KH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS04 "
+  },
+  "133AD": {
+    "name": "Türcontroller_A01U1E59KH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM13 "
+  },
+  "133BD": {
+    "name": "Magnetkontakt_A01U1E5BKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK13 "
+  },
+  "133C7": {
+    "name": "Elektromagnetischer Türöffner_A01U1E5DKH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ03 "
+  },
+  "133D7": {
+    "name": [
+      "Polygon_A01U1FVKKH",
+      "Magnetkontakt_A01U1E5FKH"
+    ],
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK08 "
+  },
+  "133E1": {
+    "name": "Kartenleser Zutritt Anlage_A01U1E5HKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS03 "
+  },
+  "133F4": {
+    "name": "Auslass 230 V_A01U1E5JKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "13405": {
+    "name": "Kartenleser Zutritt Anlage_A01U1E5OKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS02 "
+  },
+  "13418": {
+    "name": "Magnetkontakt_A01U1E5QKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK05 "
+  },
+  "13422": {
+    "name": "Auslass 230 V_A01U1E5SKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "13433": {
+    "name": "Kartenleser Zutritt Anlage_A01U1E6HKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS08 "
+  },
+  "13446": {
+    "name": "Elektromagnetischer Türöffner_A01U1E6JKH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ08 "
+  },
+  "13456": {
+    "name": [
+      "Polygon_A01U1FVSKH",
+      "Magnetkontakt_A01U1E6LKH"
+    ],
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK21 "
+  },
+  "13460": {
+    "name": [
+      "Polygon_A01U1FVTKH",
+      "Magnetkontakt_A01U1E6NKH"
+    ],
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK19 "
+  },
+  "1346A": {
+    "name": "Elektromagnetischer Türöffner_A01U1E6PKH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ07 "
+  },
+  "1347A": {
+    "name": "Magnetkontakt_A01U1E6RKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK18 "
+  },
+  "13484": {
+    "name": "Türcontroller_A01U1E6TKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM17 "
+  },
+  "13494": {
+    "name": "Auslass 230 V_A01U1E6VKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "134A5": {
+    "name": "Auslass 230 V_A01U1E6YKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "134B6": {
+    "name": "Türcontroller_A01U1E71KH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM14 "
+  },
+  "134C6": {
+    "name": "Magnetkontakt_A01U1E73KH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK11 "
+  },
+  "134D0": {
+    "name": "Magnetkontakt_A01U1E75KH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK10 "
+  },
+  "134DA": {
+    "name": "Türcontroller_A01U1E77KH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM10 "
+  },
+  "134EA": {
+    "name": "Auslass 230 V_A01U1E79KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F01 ZKS "
+  },
+  "134FB": {
+    "name": "Türcontroller_A01U1E7CKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM07 "
+  },
+  "1350B": {
+    "name": "Magnetkontakt_A01U1E7EKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK07 "
+  },
+  "13515": {
+    "name": "Auslass 230 V_A01U1E7GKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F01 ZKS "
+  },
+  "13526": {
+    "name": "Auslass 230 V_A01U1E7ZKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "13537": {
+    "name": "Auslass 230 V_A01U1E82KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "13548": {
+    "name": "Elektromagnetischer Türöffner_A01U1EF9KH",
+    "layer": "ADE_ET_ZKS_Oeffner",
+    "txt": "ZTÖ02 "
+  },
+  "13558": {
+    "name": "Auslass 230 V_A01U1EFEKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F02 BMA Sirene "
+  },
+  "13569": {
+    "name": "Auslass 400 V_A01U1EG1KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": ""
+  },
+  "13572": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1FC7KH",
+      "Schaltkreis_A01U1EG2KH",
+      "AP-SD_ Drehstrom_A01U1FCAKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A Kran 25F01 "
+  },
+  "13581": {
+    "name": "Auslass 400 V_A01U1EG5KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": ""
+  },
+  "1358A": {
+    "name": "Schaltkreis_A01U1EG6KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A Kran 25F03 "
+  },
+  "135A6": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EGDKH",
+      "Schaltkreis_A01U1EGAKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F03 Staplerladestation "
+  },
+  "135C2": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EGHKH",
+      "Schaltkreis_A01U1EGEKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F02 Staplerladestation "
+  },
+  "135DE": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1EGLKH",
+      "Schaltkreis_A01U1EGIKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F01 Staplerladestation "
+  },
+  "135FD": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EGPKH",
+      "Schaltkreis_A01U1EGMKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 13F01 Staplerladestation "
+  },
+  "13619": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EGTKH",
+      "Schaltkreis_A01U1EGQKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A Staplerladestation 11F04 "
+  },
+  "13635": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EGXKH",
+      "Schaltkreis_A01U1EGUKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 11F03 Staplerladestation "
+  },
+  "13651": {
+    "name": [
+      "1xAP-SD_ SchuKo_A01U1EH1KH",
+      "Schaltkreis_A01U1EGYKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 11F02 Staplerladestation "
+  },
+  "1366D": {
+    "name": "Schaltkreis_A01U1EH2KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 11F01 Staplerladestation "
+  },
+  "1367C": {
+    "name": "Beleuchtungstableau_A01U1EH8KH",
+    "layer": "ADE_ET_NSV_Tableau",
+    "txt": ""
+  },
+  "13695": {
+    "name": "Beleuchtungstableau_A01U1EH9KH",
+    "layer": "ADE_ET_NSV_Tableau",
+    "txt": ""
+  },
+  "136AD": {
+    "name": "Beleuchtungstableau_A01U1EHAKH",
+    "layer": "ADE_ET_NSV_Tableau",
+    "txt": ""
+  },
+  "136C5": {
+    "name": "Beleuchtungstableau_A01U1EHBKH",
+    "layer": "ADE_ET_NSV_Tableau",
+    "txt": ""
+  },
+  "136DD": {
+    "name": "Auslass 230 V_A01U1EHCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F01 EDV Rack "
+  },
+  "13914": {
+    "name": "Auslass 230 V_A01U1EHFKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F02 EDV Rack "
+  },
+  "13925": {
+    "name": "Auslass 230 V_A01U1EHIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F03 EDV Rack "
+  },
+  "13936": {
+    "name": "Auslass 230 V_A01U1EJVKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F01 EDV Rack "
+  },
+  "13947": {
+    "name": "Auslass 230 V_A01U1EJYKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F02 EDV Rack "
+  },
+  "13958": {
+    "name": "Auslass 230 V_A01U1EK1KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F03 EDV Rack "
+  },
+  "139B9": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1EPZKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/006 Brandschutztor "
+  },
+  "139F3": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1EQ7KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 03/010 "
+  },
+  "13A89": {
+    "name": "Auslass 230 V_A01U1ETVKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F04 BMA Sirene "
+  },
+  "13A9A": {
+    "name": "Druckknopfmelder_A01U1ETYKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/009 "
+  },
+  "13AAA": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1EU0KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 03/008 "
+  },
+  "13ABD": {
+    "name": "Auslass 230 V_A01U1EU3KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F04 BMA Sirene "
+  },
+  "13B11": {
+    "name": "Auslass 230 V_A01U1EUIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F02 BMA Sirene "
+  },
+  "13B22": {
+    "name": "Auslass 230 V_A01U1EURKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "13B33": {
+    "name": "Auslass 230 V_A01U1EUUKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F01 "
+  },
+  "13B44": {
+    "name": "1xAP-SD_ SchuKo_A01U1EV0KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "13B56": {
+    "name": "1xAP-SD_ SchuKo_A01U1EV2KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "13B68": {
+    "name": "1xAP-SD_ SchuKo_A01U1EV4KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "13B7A": {
+    "name": "1xAP-SD_ SchuKo_A01U1EV6KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "13B8C": {
+    "name": "1xAP-SD_ SchuKo_A01U1EV8KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "13B9E": {
+    "name": "1xAP-SD_ SchuKo_A01U1EVAKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "13BB0": {
+    "name": "Präsenzmelder AP 360°_A01U1EVCKH",
+    "layer": "ADE_ET_NSV_BWM_DALI",
+    "txt": "DALI "
+  },
+  "13BDD": {
+    "name": "Präsenzmelder AP 360°_A01U1EVEKH",
+    "layer": "ADE_ET_NSV_BWM_DALI",
+    "txt": "DALI "
+  },
+  "13C0A": {
+    "name": [
+      "Auslass 400 V_A01U1EVRKH",
+      "Auslass 230 V_A01U1EVOKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 20F05 "
+  },
+  "13C24": {
+    "name": "Schaltkreis_A01U1EVSKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "32A DLE 24F01 "
+  },
+  "13C33": {
+    "name": "Auslass 230 V_A01U1EVVKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F05 Armatur "
+  },
+  "13C44": {
+    "name": "Auslass 230 V_A01U1EVYKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 20F05 "
+  },
+  "13C82": {
+    "name": "Auslass 230 V_A01U1EW5KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "25F01 BMA Sirene "
+  },
+  "13C93": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1EW4KH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1EW8KH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sirene 05/001 "
+  },
+  "13CA6": {
+    "name": "1xAP-SD_ SchuKo_A01U1EWBKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13CB8": {
+    "name": "1xAP-SD_ SchuKo_A01U1EWDKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13CCA": {
+    "name": "1xAP-SD_ SchuKo_A01U1EWFKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13CDC": {
+    "name": "Auslass 230 V_A01U1EWKKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 21F01 "
+  },
+  "13CED": {
+    "name": "Auslass 230 V_A01U1EWNKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "25F02 BMA Sirene "
+  },
+  "13CFE": {
+    "name": "Auslass 230 V_A01U1EWQKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F06 BMA Sirene "
+  },
+  "13D0F": {
+    "name": "1xAP-SD_ SchuKo_A01U1EWWKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13D21": {
+    "name": "1xAP-SD_ SchuKo_A01U1EWYKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13D33": {
+    "name": "Auslass 230 V_A01U1EX0KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F05 BMA Sirene "
+  },
+  "13D44": {
+    "name": "Auslass 230 V_A01U1EX3KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F02 BMA Sirene "
+  },
+  "13D55": {
+    "name": "Geräteanschluß 400 V_A01U1EX6KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "SiBe Zentrale 1F8 "
+  },
+  "13D68": {
+    "name": "1xAP-SD_ SchuKo_A01U1EXFKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13D7A": {
+    "name": "1xAP-SD_ SchuKo_A01U1EXHKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13D8C": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1EXJKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Brandschutztor 05/016 "
+  },
+  "13D9F": {
+    "name": "Auslass 230 V_A01U1EXMKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "25F01 EDV Rack "
+  },
+  "13DB0": {
+    "name": "Auslass 230 V_A01U1EXPKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "EDV Rack 25F02 "
+  },
+  "13DC1": {
+    "name": "Auslass 230 V_A01U1EXSKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "EDV Rack 25F03 "
+  },
+  "13DD2": {
+    "name": "Auslass 230 V_A01U1EXVKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F03 BMA Sirene "
+  },
+  "13DE3": {
+    "name": "Auslass 230 V_A01U1EY1KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "22F03 BMA Sirene "
+  },
+  "13DF4": {
+    "name": "Auslass 230 V_A01U1EY4KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ZKS 20F03 "
+  },
+  "13E05": {
+    "name": "Türcontroller_A01U1EY7KH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM18 "
+  },
+  "13E15": {
+    "name": "Geräteanschluß 400 V_A01U1EYCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "SiBe Zentrale 1F8 "
+  },
+  "13E28": {
+    "name": "Auslass 230 V_A01U1EYFKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "22F03 BMA Sirene "
+  },
+  "13E39": {
+    "name": "Auslass 230 V_A01U1EYIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F01 BMA Sirene "
+  },
+  "13E4A": {
+    "name": "Druckknopfmelder_A01U1EYLKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "in Hydrant 04/024 "
+  },
+  "13E5F": {
+    "name": "Druckknopfmelder_A01U1EYUKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "04/022 in Hydrant "
+  },
+  "13E74": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1EZ0KH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1EYXKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 04/023 Sirene "
+  },
+  "13EB4": {
+    "name": "Auslass 230 V_A01U1EZ1KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F03 BMA Sirene "
+  },
+  "13EC5": {
+    "name": "Beleuchtungstableau_A01U1EZ4KH",
+    "layer": "ADE_ET_NSV_Tableau",
+    "txt": ""
+  },
+  "13EDD": {
+    "name": "Auslass 230 V_A01U1EZ5KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "25F04 BMA Sirene "
+  },
+  "13F1B": {
+    "name": "Auslass 230 V_A01U1EZ9KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F03 BMA Sirene "
+  },
+  "13F2C": {
+    "name": [
+      "Netzteil inkl. Akku_A01U1EZ8KH",
+      "Bus-Steuerkoppler BMA (I_O)_A01U1EZCKH"
+    ],
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 04/020 Sirene "
+  },
+  "13F3F": {
+    "name": "Türcontroller_A01U1EZFKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM05 "
+  },
+  "13F4F": {
+    "name": "Türcontroller_A01U1EZHKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM06 "
+  },
+  "13F5F": {
+    "name": "Türcontroller_A01U1EZJKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM09 "
+  },
+  "13F6F": {
+    "name": "Türcontroller_A01U1EZLKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM08 "
+  },
+  "13F7F": {
+    "name": "Türcontroller_A01U1EZNKH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM11 "
+  },
+  "13F8F": {
+    "name": "1xUP-SD_ SchuKo_A01U1EZZKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13F9B": {
+    "name": "1xUP-SD_ SchuKo_A01U1F01KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13FA7": {
+    "name": "3xUP-SD_ SchuKo_A01U1F03KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F05 "
+  },
+  "13FB5": {
+    "name": "Taster_ UP_ 1S_A01U1F05KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "13FBB": {
+    "name": "1xUP-SD_ SchuKo_A01U1F06KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "13FC7": {
+    "name": "3xUP-SD_ SchuKo_A01U1F08KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F03 "
+  },
+  "13FD5": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0AKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.12/13 "
+  },
+  "13FE3": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0CKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 18.01/02 "
+  },
+  "13FF1": {
+    "name": "3xUP-SD_ SchuKo_A01U1F0EKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F05 "
+  },
+  "13FFF": {
+    "name": "1xUP-SD_ SchuKo_A01U1F0GKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "1400B": {
+    "name": "Taster_ UP_ 1S_A01U1F0IKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14011": {
+    "name": "Taster_ UP_ 1S_A01U1F0JKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14017": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0KKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 18.05/06 "
+  },
+  "14025": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0MKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.16/17 "
+  },
+  "14033": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0OKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.22/23 "
+  },
+  "14041": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0QKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.14/15 "
+  },
+  "1404F": {
+    "name": "002 Sirene_A01U1F0SKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "04/015 "
+  },
+  "1405D": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0UKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 18.03/04 "
+  },
+  "1406B": {
+    "name": "3xUP-SD_ SchuKo_A01U1F0WKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "14079": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F0YKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.18/19 "
+  },
+  "14087": {
+    "name": "3xUP-SD_ SchuKo_A01U1F10KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F03 "
+  },
+  "14095": {
+    "name": "3xUP-SD_ SchuKo_A01U1F12KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F04 "
+  },
+  "140A9": {
+    "name": "3xUP-SD_ SchuKo_A01U1F15KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "140B7": {
+    "name": "002 Sirene_A01U1F17KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "04/014 "
+  },
+  "140C5": {
+    "name": "1xUP-SD_ SchuKo_A01U1F19KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "140D1": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F1BKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.10/11 "
+  },
+  "140DF": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F1DKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.20/21 "
+  },
+  "140ED": {
+    "name": "Taster_ UP_ 1S_A01U1F1FKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "140F3": {
+    "name": "3xUP-SD_ SchuKo_A01U1F1GKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "14101": {
+    "name": "3xUP-SD_ SchuKo_A01U1F1IKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F04 "
+  },
+  "1410F": {
+    "name": "3xUP-SD_ SchuKo_A01U1F1KKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "1411D": {
+    "name": "002 Sirene_A01U1F1MKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "04/013 "
+  },
+  "1412B": {
+    "name": "Präsenzmelder UP 360°_A01U1F1QKH",
+    "layer": "ADE_ET_NSV_BWM",
+    "txt": ""
+  },
+  "14149": {
+    "name": "Präsenzmelder UP 360°_A01U1F1TKH",
+    "layer": "ADE_ET_NSV_BWM",
+    "txt": ""
+  },
+  "14166": {
+    "name": "Präsenzmelder UP 360°_A01U1F1YKH",
+    "layer": "ADE_ET_NSV_BWM",
+    "txt": ""
+  },
+  "14183": {
+    "name": "1xUP-SD_ SchuKo_A01U1F23KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "1418F": {
+    "name": "Auslass 230 V_A01U1F28KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Urinal 21F02 "
+  },
+  "141A0": {
+    "name": "002 Sirene_A01U1F2MKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "04/026 "
+  },
+  "141AE": {
+    "name": "Auslass 230 V_A01U1F2UKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Urinal 21F02 "
+  },
+  "141BF": {
+    "name": "1xUP-SD_ SchuKo_A01U1F34KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "141CB": {
+    "name": [
+      "Auslass 400 V_A01U1GIBKH",
+      "Auslass 230 V_A01U1F3EKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F02 Urinal "
+  },
+  "141DC": {
+    "name": "002 Sirene_A01U1F48KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "04/025 "
+  },
+  "141F3": {
+    "name": [
+      "Auslass 400 V_A01U1F4HKH",
+      "Schaltkreis_A01U1F4IKH",
+      "Auslass 400 V_A01U1GD4KH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A DLE 24F03 "
+  },
+  "14202": {
+    "name": "3xUP-SD_ SchuKo_A01U1F4UKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "14210": {
+    "name": "3xUP-SD_ SchuKo_A01U1F4WKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "1421E": {
+    "name": "3xUP-SD_ SchuKo_A01U1F4YKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "1422C": {
+    "name": "3xUP-SD_ SchuKo_A01U1F50KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F03 "
+  },
+  "1423A": {
+    "name": "3xUP-SD_ SchuKo_A01U1F52KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F05 "
+  },
+  "14248": {
+    "name": "002 Sirene_A01U1F54KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "03/041 "
+  },
+  "14256": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F56KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.03/04 "
+  },
+  "14264": {
+    "name": "1xUP-SD_ SchuKo_A01U1F58KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "14270": {
+    "name": "Taster_ UP_ 1S_A01U1F5AKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14276": {
+    "name": "3xUP-SD_ SchuKo_A01U1F5BKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F04 "
+  },
+  "14284": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F5DKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.23/24 "
+  },
+  "14292": {
+    "name": "1xUP-SD_ SchuKo_A01U1F5FKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "1429E": {
+    "name": "3xUP-SD_ SchuKo_A01U1F5HKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F03 "
+  },
+  "142AC": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F5JKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.17/18 "
+  },
+  "142BA": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F5LKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.21/22 "
+  },
+  "142C8": {
+    "name": "Taster_ UP_ 1S_A01U1F5NKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "142CE": {
+    "name": "1xUP-SD_ SchuKo_A01U1F5OKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "142DA": {
+    "name": "1xUP-SD_ SchuKo_A01U1F5QKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "142E6": {
+    "name": "002 Sirene_A01U1F5SKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "03/039 "
+  },
+  "142F4": {
+    "name": "3xUP-SD_ SchuKo_A01U1F5UKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "14302": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F5WKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.01/02 "
+  },
+  "14310": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F5YKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.05/06 "
+  },
+  "1431E": {
+    "name": "3xUP-SD_ SchuKo_A01U1F60KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F04 "
+  },
+  "1432C": {
+    "name": "Taster_ UP_ 1S_A01U1F62KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14332": {
+    "name": "3xUP-SD_ SchuKo_A01U1F63KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F05 "
+  },
+  "14340": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F65KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.13/14 "
+  },
+  "1434E": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F67KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.07/08 "
+  },
+  "1435C": {
+    "name": "Taster_ UP_ 1S_A01U1F69KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14362": {
+    "name": "002 Sirene_A01U1F6AKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "03/040 "
+  },
+  "14376": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F6DKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.15/16 "
+  },
+  "14384": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1F6FKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.19/20 "
+  },
+  "14392": {
+    "name": "1xUP-SD_ SchuKo_A01U1F6HKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "1439E": {
+    "name": "1xAP-SD_ SchuKo_A01U1F8JKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 14F03 "
+  },
+  "143B5": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1F9AKH",
+      "1xAP-SD_ SchuKo_A01U1F8MKH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 14F01 "
+  },
+  "143CC": {
+    "name": "1xAP-SD_ SchuKo_A01U1F8PKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 14F02 "
+  },
+  "143E3": {
+    "name": "1xAP-SD_ SchuKo_A01U1F8SKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 13F04 "
+  },
+  "143FA": {
+    "name": "1xAP-SD_ SchuKo_A01U1F8VKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 13F03 "
+  },
+  "14411": {
+    "name": "1xAP-SD_ SchuKo_A01U1F8YKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 13F02 "
+  },
+  "14428": {
+    "name": "1xAP-SD_ SchuKo_A01U1F91KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 13F01 "
+  },
+  "1443F": {
+    "name": "AP-SD_ Drehstrom_A01U1F94KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "15F01 Staplerladestation "
+  },
+  "14459": {
+    "name": "1xAP-SD_ SchuKo_A01U1F97KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Staplerladestation 14F04 "
+  },
+  "14480": {
+    "name": "Schaltkreis_A01U1F9BKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 15F02 Staplerladestation "
+  },
+  "1448F": {
+    "name": "1xAP-SD_ SchuKo_A01U1F9EKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "144A1": {
+    "name": "Taster_ AP_ 1S_A01U1F9GKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "144B2": {
+    "name": "1xAP-SD_ SchuKo_A01U1F9HKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "144C4": {
+    "name": "Taster_ AP_ 1S_A01U1F9JKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "144D5": {
+    "name": "Ansaugstutzen RAS_A01U1F9KKH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": ""
+  },
+  "144E1": {
+    "name": "Elektroschloss_A01U1F9LKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "144F1": {
+    "name": "Elektroschloss_A01U1F9MKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "14501": {
+    "name": "Mulitnsensormelder mit integr. Sirene_A01U1F9NKH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": "03/034 "
+  },
+  "14519": {
+    "name": [
+      "Ableitung_A01U1FADKH",
+      "Rauchansaugsystem_A01U1F9QKH",
+      "Ableitung_A01U1FAEKH"
+    ],
+    "layer": "ADE_ET_BMA_RAS",
+    "txt": "RAS 03/018 "
+  },
+  "14527": {
+    "name": "Netzteil inkl. Akku_A01U1F9SKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": ""
+  },
+  "14554": {
+    "name": "Auslass 230 V_A01U1F9TKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "RAS 22F02 "
+  },
+  "14565": {
+    "name": "Ansaugstutzen RAS_A01U1FABKH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": ""
+  },
+  "14571": {
+    "name": "Elektroschloss_A01U1FACKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "145BF": {
+    "name": "Leitung_A01U1FAFKH",
+    "layer": "ADE_ET_BMA_RAS",
+    "txt": ""
+  },
+  "145C6": {
+    "name": "Leitung_A01U1FAGKH",
+    "layer": "ADE_ET_BMA_RAS",
+    "txt": ""
+  },
+  "145CC": {
+    "name": "Taster_ AP_ 1S_A01U1FANKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "145DD": {
+    "name": "1xAP-SD_ SchuKo_A01U1FAOKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "145F8": {
+    "name": [
+      "Auslass 400 V_A01U1FAQKH",
+      "Schaltkreis_A01U1FARKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A 24F02 VENT "
+  },
+  "14607": {
+    "name": "1xAP-SD_ SchuKo_A01U1FAUKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "14619": {
+    "name": "Taster_ AP_ 1S_A01U1FAWKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "1462A": {
+    "name": "Geräteanschluß 230 V_A01U1FB1KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sprinklerzentrale 22F01 "
+  },
+  "1463B": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FB4KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Sprinklerzentrale 03/024 "
+  },
+  "1464E": {
+    "name": "Druckknopfmelder_A01U1FB7KH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/023 "
+  },
+  "1465E": {
+    "name": "Mulitnsensormelder mit integr. Sirene_A01U1FB9KH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": "03/025 "
+  },
+  "14676": {
+    "name": "002 Sirene_A01U1FBBKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "03/035 "
+  },
+  "14684": {
+    "name": "Taster_ AP_ 1S_A01U1FBGKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14695": {
+    "name": "1xAP-SD_ SchuKo_A01U1FBHKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "146A7": {
+    "name": "Druckknopfmelder_A01U1FBJKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "03/032 "
+  },
+  "146FB": {
+    "name": [
+      "069 Multisensormelder (Kombination RMO WMD)_A01U1FBLKH",
+      "Schaltkreis_A01U1FBMKH"
+    ],
+    "layer": "ADE_ET_BMA_Brandmelder-ZWD",
+    "txt": "ZWB 03/033 "
+  },
+  "14705": {
+    "name": "RJ-45-Datendose 2-fach_ AP_A01U1FBRKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 14.18/19 "
+  },
+  "14714": {
+    "name": "Elektroschloss_A01U1FBTKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": ""
+  },
+  "14724": {
+    "name": "1xAP-SD_ SchuKo_A01U1FBUKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "14736": {
+    "name": "Druckknopfmelder_A01U1FBWKH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "04/001 "
+  },
+  "14746": {
+    "name": "Taster_ AP_ 1S_A01U1FBYKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14757": {
+    "name": "Mulitnsensormelder mit integr. Sirene_A01U1FBZKH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": "04/003 "
+  },
+  "147B3": {
+    "name": [
+      "069 Multisensormelder (Kombination RMO WMD)_A01U1FC4KH",
+      "Schaltkreis_A01U1FC5KH"
+    ],
+    "layer": "ADE_ET_BMA_Brandmelder-ZWD",
+    "txt": "ZWB 04/002 "
+  },
+  "147CD": {
+    "name": "Schaltkreis_A01U1FC8KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F02 "
+  },
+  "147E7": {
+    "name": "Schaltkreis_A01U1FCBKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F03 "
+  },
+  "147F1": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FCDKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.03/04 "
+  },
+  "147FF": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FCFKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.05/06 "
+  },
+  "1480D": {
+    "name": "1xAP-SD_ SchuKo_A01U1FCHKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Prüfstand 6206 11F01 "
+  },
+  "14824": {
+    "name": "1xAP-SD_ SchuKo_A01U1FCKKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "Prüfstand 6206 11F02 "
+  },
+  "1483B": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FCNKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.13/14 "
+  },
+  "14849": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FCPKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.15/16 "
+  },
+  "14867": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1FCRKH",
+      "Schaltkreis_A01U1FCSKH",
+      "AP-SD_ Drehstrom_A01U1FCVKH",
+      "AP-SD_ Drehstrom_A01U1FD1KH",
+      "AP-SD_ Drehstrom_A01U1FD4KH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A Prüfstand APL 3333 14F01 "
+  },
+  "14886": {
+    "name": "Schaltkreis_A01U1FCWKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A Prüfstand APL 3333 14F02 "
+  },
+  "14895": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FCZKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.11/12 "
+  },
+  "148B3": {
+    "name": "Schaltkreis_A01U1FD2KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "32A 15F02 "
+  },
+  "148CD": {
+    "name": "Schaltkreis_A01U1FD5KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "32A 15F01 "
+  },
+  "148D7": {
+    "name": "Polygon_A01U1FD7KH",
+    "layer": "ADE_ET_Allg_TXT",
+    "txt": "an bauseitiger Stahlunterkonstruktion"
+  },
+  "148E7": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FD8KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Alarm BT5.1 03/026 "
+  },
+  "148FA": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FDBKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Alarm BT5.1 03/028 "
+  },
+  "1490D": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FDEKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Alarm BT5.1 03/029 "
+  },
+  "14920": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FDHKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/030 Alarm BT5.1 "
+  },
+  "14933": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FDKKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Alarm BT5.1 03/027 "
+  },
+  "14946": {
+    "name": "Leitung_A01U1FDNKH",
+    "layer": "ADE_ET_BMA_RAS",
+    "txt": ""
+  },
+  "1494F": {
+    "name": "Leitung_A01U1FDOKH",
+    "layer": "ADE_ET_BMA_RAS",
+    "txt": ""
+  },
+  "1499F": {
+    "name": "Taster_ Zugangskontrolle_A01U1FF9KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brückenkran 2t 1,5 m "
+  },
+  "149B3": {
+    "name": "Taster_ Zugangskontrolle_A01U1FFCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Leichtkran 1t 1,5 m "
+  },
+  "149C7": {
+    "name": "Taster_ Zugangskontrolle_A01U1FFFKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Leichtkran 1t 1,5 m "
+  },
+  "149DB": {
+    "name": "Taster_ Zugangskontrolle_A01U1FFOKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Leichtkran 1t 1,5 m "
+  },
+  "149EF": {
+    "name": "Taster_ Zugangskontrolle_A01U1FFRKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "1,5 m Brückenkran 5t "
+  },
+  "14A03": {
+    "name": "Taster_ Zugangskontrolle_A01U1FFUKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "1,5 m Brückenkran 5t "
+  },
+  "14A17": {
+    "name": "Taster_ Zugangskontrolle_A01U1FFXKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Leichtkran 1t 1,5 m "
+  },
+  "14A2B": {
+    "name": "Taster_ Zugangskontrolle_A01U1FG0KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brückenkran 5t 1,5 m "
+  },
+  "14A3F": {
+    "name": "Taster_ Zugangskontrolle_A01U1FG3KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brückenkran 10t 1,5 m "
+  },
+  "14A53": {
+    "name": "Taster_ Zugangskontrolle_A01U1FG6KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brückenkran 5t 1,5 m "
+  },
+  "14A67": {
+    "name": "Taster_ Zugangskontrolle_A01U1FG9KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brückenkran 5t 1,5 m "
+  },
+  "14A7B": {
+    "name": "Taster_ Zugangskontrolle_A01U1FGCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Wandlaufkran 5t 1,5 m "
+  },
+  "14A8F": {
+    "name": "Auslass 400 V_A01U1FGFKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "1F5 Wandlaufkran 5t "
+  },
+  "14AA2": {
+    "name": "Taster_ Zugangskontrolle_A01U1FGIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brückenkran 10t 1,5 m "
+  },
+  "14AB6": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FGLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.04/05 in VT "
+  },
+  "14ACA": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FGOKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 12.19/20 "
+  },
+  "14ADE": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FGRKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 18.21/22 "
+  },
+  "14AF2": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FH0KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 12.15/16 "
+  },
+  "14B06": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FH3KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 12.13/14 "
+  },
+  "14B1A": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FH6KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 18.23/24 "
+  },
+  "14B2E": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FH9KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 20.05/06 "
+  },
+  "14B42": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FHCKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 20.07/08 "
+  },
+  "14B69": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FHOKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 04/008 ISP "
+  },
+  "14B7C": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FHRKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR ISP 03/020 "
+  },
+  "14B8F": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FHUKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR ISP 05/014 "
+  },
+  "14BA2": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FHXKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 18.23/24 in VT "
+  },
+  "14BB6": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1FI0KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 in VT 12.17/18 "
+  },
+  "14BCA": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1FI3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 22.13 an KT "
+  },
+  "14BDE": {
+    "name": "Auslass 400 V_A01U1FI6KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "VEN 23F01 "
+  },
+  "14BF1": {
+    "name": "Schaltkreis_A01U1FI9KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A "
+  },
+  "14BF6": {
+    "name": "optisch akustischer Signalgeber_A01U1FIAKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S009/1 an KT "
+  },
+  "14C0D": {
+    "name": "optisch akustischer Signalgeber_A01U1FIDKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S009/2 an KT "
+  },
+  "14C24": {
+    "name": "optisch akustischer Signalgeber_A01U1FIGKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S009/3 an KT "
+  },
+  "14C48": {
+    "name": [
+      "optisch akustischer Signalgeber_A01U1FIJKH",
+      "Schaltkreis_A01U1FIKKH"
+    ],
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/6 "
+  },
+  "14C4D": {
+    "name": "Schaltkreis_A01U1FILKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "an KT "
+  },
+  "14C52": {
+    "name": "optisch akustischer Signalgeber_A01U1FIMKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/5 an KT "
+  },
+  "14C69": {
+    "name": "optisch akustischer Signalgeber_A01U1FIPKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S001/1 an KT "
+  },
+  "14C80": {
+    "name": "optisch akustischer Signalgeber_A01U1FISKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S001/2 an KT "
+  },
+  "14C97": {
+    "name": "optisch akustischer Signalgeber_A01U1FIVKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S006/1 4 m "
+  },
+  "14CAE": {
+    "name": "optisch akustischer Signalgeber_A01U1FIYKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S009/2 4 m "
+  },
+  "14CC5": {
+    "name": "optisch akustischer Signalgeber_A01U1FJ1KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S009/1 an KT "
+  },
+  "14CDC": {
+    "name": "optisch akustischer Signalgeber_A01U1FJ4KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S009/3 an KT "
+  },
+  "14CF3": {
+    "name": "optisch akustischer Signalgeber_A01U1FJ7KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "5,7 m S037/2 an KT "
+  },
+  "14D0F": {
+    "name": "optisch akustischer Signalgeber_A01U1FJBKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S037/1 an KT "
+  },
+  "14D26": {
+    "name": "optisch akustischer Signalgeber_A01U1FJEKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S021/3 an KT "
+  },
+  "14D3D": {
+    "name": "optisch akustischer Signalgeber_A01U1FJHKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S022/2 an KT "
+  },
+  "14D54": {
+    "name": "optisch akustischer Signalgeber_A01U1FJKKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S021/1 an KT "
+  },
+  "14D6B": {
+    "name": "optisch akustischer Signalgeber_A01U1FJNKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/5 an KT "
+  },
+  "14D82": {
+    "name": "optisch akustischer Signalgeber_A01U1FJQKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/4 an KT "
+  },
+  "14D99": {
+    "name": "optisch akustischer Signalgeber_A01U1FJTKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/3 an KT "
+  },
+  "14DB0": {
+    "name": "optisch akustischer Signalgeber_A01U1FJWKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S012/1 4 m "
+  },
+  "14DC7": {
+    "name": "optisch akustischer Signalgeber_A01U1FJZKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S002/2 an KT "
+  },
+  "14DDE": {
+    "name": "optisch akustischer Signalgeber_A01U1FK2KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S002/1 4 m "
+  },
+  "14DF5": {
+    "name": "optisch akustischer Signalgeber_A01U1FK5KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S006/2 an KT "
+  },
+  "14E15": {
+    "name": [
+      "Auslass 400 V_A01U1FK8KH",
+      "Schaltkreis_A01U1FK9KH",
+      "Auslass 400 V_A01U1GDCKH",
+      "Auslass 400 V_A01U1GDGKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A DLE 23F03 "
+  },
+  "14E24": {
+    "name": "Auslass 230 V_A01U1FKFKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 20F02 "
+  },
+  "14E35": {
+    "name": "Auslass 400 V_A01U1FKIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "DLE 23F01 "
+  },
+  "14E48": {
+    "name": "Schaltkreis_A01U1FKLKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A "
+  },
+  "14E4D": {
+    "name": "Auslass 230 V_A01U1FKMKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F02 Armatur "
+  },
+  "14E5E": {
+    "name": "Präsenzmelder UP 360°_A01U1FKSKH",
+    "layer": "ADE_ET_NSV_BWM",
+    "txt": ""
+  },
+  "14E7B": {
+    "name": "Präsenzmelder UP 360°_A01U1FKTKH",
+    "layer": "ADE_ET_NSV_BWM",
+    "txt": ""
+  },
+  "14E98": {
+    "name": "002 Sirene_A01U1FKUKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "05/005 "
+  },
+  "14EA6": {
+    "name": "1xUP-SD_ SchuKo_A01U1FKWKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "14EB2": {
+    "name": "002 Sirene_A01U1FL1KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "05/004 "
+  },
+  "14EC0": {
+    "name": "1xUP-SD_ SchuKo_A01U1FL9KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "14ECC": {
+    "name": "Auslass 230 V_A01U1FLBKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Urinal 20F04 "
+  },
+  "14EDD": {
+    "name": "Auslass 230 V_A01U1FLEKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 20F02 "
+  },
+  "14EEE": {
+    "name": "Präsenzmelder UP 360°_A01U1FLHKH",
+    "layer": "ADE_ET_NSV_BWM",
+    "txt": ""
+  },
+  "14F0B": {
+    "name": "Auslass 230 V_A01U1FLIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Urinal 20F04 "
+  },
+  "14F1C": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FLLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.01/02 "
+  },
+  "14F2A": {
+    "name": "1xUP-SD_ SchuKo_A01U1FLNKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "14F36": {
+    "name": "3xUP-SD_ SchuKo_A01U1FLPKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "14F44": {
+    "name": "Taster_ UP_ 1S_A01U1FLRKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "14F4A": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FLSKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.20/21 "
+  },
+  "14F58": {
+    "name": "3xUP-SD_ SchuKo_A01U1FLUKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "14F66": {
+    "name": "002 Sirene_A01U1FLWKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "05/003 "
+  },
+  "14F74": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FLYKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 20.03/04 "
+  },
+  "14F82": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FM0KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.22/23 "
+  },
+  "14F90": {
+    "name": "3xUP-SD_ SchuKo_A01U1FM2KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "14F9E": {
+    "name": "3xUP-SD_ SchuKo_A01U1FM4KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "14FAC": {
+    "name": "optisch akustischer Signalgeber_A01U1FM6KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S001/4 4 m "
+  },
+  "14FC3": {
+    "name": "optisch akustischer Signalgeber_A01U1FM9KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/4 an KT "
+  },
+  "14FDA": {
+    "name": "optisch akustischer Signalgeber_A01U1FMFKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S013/1 4 m "
+  },
+  "14FF1": {
+    "name": "optisch akustischer Signalgeber_A01U1FMIKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S037/3 4 m "
+  },
+  "15008": {
+    "name": "optisch akustischer Signalgeber_A01U1FMLKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "4 m S013/2 "
+  },
+  "1501F": {
+    "name": "optisch akustischer Signalgeber_A01U1FMOKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S038/1 4 m "
+  },
+  "15036": {
+    "name": "optisch akustischer Signalgeber_A01U1FMRKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S038/2 an KT "
+  },
+  "1504D": {
+    "name": "optisch akustischer Signalgeber_A01U1FMUKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "4 m S006/4 "
+  },
+  "15064": {
+    "name": "optisch akustischer Signalgeber_A01U1FMXKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S029/2 an KT "
+  },
+  "1507B": {
+    "name": "optisch akustischer Signalgeber_A01U1FN0KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S006/3 4 m "
+  },
+  "15092": {
+    "name": "optisch akustischer Signalgeber_A01U1FN3KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "4 m S012/1 "
+  },
+  "150A9": {
+    "name": "optisch akustischer Signalgeber_A01U1FN6KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/2 an KT "
+  },
+  "150C0": {
+    "name": "optisch akustischer Signalgeber_A01U1FN9KH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "4 m S029/3 "
+  },
+  "150D7": {
+    "name": "optisch akustischer Signalgeber_A01U1FNCKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S012/3 an KT "
+  },
+  "150EE": {
+    "name": "optisch akustischer Signalgeber_A01U1FNFKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S020/2 an KT "
+  },
+  "15105": {
+    "name": "optisch akustischer Signalgeber_A01U1FNIKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S029/1 an KT "
+  },
+  "1511C": {
+    "name": "optisch akustischer Signalgeber_A01U1FNLKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S029/4 an KT "
+  },
+  "15133": {
+    "name": "optisch akustischer Signalgeber_A01U1FNOKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S023/2 an KT "
+  },
+  "1514A": {
+    "name": "optisch akustischer Signalgeber_A01U1FNRKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S023/1 an KT "
+  },
+  "15161": {
+    "name": "optisch akustischer Signalgeber_A01U1FNUKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S048/2 an KT "
+  },
+  "15178": {
+    "name": "optisch akustischer Signalgeber_A01U1FNXKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S048/1 an KT "
+  },
+  "1518F": {
+    "name": "optisch akustischer Signalgeber_A01U1FO0KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "an KT S048/3 "
+  },
+  "151A6": {
+    "name": "optisch akustischer Signalgeber_A01U1FO3KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "an KT S038/4 "
+  },
+  "151BD": {
+    "name": "optisch akustischer Signalgeber_A01U1FO6KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S038/3 an KT "
+  },
+  "151D4": {
+    "name": "optisch akustischer Signalgeber_A01U1FO9KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S020/1 an KT "
+  },
+  "151EB": {
+    "name": "optisch akustischer Signalgeber_A01U1FOCKH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "S020/3 an KT "
+  },
+  "15202": {
+    "name": "optisch akustischer Signalgeber_A01U1FOFKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "4 m S029/5 "
+  },
+  "15219": {
+    "name": "optisch akustischer Signalgeber_A01U1FOIKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S029/6 4 m "
+  },
+  "15230": {
+    "name": "optisch akustischer Signalgeber_A01U1FOLKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S001/3 4 m "
+  },
+  "15247": {
+    "name": "optisch akustischer Signalgeber_A01U1FPXKH",
+    "layer": "ADE_ET_BMA_Sirene-W",
+    "txt": "S012/2 4 m "
+  },
+  "15267": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FQZKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR Löschwasserbarriere "
+  },
+  "15275": {
+    "name": "Warnschild_A01U1FR6KH",
+    "layer": "ADE_ET_BMA_Sirene-D",
+    "txt": "W017/1 "
+  },
+  "15293": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FR9KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR 03/017 Warnschild "
+  },
+  "152A6": {
+    "name": "Auslass 230 V_A01U1FRCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F02 Warnschild "
+  },
+  "152B7": {
+    "name": "Kartenleser Zutritt Anlage_A01U1FSRKH",
+    "layer": "ADE_ET_ZKS_Leser",
+    "txt": "ZKS07 "
+  },
+  "152D8": {
+    "name": [
+      "Auslass 400 V_A01U1GD8KH",
+      "Auslass 230 V_A01U1FTWKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F03 Armatur "
+  },
+  "152E9": {
+    "name": "Ansaugstutzen RAS_A01U1FURKH",
+    "layer": "ADE_ET_BMA_Brandmelder-D",
+    "txt": ""
+  },
+  "152F5": {
+    "name": "Blitzleuchte_A01U1FV0KH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": ""
+  },
+  "15316": {
+    "name": "Geräteanschluß 230 V_A01U1FVDKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F01 Einspeisung KSS "
+  },
+  "15327": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1FVGKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 24.17/18 "
+  },
+  "15335": {
+    "name": "Polygon_A01U1FVJKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": ""
+  },
+  "15348": {
+    "name": "Polygon_A01U1FVLKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": ""
+  },
+  "15351": {
+    "name": "Polygon_A01U1FVMKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": ""
+  },
+  "1536C": {
+    "name": "Auslass 230 V_A01U1FVUKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ULK 20F01 "
+  },
+  "153BD": {
+    "name": "Bus-Steuerkoppler BMA (I_O)_A01U1FWLKH",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "STR SiBe 03/007 "
+  },
+  "153D0": {
+    "name": "Geräteanschluß 400 V_A01U1FWOKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "SiBe Zentrale 1F7 "
+  },
+  "153E3": {
+    "name": "Auslass 400 V_A01U1FWRKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Schaltschrank Langgutanlage xxFxx "
+  },
+  "153F6": {
+    "name": "Auslass 400 V_A01U1FWUKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Schaltschrank Sägezelle "
+  },
+  "15409": {
+    "name": "Auslass 400 V_A01U1FWXKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Nasstrennschleifer "
+  },
+  "1541C": {
+    "name": "Auslass 400 V_A01U1FX0KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Säge 3 "
+  },
+  "1542F": {
+    "name": "Auslass 400 V_A01U1FX3KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Säge 1 "
+  },
+  "15442": {
+    "name": "Auslass 400 V_A01U1FX6KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Säge 2 "
+  },
+  "15455": {
+    "name": "Auslass 400 V_A01U1FX9KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Säge 4 "
+  },
+  "15468": {
+    "name": "Auslass 400 V_A01U1FXCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "xxFxx Anfasmaschine "
+  },
+  "1597E": {
+    "name": "Taster_ AP_ 1S_A01U1G1PKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "159AA": {
+    "name": "Taster_ AP_ 1S_A01U1G1TKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "159C0": {
+    "name": "Taster_ AP_ 1S_A01U1G1VKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "159EC": {
+    "name": [
+      "Taster_ UP_ 1S_A01U1F6CKH",
+      "Taster_ AP_ 1S_A01U1G1ZKH"
+    ],
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A02": {
+    "name": "Taster_ AP_ 1S_A01U1G21KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A18": {
+    "name": [
+      "Taster_ UP_ 1S_A01U1F14KH",
+      "Taster_ AP_ 1S_A01U1G23KH"
+    ],
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A2E": {
+    "name": "Taster_ AP_ 1S_A01U1G25KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A44": {
+    "name": "Taster_ AP_ 1S_A01U1G27KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A5A": {
+    "name": "Taster_ AP_ 1S_A01U1G29KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A70": {
+    "name": "Taster_ AP_ 1S_A01U1G2BKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A86": {
+    "name": "Taster_ AP_ 1S_A01U1G2DKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15A9C": {
+    "name": "Taster_ AP_ 1S_A01U1G2FKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15AB2": {
+    "name": "Taster_ AP_ 1S_A01U1G2HKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15AC8": {
+    "name": "Taster_ AP_ 1S_A01U1G2JKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": "WS "
+  },
+  "15ADE": {
+    "name": "Auslass 230 V_A01U1G2LKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Spülstation 20F05 "
+  },
+  "16011": {
+    "name": "Auslass 230 V_A01U1G7NKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F03 Armatur "
+  },
+  "16022": {
+    "name": "Auslass 230 V_A01U1G7QKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F03 Armatur "
+  },
+  "16033": {
+    "name": [
+      "Auslass 400 V_A01U1G7WKH",
+      "Auslass 230 V_A01U1G7TKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 21F01 "
+  },
+  "1604D": {
+    "name": "Schaltkreis_A01U1G7XKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A DLE 24F04 "
+  },
+  "1605C": {
+    "name": "Auslass 230 V_A01U1G80KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F02 Urinal "
+  },
+  "1606D": {
+    "name": "Auslass 400 V_A01U1G8DKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "VEN 23F02 "
+  },
+  "16080": {
+    "name": "Schaltkreis_A01U1G8GKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A "
+  },
+  "16085": {
+    "name": "Auslass 230 V_A01U1G8HKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "ULK BG61 20F01 "
+  },
+  "1609F": {
+    "name": [
+      "Auslass 400 V_A01U1G8NKH",
+      "Schaltkreis_A01U1G8OKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A 24F01 VENT "
+  },
+  "160B7": {
+    "name": "Schaltkreis_A01U1GD5KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A DLE 24F02 "
+  },
+  "160CF": {
+    "name": "Schaltkreis_A01U1GD9KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A DLE 24F01 "
+  },
+  "160E7": {
+    "name": "Schaltkreis_A01U1GDDKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "32A 24F01 DLE "
+  },
+  "160FF": {
+    "name": "Schaltkreis_A01U1GDHKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A 23F02 DLE "
+  },
+  "1610E": {
+    "name": "Auslass 230 V_A01U1GDNKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "E-Heizkorper 21F01 "
+  },
+  "16159": {
+    "name": [
+      "AP-SD_ Drehstrom_A01U1GG4KH",
+      "Schaltkreis_A01U1GG5KH"
+    ],
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A 12F01 "
+  },
+  "1617D": {
+    "name": "3xUP-SD_ SchuKo_A01U1GHLKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F04 "
+  },
+  "1618B": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1GHNKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.07/08 "
+  },
+  "16199": {
+    "name": "3xUP-SD_ SchuKo_A01U1GHPKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "161A7": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1GHRKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.09/10 "
+  },
+  "161B5": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1GHTKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.11/12 "
+  },
+  "161C3": {
+    "name": "3xUP-SD_ SchuKo_A01U1GHVKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F01 "
+  },
+  "161D1": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1GHXKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.05/06 "
+  },
+  "161DF": {
+    "name": "3xUP-SD_ SchuKo_A01U1GHZKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F03 "
+  },
+  "161ED": {
+    "name": "3xUP-SD_ SchuKo_A01U1GI1KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F02 "
+  },
+  "161FB": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1GI3KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.01/02 "
+  },
+  "16209": {
+    "name": "1xAP-SD_ SchuKo_A01U1GI5KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "12F03 "
+  },
+  "1621B": {
+    "name": "1xAP-SD_ SchuKo_A01U1GI7KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "12F01 "
+  },
+  "1622D": {
+    "name": "1xAP-SD_ SchuKo_A01U1GI9KH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "12F02 "
+  },
+  "16248": {
+    "name": "Schaltkreis_A01U1GICKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A 22F01 "
+  },
+  "1625B": {
+    "name": [
+      "Auslass 400 V_A01U1GIEKH",
+      "Schaltkreis_A01U1GIFKH"
+    ],
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A 22F02 "
+  },
+  "16265": {
+    "name": "RJ-45-Datendose 2-fach_ UP_A01U1GIHKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 22.03/04 "
+  },
+  "16273": {
+    "name": "3xUP-SD_ SchuKo_A01U1GIJKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "11F03 "
+  },
+  "16281": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GMYKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 18.21 WLAN/an Wand "
+  },
+  "16295": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1GNWKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 Infoscreen 16.04/05 "
+  },
+  "162A9": {
+    "name": "2xAP-SD_ SchuKo_A01U1GNZKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Infoscreen 11F06 "
+  },
+  "162C7": {
+    "name": "2xAP-SD_ SchuKo_A01U1GO2KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "11F06 Infoscreen "
+  },
+  "162E5": {
+    "name": "RJ45-Steckdose_ AP_A01U1GO5KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 Infoscreen 12.23/24 "
+  },
+  "162F9": {
+    "name": "2xRJ45-Steckdose_ AP_A01U1GOEKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "2x RJ 45 Zeiterfassung 16.11/12 "
+  },
+  "1630D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GOHKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/an KT 10.22 "
+  },
+  "16321": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GOKKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/Reserve/an KT 10.06 "
+  },
+  "16335": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GONKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.14 WLAN/an KT "
+  },
+  "16349": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GOQKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.16 WLAN/an LS "
+  },
+  "1635D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GP9KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/an Wand 18.20 "
+  },
+  "16371": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GPCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.20 WLAN/an KT "
+  },
+  "16385": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GPFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.13 WLAN/an KT "
+  },
+  "16399": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GPIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/ Aussen/an KT 14.20 "
+  },
+  "163AD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GPRKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.15 WLAN/an KT "
+  },
+  "163C1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GPUKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.13 WLAN/an KT "
+  },
+  "163D5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GPXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.15 WLAN/an KT "
+  },
+  "163E9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQ0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.11 WLAN/an KT "
+  },
+  "163FD": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQ3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.23 WLAN/an KT "
+  },
+  "16411": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQ6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.10 WLAN/Reserve/an KT "
+  },
+  "16425": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQ9KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.18 WLAN/an LS "
+  },
+  "16439": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQCKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.19 WLAN/an KT "
+  },
+  "1644D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQFKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 18.12 WLAN/an KT "
+  },
+  "16461": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQIKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/ Aussen/an KT 14.18 "
+  },
+  "16475": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQPKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/an KT 14.19 "
+  },
+  "16489": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQSKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 "
+  },
+  "1649D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQYKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.16 WLAN/an KT "
+  },
+  "164B1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GR1KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.10 WLAN/an KT "
+  },
+  "164C5": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GR7KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/an Wand 18.14 "
+  },
+  "164D9": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GRAKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/ Aussen/an KT 24.24 "
+  },
+  "164ED": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GRDKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.16 WLAN/Reserve/an KT "
+  },
+  "16501": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GRGKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.21 WLAN/an KT "
+  },
+  "16515": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GRJKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "16529": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GS2KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/Reserve/an Wand 10.08 "
+  },
+  "1653D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GS5KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/an KT 18.16 "
+  },
+  "16551": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GS8KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/ Aussen/an KT 18.17 "
+  },
+  "16565": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GSFKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/an Wand 24.20 4 m "
+  },
+  "1657E": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GSJKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/an Wand 18.22 3,8 m "
+  },
+  "16597": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GSXKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 24.22 WLAN/an KT "
+  },
+  "165AB": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GT0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/Reserve/an KT 14.15 "
+  },
+  "165BF": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GT3KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/an KT 10.11 "
+  },
+  "165D3": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GT9KH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 24.21 WLAN/an Wand 3,8 m "
+  },
+  "165EC": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GTDKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/Aussen/an Wand 10.23 "
+  },
+  "16600": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GTGKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.17 WLAN/an KT "
+  },
+  "16614": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GTJKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/Reserve/an KT 12.07 "
+  },
+  "16628": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GTPKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.09 WLAN/Reserve/an KT "
+  },
+  "1663C": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GTSKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/an Wand 24.19 3,8 m "
+  },
+  "16655": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GTWKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.22 WLAN/an KT "
+  },
+  "16669": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GU6KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.12 WLAN/an LS "
+  },
+  "1667D": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GUGKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.17 WLAN/an LS "
+  },
+  "166A0": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GUPKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.17 WLAN/an LS "
+  },
+  "166B4": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GUSKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/Reserve/an KT 14.14 "
+  },
+  "166C8": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GUYKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/ Aussen/an KT 24.23 "
+  },
+  "166DC": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GVAKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.18 WLAN/an KT "
+  },
+  "166F0": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GVHKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 14.21 WLAN/an KT "
+  },
+  "16704": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GVKKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 WLAN/an KT 18.18 "
+  },
+  "16718": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GVQKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 WLAN/an Wand 18.23 "
+  },
+  "1672C": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GW0KH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.05 WLAN/Reserve/an KT "
+  },
+  "16745": {
+    "name": "1xUP-SD_ SchuKo_A01U1GWDKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F02 "
+  },
+  "16751": {
+    "name": "1xAP-SD_ SchuKo_A01U1GWIKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "10F01 "
+  },
+  "16763": {
+    "name": "Taster_ AP_ 1S_A01U1GWKKH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "16774": {
+    "name": "E-Verteiler_A01U1GWOKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "1677D": {
+    "name": "E-Verteiler_A01U1GWPKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "16786": {
+    "name": "E-Verteiler_A01U1GWQKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "1678F": {
+    "name": "E-Verteiler_A01U1GWRKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "16798": {
+    "name": "E-Verteiler_A01U1GWSKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167A1": {
+    "name": "E-Verteiler_A01U1GWTKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167AB": {
+    "name": "E-Verteiler_A01U1GWUKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167B4": {
+    "name": "E-Verteiler_A01U1GWVKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167BD": {
+    "name": "E-Verteiler_A01U1GWWKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167C6": {
+    "name": "E-Verteiler_A01U1GWXKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167CF": {
+    "name": "E-Verteiler_A01U1GWYKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167D8": {
+    "name": "E-Verteiler_A01U1GWZKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167E1": {
+    "name": "E-Verteiler_A01U1GX0KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167EA": {
+    "name": "E-Verteiler_A01U1GX1KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167F3": {
+    "name": "E-Verteiler_A01U1GX2KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "167FD": {
+    "name": "Taster_ UP_ 1S_A01U1GX7KH",
+    "layer": "ADE_ET_NSV_Schalter",
+    "txt": ""
+  },
+  "16803": {
+    "name": "Steckdosenverteiler_A01U1GY1KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F8 "
+  },
+  "16CDC": {
+    "name": "Steckdosenverteiler_A01U1GY3KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F4 "
+  },
+  "171B5": {
+    "name": "Steckdosenverteiler_A01U1GY5KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F4 "
+  },
+  "1768E": {
+    "name": "Steckdosenverteiler_A01U1GY7KH",
+    "layer": "ADE_ET_NSHV_Verteiler",
+    "txt": "Typ 1 1F8 "
+  },
+  "17B67": {
+    "name": "E-Verteiler_A01U1GYGKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17B70": {
+    "name": "Polygonsäule_A01U1GYHKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17B87": {
+    "name": "Polygonsäule_A01U1GYIKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17B9E": {
+    "name": "Polygonsäule_A01U1GYJKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17BB5": {
+    "name": "Polygonsäule_A01U1GYKKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17BCC": {
+    "name": "E-Verteiler_A01U1GYLKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17BD5": {
+    "name": "Polygonsäule_A01U1GYMKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17BEC": {
+    "name": "E-Verteiler_A01U1GYNKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17BF5": {
+    "name": "Polygonsäule_A01U1GYOKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C0C": {
+    "name": "Polygonsäule_A01U1GYPKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C23": {
+    "name": "Polygonsäule_A01U1GYQKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C3A": {
+    "name": "E-Verteiler_A01U1GYRKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C43": {
+    "name": "Polygonsäule_A01U1GYSKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C5A": {
+    "name": "Polygonsäule_A01U1GYTKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C71": {
+    "name": "E-Verteiler_A01U1GYUKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C7A": {
+    "name": "Polygonsäule_A01U1GYVKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17C91": {
+    "name": "Polygonsäule_A01U1GYWKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17CA8": {
+    "name": "E-Verteiler_A01U1GYXKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17CB1": {
+    "name": "Polygonsäule_A01U1GYYKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17CC8": {
+    "name": "Polygonsäule_A01U1GYZKH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17CDF": {
+    "name": "E-Verteiler_A01U1GZ0KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17CE8": {
+    "name": "Polygonsäule_A01U1GZ1KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17CFF": {
+    "name": "Polygonsäule_A01U1GZ2KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17D16": {
+    "name": "E-Verteiler_A01U1GZ3KH",
+    "layer": "ADE_ET_NSV_Verteiler",
+    "txt": ""
+  },
+  "17D20": {
+    "name": "Auslass 230 V_A01U1H06KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 21F01 "
+  },
+  "17D42": {
+    "name": "Auslass 230 V_A01U1H0CKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 21F02 "
+  },
+  "17D64": {
+    "name": "Geräteanschluß 400 V_A01U1H0VKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Schieber WHG-Fläche xxFxx "
+  },
+  "17D77": {
+    "name": "Schaltkreis_A01U1H0YKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "16A "
+  },
+  "17D7C": {
+    "name": "Revisionswolke_A01U1H0ZKH",
+    "layer": "ADE_ET_Allg_OFFEN",
+    "txt": ""
+  },
+  "17D9B": {
+    "name": "Geräteanschluß 400 V_A01U1H10KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 23F01 "
+  },
+  "17DAE": {
+    "name": "Auslass 230 V_A01U1H13KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 21F04 "
+  },
+  "17DBF": {
+    "name": "Geräteanschluß 400 V_A01U1H16KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 23F01 "
+  },
+  "17DD2": {
+    "name": "Geräteanschluß 400 V_A01U1H19KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 23F02 "
+  },
+  "17DE5": {
+    "name": "Geräteanschluß 400 V_A01U1H1CKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 21F01 "
+  },
+  "17DF8": {
+    "name": "Auslass 230 V_A01U1H1FKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 20F02 "
+  },
+  "17E09": {
+    "name": "Geräteanschluß 400 V_A01U1H1IKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 23F03 "
+  },
+  "17E1C": {
+    "name": "Auslass 230 V_A01U1H1LKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 22F02 "
+  },
+  "17E2D": {
+    "name": "Geräteanschluß 400 V_A01U1H1OKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F03 Sektionaltor "
+  },
+  "17E40": {
+    "name": "Geräteanschluß 400 V_A01U1H1RKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F02 Sektionaltor "
+  },
+  "17E53": {
+    "name": "Auslass 230 V_A01U1H1UKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 22F03 "
+  },
+  "17E64": {
+    "name": "Auslass 230 V_A01U1H1XKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "22F01 Schnelllauftor "
+  },
+  "17E75": {
+    "name": "Auslass 230 V_A01U1H20KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F03 Schnelllauftor "
+  },
+  "17E86": {
+    "name": "Geräteanschluß 400 V_A01U1H23KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 21F01 "
+  },
+  "17E99": {
+    "name": "Geräteanschluß 400 V_A01U1H26KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Sektionaltor 22F01 "
+  },
+  "17EAC": {
+    "name": "Auslass 230 V_A01U1H29KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 21F03 "
+  },
+  "17EDF": {
+    "name": "Auslass 230 V_A01U1H2OKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F03 Brandschutztor "
+  },
+  "17EF0": {
+    "name": "Auslass 230 V_A01U1H2RKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Brandschutztor 21F02 "
+  },
+  "17F12": {
+    "name": "Auslass 230 V_A01U1H2XKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F01 Brandschutztor "
+  },
+  "17F34": {
+    "name": "1xAP-SD_ SchuKo_A01U1H9UKH",
+    "layer": "ADE_ET_NSV_Steckdose",
+    "txt": "xxFxx "
+  },
+  "17F46": {
+    "name": "Magnetkontakt_A01U1H9ZKH",
+    "layer": "Adenbeck_ET_SWS_Zuko",
+    "txt": "MGK12 "
+  },
+  "17F50": {
+    "name": "Türcontroller_A01U1HA4KH",
+    "layer": "ADE_ET_ZKS_Türsteuereinheit",
+    "txt": "TCT GAM12 "
+  },
+  "17F60": {
+    "name": "Druckknopfmelder_A01U1HA6KH",
+    "layer": "ADE_ET_BMA_Brandmelder-W",
+    "txt": "05/008 "
+  },
+  "17F70": {
+    "name": "Auslass 230 V_A01U1HAAKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "22F05 RWA "
+  },
+  "17F81": {
+    "name": "RWA-Zentrale_A01U1HADKH",
+    "layer": "ADE_ET_RWA_Zentrale",
+    "txt": "RWA-Z "
+  },
+  "17F8A": {
+    "name": "RWA-Taster_A01U1HAEKH",
+    "layer": "ADE_ET_RWA_Taster",
+    "txt": ""
+  },
+  "17FAC": {
+    "name": "FIZ",
+    "layer": "ADE_ET_BMA_Peripherie",
+    "txt": "FIZ "
+  },
+  "17FB2": {
+    "name": "Zentralbedientableau RWA_A01U1HAFKH",
+    "layer": "ADE_ET_RWA_Zentralbedientableau",
+    "txt": ""
+  },
+  "17FC1": {
+    "name": "Auslass 230 V_A01U1HAGKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "26F04 RWA "
+  },
+  "17FD2": {
+    "name": "Auslass 230 V_A01U1HBFKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "21F04 Armatur "
+  },
+  "17FE3": {
+    "name": "Auslass 400 V_A01U1HBIKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "23F03 "
+  },
+  "17FF1": {
+    "name": "Schaltkreis_A01U1HBKKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "16A DLE "
+  },
+  "1800A": {
+    "name": "Auslass 230 V_A01U1HBUKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 20F02 "
+  },
+  "1801B": {
+    "name": "Auslass 230 V_A01U1HBXKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 20F02 "
+  },
+  "1802C": {
+    "name": "Auslass 400 V_A01U1HC0KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "24F01 "
+  },
+  "1803A": {
+    "name": "Schaltkreis_A01U1HC2KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "32A DLE "
+  },
+  "18044": {
+    "name": "Auslass 230 V_A01U1HC4KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 21F04 "
+  },
+  "18055": {
+    "name": "Auslass 230 V_A01U1HC7KH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "Armatur 21F04 "
+  },
+  "18066": {
+    "name": "Auslass 400 V_A01U1HCAKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "25F01 "
+  },
+  "18074": {
+    "name": "Schaltkreis_A01U1HCCKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "32A DLE "
+  },
+  "1807E": {
+    "name": "Auslass 230 V_A01U1HCEKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F03 Armatur "
+  },
+  "1808F": {
+    "name": "Auslass 230 V_A01U1HCHKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F03 Armatur "
+  },
+  "180A0": {
+    "name": "Auslass 230 V_A01U1HCKKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": "20F03 Armatur "
+  },
+  "180B1": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1HGKKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 10.04 WLAN/Reserve/an KT "
+  },
+  "180C5": {
+    "name": "Verteiler AV-SV_A01U1C4PKH",
+    "layer": "ADE_ET_Verteiler_SV",
+    "txt": ""
+  },
+  "1810B": {
+    "name": "Auslass 400 V_A01U1GIEKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": ""
+  },
+  "1810C": {
+    "name": "Auslass 400 V_A01U1GIEKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": ""
+  },
+  "1810D": {
+    "name": "Auslass 400 V_A01U1GIEKH",
+    "layer": "ADE_ET_NSV_Anschluss",
+    "txt": ""
+  },
+  "1810E": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 "
+  },
+  "18110": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 "
+  },
+  "18113": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1D4FKH",
+    "layer": "ADE_ET_EDV_Dose-D",
+    "txt": "RJ 45 "
+  },
+  "18116": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18120": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18121": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18122": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18123": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18124": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18125": {
+    "name": "RJ-45-Datendose 1-fach_ AP_A01U1GQLKH",
+    "layer": "ADE_ET_EDV_Dose-W",
+    "txt": "RJ 45 "
+  },
+  "18488": {
+    "name": "_Oblique",
+    "layer": "ADE_ET_BEL_BEM",
+    "txt": "1,53"
+  },
+  "1848C": {
+    "name": "_Oblique",
+    "layer": "ADE_ET_BEL_BEM",
+    "txt": "1,83"
+  },
+  "18490": {
+    "name": "_Oblique",
+    "layer": "ADE_ET_BEL_BEM",
+    "txt": "1,43"
+  },
+  "3004C": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Polygon_A01KSW3SXE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "3005C": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Pfeil_A01KSW3TXE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "30068": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Bauteilbeschriftung_A01KSW3WXE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": "EV 51_00.6 "
+  },
+  "30072": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Pfeil_A01KSW3XXE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "3007E": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Polygon_A01KSW3YXE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "3008B": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Bauteilbeschriftung_A01KSW40XE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": "EV 51_00.5 "
+  },
+  "30095": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Pfeil_A01KSW41XE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "300A0": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Pfeil_A01KSW42XE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "300AB": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Polygon_A01KSW44XE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_NSV_VTB",
+    "txt": ""
+  },
+  "300BF": {
+    "name": "XREF-ADE-ET-UVT-E0$0$Polygon_A01KSW45XE",
+    "layer": "XREF-ADE-ET-UVT-E0$0$ADE_ET_EDV_VTB",
+    "txt": ""
+  },
+  "308BE": {
+    "name": "XREF-ADE_Allg_EG_KOM-DSP$0$Revisionswolke_A01U581Y4P",
+    "layer": "XREF-ADE_Allg_EG_KOM-DSP$0$ADE_Allg_Kommentierung-DSP",
+    "txt": ""
+  },
+  "3091C": {
+    "name": "XREF-ADE_Allg_EG_KOM-DSP$0$Revisionswolke_A01U581Z4P",
+    "layer": "XREF-ADE_Allg_EG_KOM-DSP$0$ADE_Allg_Kommentierung-DSP",
+    "txt": ""
+  },
+  "30978": {
+    "name": "XREF-ADE_Allg_EG_KOM-DSP$0$Revisionswolke_A01U58204P",
+    "layer": "XREF-ADE_Allg_EG_KOM-DSP$0$ADE_Allg_Kommentierung-DSP",
+    "txt": ""
+  },
+  "309B2": {
+    "name": "XREF-ADE_Allg_EG_KOM-DSP$0$Revisionswolke_A01U58224P",
+    "layer": "XREF-ADE_Allg_EG_KOM-DSP$0$ADE_Allg_Kommentierung-DSP",
+    "txt": ""
+  },
+  "30AA7": {
+    "name": "*E5118",
+    "layer": "E-Deckenspiegel",
+    "txt": "Deckenraster 625x625mm Zwischendecke H=2,6m Raumhöhe H=3m "
+  },
+  "52595": {
+    "name": "*E5120",
+    "layer": "0",
+    "txt": "I5 "
+  },
+  "525AC": {
+    "name": "*E5121",
+    "layer": "0",
+    "txt": "I5 "
+  },
+  "2192": {
+    "name": "Schaltkreis_A01KSZC9XE",
+    "layer": "ADE_ET_SIBE_Wand-TXT",
+    "txt": "US03-2-01-03 "
+  },
+  "7ACF": {
+    "name": "Schaltkreis_A01KT172XE",
+    "layer": "ADE_ET_SIBE_Wand-TXT",
+    "txt": "US03-2-02-03 "
+  },
+  "7CE7": {
+    "name": "Schaltkreis_A01KT1O9XE",
+    "layer": "ADE_ET_BEL_Wand-TXT",
+    "txt": "B11 02F01 "
+  },
+  "7CF1": {
+    "name": "Schaltkreis_A01KT1OCXE",
+    "layer": "ADE_ET_BEL_Wand-TXT",
+    "txt": "B11 02F01 "
+  },
+  "7D23": {
+    "name": "Schaltkreis_A01KT1OGXE",
+    "layer": "ADE_ET_BEL_Wand-TXT",
+    "txt": "B11 02F02 "
+  },
+  "7D2D": {
+    "name": "Schaltkreis_A01KT1OJXE",
+    "layer": "ADE_ET_BEL_Wand-TXT",
+    "txt": "B11 02F02 "
+  },
+  "12CA4": {
+    "name": "Schaltkreis_A01U1DCLKH",
+    "layer": "ADE_ET_BMA_Peripherie-TXT",
+    "txt": "Brandschutztor "
+  },
+  "16493": {
+    "name": "Schaltkreis_A01U1GQTKH",
+    "layer": "ADE_ET_EDV_Dose-W-TXT",
+    "txt": "WLAN/an KT 14.15 "
+  },
+  "1651F": {
+    "name": "Schaltkreis_A01U1GRKKH",
+    "layer": "ADE_ET_EDV_Dose-D-TXT",
+    "txt": "WLAN/ Aussen 18.19 "
+  }
+}

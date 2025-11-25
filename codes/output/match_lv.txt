@@ -1,0 +1,62 @@
+002 Sirene 
+069 Multisensormelder (Kombination RMO WMD)-ZWB
+A1_LED_38_W
+Ableitung_RAS
+Anschluss_230V_1_polig
+Anschluss_230_1_polig
+Anschluss_400V_1_polig
+Anschluss_400V_3_polig
+Anschluss_400_1_polig
+B11-BEL_Decke
+B12-BEL_Decke
+B13-BEL_Decke
+B14-BEL_Decke
+B16-BEL_Decke
+B17-BEL_Decke
+B2-BEL_Decke
+B30-BEL_Decke
+Bus_Steuerkoppler_BMA_(I_O)
+Druckknopfmelder
+Einspeisestück
+Elektro_Verteiler_AV
+Elektro_Verteiler_SV
+Elektromagnetischer_Türöffner
+Elektroschloss-ZKS_Offline
+Feuerwehr_Blitzleuchte
+Feuerwehr_Informations_Zentrale
+Hauptschalter_AP
+Leitung_RAS
+Lichtbedientableau-NSV_Tableau
+Mulitnsensormelder_mit_integr_Sirene
+Netzteil_inkl_Akku
+Optisch_akustischer_Signalgeber
+Präsenzmelder_Decke_AP_360-DALI
+Präsenzmelder_Decke_UP_360
+RAS_Ansaugstutzen
+RJ_45_Datendose_1_fach_AP
+RJ_45_Datendose_2_fach_AP
+RJ_45_Datendose_2_fach_UP
+RWA_Taster
+RWA_Zentrale
+S02
+S04
+S07
+S10
+S11
+S12
+Sicherheitsbeleuchtungszentrale
+Steckdose_1_fach_AP
+Steckdose_1_fach_UP
+Steckdose_2_fach_AP
+Steckdose_3_fach_UP_Schuko
+Steckdose_CEE_230V_AP
+Steckdosenverteiler-1 Typ
+Steckdosenverteiler-2 Typ
+Steckdosenverteiler-3 Typ
+Taster_AP_1S
+Taster_UP_1S
+Warnschild_Brandalarm
+ZKS-Magnetkontakt
+ZKS_Kartenleser_Online
+ZKS_Türsteuereinheit_GAM
+__NO_GROUP_ID__
