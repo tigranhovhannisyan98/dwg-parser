@@ -287,7 +287,8 @@ def get_entity_rgb(e,layer_table):
 
 def clean_text_basic(t):
     if not t: return ""
-    t=t.replace("\P"," ").replace("\\P"," ")
+    # replace AutoCAD paragraph markers with space
+    t=t.replace(r"\P"," ").replace("\\\\P"," ")
     # keep payload in {...} by taking last ';' segment
     def repl(m):
         parts=[p.strip() for p in m.group(1).split(";") if p.strip()]
@@ -367,7 +368,7 @@ def collect_items(msp, layer_table, M):
                 txt += clean_txt((v.dxf.text + " "))
                 #TODO-fixed bug repetition in txt when the same layer has two virtual layers during printing
                 #txt = (v.dxf.text + " ")
-                print(f"  * TEXT  layer={lay} text={v.dxf.text!r} ins={tuple(v.dxf.insert)} img_pos={(X,Y)}")
+                #print(f"  * TEXT  layer={lay} text={v.dxf.text!r} ins={tuple(v.dxf.insert)} img_pos={(X,Y)}")
 
             elif v.dxftype() == "MTEXT":
                 text = mtext_to_plain(v) if 'mtext_to_plain' in globals() else v.dxf.text
@@ -375,7 +376,7 @@ def collect_items(msp, layer_table, M):
                 txt += clean_txt((v.dxf.text + " "))
                 x,y = float(v.dxf.insert[0]),float(v.dxf.insert[1])
                 X,Y = apply_M(M,x,y)
-                print(f"  * MTEXT layer={lay} text={txt!r} ins={tuple(v.dxf.insert)} img_pos={(X,Y)}")
+                #print(f"  * MTEXT layer={lay} text={txt!r} ins={tuple(v.dxf.insert)} img_pos={(X,Y)}")
             #else:
             #    print(f"  * {v.dxftype()} {h} layer={lay}")
         
