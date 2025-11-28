@@ -356,7 +356,7 @@ def collect_items(msp, layer_table, M):
         X,Y = apply_M(M,x,y)
         rgb = get_entity_rgb(e, layer_table)
 
-        #print(f"elem: name={name} layer={layer} text={ttext} ins={tuple(e.dxf.insert)} matrix={wx, wy}")
+        #print(f"ekav: name={name} layer={layer} ins={tuple(e.dxf.insert)}")
 #TODO ete inqe ekel mtel a uje txt poxvel a heto vor sxal el lini meje pahum a txt infon
         vents = list(e.virtual_entities())
         for v in vents:
@@ -384,14 +384,21 @@ def collect_items(msp, layer_table, M):
         #print("layer: ", layer)
         #print("prev_name: ", prev_name)
         
-        if "Schaltkreis_" in name:
+        #if "Schaltkreis_" in name and prev_layer + "-TXT" == layer:
+        if prev_layer and prev_layer + "-TXT" == layer:
             elements[prev_id]['txt'] += txt 
-        elif prev_layer  == layer[:-4]:
+            #print("poxvec: ", elements[prev_id])
+        elif "Schaltkreis_" in name and math.dist(prev_pos, [x,y]) < 20: 
             elements[prev_id]['txt'] += txt
-        elif "-TXT" in layer and math.dist(prev_pos, [x,y]) < 12 :#and prev_rgb == rgb:
+        elif prev_layer  == layer and "Schaltkreis_" in name and not "Schaltkreis_" in prev_name:
             elements[prev_id]['txt'] += txt
+            #print("poxvec: ", elements[prev_id])
+        #elif "-TXT" in layer and math.dist(prev_pos, [x,y]) < 12 :#and prev_rgb == rgb:
+        #    elements[prev_id]['txt'] += txt
+        #    #print("poxvec: ", elements[prev_id])
         else:
             elements[iid] = {'name': name, 'layer': layer, 'rgb':rgb, 'pos_dxf': [x,y], 'pos_img': [X,Y], 'txt': txt}
+            #print("element: ", elements[iid])
             prev_layer = layer
             prev_name = name
             prev_pos = [x,y]
@@ -401,107 +408,146 @@ def collect_items(msp, layer_table, M):
         out = elements
     return out
 
+def extract_prefix(input_string):
+    # Step 1: take the last segment after '$'
+    last_part = input_string.split('$')[-1]
+
+    # Step 2: split by '_' → ["Kabelkanal", "A01KSXVQXE"]
+    prefix = last_part.split('_')[0]
+
+    # Step 3: return with trailing underscore
+    return prefix 
+
+def extract_layer_suffix(layer_string):
+    # Split by '$' and return the last segment
+    return layer_string.split('$')[-1]
+
+def remove_last_dash_part(text):
+    if '-' not in text:
+        return text
+    return '-'.join(text.split('-')[:-1])
+
 def clean_data(elements):
     clean_elements = {}
     for k, element in elements.items():
-        if "Vorplanung" in element["layer"] or "Vorplanung" in element["name"] or element["layer"] == "ADE_ET_BEL_Lichtschiene" or element["layer"] == "E-Stromschiene Variante 2":
+        if "Polygonsäule" in element["name"] or "XREF" == element["name"][:4] or "*" == element["name"][0] or "_Oblique" in element["name"]:
             continue
-        elif element["pos_img"][0] < LAYOUTS_X['F'] or element["pos_img"][0] > LAYOUTS_X['I5'] or element["pos_dxf"][1] < 0:
-            continue
+            #or element["layer"] == "ADE_ET_BEL_Lichtschiene" or element["layer"] == "E-Stromschiene Variante 2":
+            #continue
+        #elif element["pos_img"][0] < LAYOUTS_X['F'] or element["pos_img"][0] > LAYOUTS_X['I5'] or element["pos_dxf"][1] < 0:
+        #    continue
         else:
+            if "Vorplanung" in element["layer"] or "Vorplanung" in element["name"]:
+                element["name"] = extract_prefix(element["name"])
+                element["layer"] = remove_last_dash_part(extract_layer_suffix(element["layer"]))
+                clean_elements[k] = element
+            elif "-" in element["layer"] and element["layer"] != "E-Stromschiene Variante 2":
+                element["layer"] = remove_last_dash_part(element["layer"])
+                clean_elements[k] = element
             clean_elements[k] = element
     return clean_elements
 
-def merge_data(elements):
-    prev_key = None
-    prev_item = None
-    break_flag = False
-    print("len elements: ", len(elements))
-    merged_elements = {}
-    txts = {}
-    for iid, curr_element in elements.items():
-        break_flag = False
-        if "-TXT" in curr_element["layer"]:
-            txts[iid] = True
-            continue
-        elif curr_element["txt"] == '':
-            for iter_iid, iter_element in elements.items():
-                if iid != iter_iid and iter_element["txt"] != "" and (curr_element['layer'] == iter_element['layer']  or curr_element['layer']+'-TXT' == iter_element['layer']):
-                    dist = math.dist(curr_element["pos_dxf"],iter_element["pos_dxf"])
-                    if dist < 12: #and element["rgb"] == item["rgb"]:
-                        if '-TXT' in iter_element['layer']:
-                            txts[iter_iid] = False
-                            curr_element['txt'] += iter_element['txt']
-                            break
-                            
-                        if iter_iid in merged_elements:
-                            if "merged" in merged_elements[iter_iid]:
-                                merged_elements[iter_iid]["merged"].append(iid)
-                                merged_elements[iter_iid]["name"].append(curr_element["name"])
-                            else:
-                                merged_elements[iter_iid]["merged"] = [iter_iid,iid]
-                                merged_elements[iter_iid]["name"] = [curr_element["name"],iter_element["name"]]
-                        else:
-                            if "merged" in elements[iter_iid]:
-                                elements[iter_iid]["merged"].append(iid)
-                                elements[iter_iid]["name"].append(curr_element["name"])
-                            else:
-                                elements[iter_iid]["merged"] = [iter_iid,iid]
-                                elements[iter_iid]["name"] = [curr_element["name"],iter_element["name"]]
-                        break_flag = True
-                        break
-        if not break_flag:
-            merged_elements[iid] = curr_element
 
-    print("len elements: ", len(merged_elements))
-    for iid in txts:
-        break_flag = False
-        best_dist = math.inf
-        best_candidate_id = None
-        if txts[iid]:
-            for k, element in merged_elements.items():
-                if element['layer'] +'-TXT' == elements[iid]['layer']:
-                    dist = math.dist(element["pos_dxf"],elements[iid]["pos_dxf"])
-                    if dist < 12:
-                        merged_elements[k]['txt'] += elements[iid]['txt']
-                        break_flag = True
-                        break
-                elif element['layer'].split('_')[:3] == elements[iid]['layer'].split('_')[:3]:
-                    dist = math.dist(element["pos_dxf"],elements[iid]["pos_dxf"])
-                    if dist < best_dist:
-                        best_candidate_id = k
-            if not break_flag:
-                if best_dist < 12:
-                    merged_elements[best_candidate_id]['txt'] += elements[iid]['txt']
-                else:
-                    merged_elements[iid] = elements[iid]
-    #print("merged_elements: ", merged_elements)
-    return merged_elements
+def load_legend_mapping(legend_path: Path) -> List[Tuple[str, str, str]]:
+    """
+    Parses legend mapping file into ordered list of tuples
+    preserving the file order to respect first-match priority.
+    """
+    entries = []
+    if not legend_path.exists():
+        return entries
 
-def gather_together(elements, texts):
-    proned_txt = []
-    break_flag = False
-    print("len_txt: ", len(texts))
-    for txt in texts:
-        break_flag = False
-        for key, element in elements.items():
-            #if txt['content'] == "HV 51_00.1":
-            if element['txt'] != '':
+    with legend_path.open(encoding="utf-8") as f:
+        for idx, line in enumerate(f):
+            line = line.strip()
+            if not line:
                 continue
-            else:
-                if txt['layer'] == element['layer'] or txt['layer'] == element['layer']+"-TXT":
-                    distance = math.dist(txt["pos_dxf"], element["pos_dxf"])
-                    if distance < 12 and txt["rgb"] == element["rgb"]:
-                        #print("element: ", key , " ", element)
-                        #print("txt: ", txt)
-                        elements[key]['txt'] += txt['content']
-                        break_flag = True
-                        break
-        if not break_flag:
-            proned_txt.append(txt)
+            parts = [part.strip() for part in line.split(",")]
+            if idx == 0 and [p.lower() for p in parts[:3]] == ["layer", "name", "legend_info"]:
+                continue  # skip header
+            if len(parts) < 3:
+                continue
+            layer, name, legend_info = remove_last_dash_part(parts[0]), parts[1], ",".join(parts[2:]).strip()
+            if name[-1] == "_":
+                name = name[:-1]
+            entries.append((layer, name, legend_info))
+    return entries
 
-    print("len_proned_txt: ", len(proned_txt))
-    return (elements, proned_txt)
+def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, str, str]]) -> Dict[str, dict]:
+    """
+    Adds 'group_id' to each element based on legend mapping.
+    - Match requires exact layer equality and legend name contained in element name (case-insensitive).
+    - When multiple legend rows satisfy this, the first occurrence is used.
+    - If nothing matches, defaults to the element's name.
+    """
+    fields = ["16A", "32A", "63A", "Typ 1", "Typ 2", "Typ 3", "Typ 4"]
+    for key, element in elements.items():
+        interesting_field = None
+        down = None
+
+        elem_layer = (element.get("layer") or "").strip()
+        elem_name = (element.get("name") or "").strip()
+        elem_txt = (element.get("txt") or "").strip()
+        elem_name_lower = elem_name.lower()
+        
+        if elem_layer == "E-Stromschiene Variante 2":
+            group_id = elem_name
+        else:
+            group_id = extract_prefix(elem_name)  # fallback
+
+        if elem_layer in ["ADE_ET_NSHV_Verteiler", "ADE_ET_NSV_Anschluss", "ADE_ET_NSV_Steckdose"]:
+            for f in fields:
+                if f in elem_txt:
+                    if "1xAP-SD_ SchuKo" in elem_name:
+                        elem_name = "1xAP-SD_ SchuKo_"+f
+                        elem_name_lower = elem_name.lower()
+                        down = True 
+                    group_id = group_id + " " + f
+                    interesting_field = f
+                    break
+                    
+        for layer, legend_name, legend_info in legend_entries:
+            if elem_layer == layer.strip():
+                legend_name_clean = legend_name.strip().lower()
+                if legend_name_clean and legend_name_clean in elem_name_lower:
+                    group_id = legend_info.strip() or extract_prefix(elem_name)
+                    if down:
+                        group_id = "CEE-Steckdose 230V AP"
+                    if interesting_field:
+                        group_id = group_id + " " + f
+                    break
+        element["group_id"] = group_id
+        elements[key] = element
+    return elements
+
+def merge_data(elements):
+    items = []
+    new_elements = {} 
+    for iid, element in elements.items():
+        if "Schaltkreis" in element["name"]:
+            items.append(iid)
+        else:
+            new_elements[iid] = elements[iid]
+    print("len: ", len(items))
+
+    potential_candidate = {}
+    for iid, element in elements.items():
+        if "Schaltkreis" in element["name"]:
+            continue
+        for i in items:
+            candidate = elements[i]
+            if element["layer"] in candidate["layer"] and math.dist(element["pos_dxf"], candidate["pos_dxf"]) < 20:
+                if i in potential_candidate:
+                    if math.dist(element["pos_dxf"], candidate["pos_dxf"]) < math.dist(candidate["pos_dxf"], elements[potential_candidate[i]]["pos_dxf"]):
+                        potential_candidate[i] = iid
+                else:
+                    potential_candidate[i] = iid
+    for i in items:
+        if i not in potential_candidate:
+            print("CHKA: ", elements[i])
+        else:
+            new_elements[potential_candidate[i]]["txt"] += elements[i]["txt"]
+    return new_elements
 
 # ------------- main -------------
 
@@ -518,6 +564,10 @@ def main():
     except (IOError,DXFStructureError) as e:
         print(f"Failed to read DXF: {e}", file=sys.stderr); sys.exit(1)
     
+    proned_txt = []
+    legend_file = Path(__file__).resolve().with_name("legend_element_match.txt")
+    legend_entries = load_legend_mapping(legend_file)
+    
     print("Loaded: ", time.time() - tk)
     msp = doc.modelspace()
 
@@ -531,19 +581,22 @@ def main():
     # Collect base
     base_texts = collect_texts(msp, layer_table, M)
     items      = collect_items(msp, layer_table, M)
-    for i, v in items.items():
-        print('item:', i, v)
-    exit(0)
-    merged_items = merge_data(items)
-    clean_items = clean_data(merged_items)
-    elements, proned_txt   = gather_together(clean_items, base_texts)
-    print('elements do:', elements)
-    elements = assign_chessboard_and_position(elements, LAYOUTS_X,  LAYOUTS_Y)
-    print('elements posle:', elements)
-    print('proned_txt: ', proned_txt)
-    with open("tiko_v3.json", "w", encoding="utf-8") as f:
+    #for i, v in items.items():
+    #    print('item:', i, v)
+    #exit(0)
+    clean_items = clean_data(items)
+    merged_items = merge_data(clean_items)
+    #print("legened_entires: ", legend_entries)
+    #exit(0)
+    items_with_groups = assign_group_ids(merged_items, legend_entries)
+    #exit(0)
+    #print('elements do:', elements)
+    elements = assign_chessboard_and_position(items_with_groups, LAYOUTS_X,  LAYOUTS_Y)
+    #print('elements posle:', elements)
+    #print('proned_txt: ', proned_txt)
+    with open("extracted_elements.json", "w", encoding="utf-8") as f:
         json.dump(elements, f, ensure_ascii=False, indent=2)
-    with open("tiko_v3_txt.json", "w", encoding="utf-8") as f:
+    with open("extracted_txt.json", "w", encoding="utf-8") as f:
         json.dump(proned_txt, f, ensure_ascii=False, indent=2)
 
 
