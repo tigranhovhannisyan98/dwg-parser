@@ -1,0 +1,102 @@
+layer, name, legend_info
+TGA_E-sym_StS, Schalter, Schalter
+TGA_E-sym_StS, Schalter 2-polig, Schalter 2-polig
+TGA_E-sym_StS, Serienschalter, Serienschalter
+TGA_E-sym_StS, Wechselschalter, Wechselschalter
+TGA_E-sym_StS, Doppelwechselschalter, Doppelwechselschalter
+TGA_E-sym_StS, Taster, Taster
+TGA_E-sym_StS, Not-Aus-Taster, Unterbrechertaster für Freilaufschließer 
+TGA_E-sym_StS, Steckdose 1-fach, Schutzkontaktsteckdose 1-fach
+TGA_E-sym_StS, Steckdose 1-fach abschließbar,  Schutzkontaktsteckdose 1-fach abschließb
+TGA_E-sym_StS, Steckdose 1-fach schaltbar, Schutzkontaktsteckdose 1-fach schaltbar
+TGA_E-sym_StS, Steckdose 2-fach, Schutzkontaktsteckdose 2-fach
+TGA_E-sym_StS, Steckdose 3-fach, Schutzkontaktsteckdose 3-fach
+TGA_E-sym_StS, CEE Steckdose_Drehstrom, CEE-Steckdose 16A-400V
+TGA_E-sym_StS, Anschluss für Lüfter (Bad Küche WC), Anschluss für Abluftventilator (über Lichtschalter, 2-polig)
+TGA_E-sym_StS, E_Dunstfilter, Anschluss für Wandfortluftautomat (über Lichtschalter, 2-polig)
+TGA_E-sym_StS, Raumthermostat 230 V, Raumthermostat 230 V Aufschaltung Fb.-hzg am Heizkreisverteiler
+TGA_E-sym_StS, Außentemperaturfühler, Außentemperaturfühler
+TGA_E-sym_StS, IBMDB_Verteilung, Unterverteilung Allgemeinstrom
+TGA_E-sym_StS, IBMDB_Verteilung, Hausanschluss-Hauptverteilung mit Wanderzähleranlage
+TGA_E-sym_StS, IBMDB_Verteilung, Zählerschrank
+TGA_E-sym_StS, Elt-Anschluss (allgemein), Elt-Anschluss (allgemein)
+TGA_E-sym_StS, Elt-Anschluss (230 V), Elt-Anschluss (230 V)
+TGA_E-sym_StS, Elt-Anschluss (400 V), Elt-Anschluss (400 V)
+TGA_E-sym_StS, C7655379B, RWA-Zentrale
+TGA_E-sym_StS, Festanschluß E-Herd 3x16A, Festanschluß E-Herd 3x16A
+TGA_E-sym_StS, Schlüsselschalter RWA - TRH Lüftungsfkt., Schlüsselschalter Dachausstieg/RWA-Fenster
+TGA_E-sym_StS, Notabschaltung-Schlüsselschalter, DC-Notschalter (Photovoltaik-Anlage)
+TGA_E-sym_StS, Anschluß für Türfeststellfunktion, Anschluß für Tür-Feststellanlage
+TGA_E-sym_StS, Anschluß für Türfreilauffunktion, Anschluß für Tür-Feststellanlage mit Freilauffunktion
+TGA_E-sym_StS, zentraler Regen- und Windwächter, zentraler Regen- und Windwächter
+TGA_E-sym_StS, Potentialausgleichschiene, Potentialausgleichschiene
+TGA_E-sym_StS, Potentialausgleich, Potentialausgleich 
+
+TGA_E-sym_Bel, Deckenauslaß, Deckenauslaß 3-adrig
+TGA_E-sym_Bel, C6A1F0E6C, Wandauslaß
+TGA_E-sym_Bel, Hausnummerleuchte, Hausnummerleuchte
+
+TGA_E-sym_Glasfaser, Glasfaser-Abschlusspunkt, Glasfaser-Abschlusspunkt (Versorger)
+TGA_E-sym_Glasfaser, Glasfaser-Gebäudeverteiler, Glasfaser-Gebäudeverteiler
+TGA_E-sym_StS, Hausanschluss Breitband, Hausanschluss Breitband
+TGA_E-sym_StS, Fernmeldesteckdose, Fernmeldesteckdose
+TGA_E-sym_SwS_Decke, Datenanschluss - RJ45, Datenanschluss CAT7-Kabel sternförmig verlegt
+E_Cat7, Datenanschluss - RJ45-Duplex, Datenanschluss Duplex-CAT7-Kabel sternförmig verlegt
+TGA_E-sym_StS, Antennensteckdose, Antennensteckdose (Koaxialkabel)
+TGA_E-sym_StS, C688A2E1E, Klingeltaster
+E_2MWTRAG_0, ELT-Kleinverteiler, ELT-Kleinverteile
+E_2MWTRAG_0, Multimedia-Kleinverteiler, Multimedia-Kleinverteiler
+E_2MWTRAG_0, C4E10030E, Magnetkontakt
+E_2MWTRAG_0, Türöffner, Türöffner
+E_2MWTRAG_0, Klingel-Gegensprechanlage, Gegensprechanlage
+E_2MWTRAG_0, Dämmerungsschalter, Dämmerungsschalter
+
+E_2MWTRAG_0, Heizkreisverteiler (6-9 Heizkreise), Heizkreisverteiler
+TGA_E-sym_S Bel, Rauchmelder, Rauchwarnmelder (batteriebetrieben)
+Hilfslinien, Rauchwarnmelder RWA, Rauchwarnmelder RWA
+TGA_E-sym_SwS, Bewegungsmelder_Wandmontage, Bewegungsmelder (Wandmontage)
+TGA_E-sym_SwS_Decke, Bewegungsmelder_Deckenmontage, Bewegungsmelder (Deckenmontage)
+
+FM-SYMBOLE, IBMDB_BMA_Zentralkomponenten, Brandmeldezentrale
+TGA_E-sym_StS, RDA-Abströmumg Motoranschluß, RDA-Abströmumg Motoranschluß
+FM-SYMBOLE, U1898, DKM_Taster-RWA/RDA
+FM-SYMBOLE, U1898, DKM_Taster-Brandalarm 
+FM-SYMBOLE, U1897, Rauchansaugsystem  Aufzüge 
+FM-BMA,IBMDB_BMA_Melder1, Thermo-optischer Rauchmelder mit akustischen Signalgeber
+FM-BMA, IBMDB_BMA_Melder, Thermo-optischer Rauchmelder 
+FM-BMA, U1899, Koppler E/A - BMA 
+TGA_E-sym_StS, Schalter-RWA_2, Schalter - RWA mit  Lüftungsfunktion
+TGA_E-sym_StS, C17341C5D, Signalgeber (Blitzleuchte)
+TGA_E-sym_StS, C37C53DD7, Signalgeber RDA
+E-Symbole Kabeltrassen, IBMDB_Kabelrinne, Kabeltrasse
+E-Symbole Kabeltrassen, IBMDB_Kabelrinne, Kabeltrasse in Funktionserhalt
+E-SYMBOLE, IBMDB_Steigetrasse, Steigetrasse
+E_STRANGNUMMER, Steigleitungen_Nr. ,ELT-Steigleitung (Strom, Cat7/Glasfaser) mit Steigernummer 
+E_Strom-Licht, C6E7F0A6B, E_Strom-Licht
+A_AS-BA, 2ddd, A_AS-BA
+E_TK-EDV, C647D0E6A, E_TK-EDV
+A_AS-BA, 2ddd, Deckendurchbruch (DD)
+A_AS-BA, 2dbd, Bodendurchbruch (BD)
+A_AS-BA, 2dwd01, Wanddurchbruch (WD)
+A_AS-BA, 2dwd01, Kernbohrung Wand (KB-W)
+A_AS-BA, Cf19502b1, Kernbohrung Decke/Fussboden (KB-D/KB-B)
+TGA_E-sym_Bel, C0F70558D, LED-Deckeneinbaustrahler (Bad)
+TGA_E-sym_Bel, RZB_Toledo Flat Round_1, LED-Deckeneinbaustrahler (Eingangsbereich)
+TGA_E-sym_Bel, RZB_Toledo Flat Round_1, LED-Deckeneinbaustrahler (Flur)
+TGA_E-sym_Bel, LED-Downlight WC, LED-Einbau-Downlight d=255mm (Umkleideraum öffentliche WC)
+TGA_E-sym_Bel, Deckenleuchte m. Bewegungsmelder 360mm, Decken-Wandleuchte mit Bewegungsmelder (Flur Treppenhaus)
+TGA_E-sym_Bel, Deckenleuchte m. Sich.+Bew., Decken-/Wandleuchte mit Bewegungsm. und 3h-Notlichtbaustein sämtliche Maße als Achsbezüge Höhe über FFB 2.30m (Flur Treppenhaus)
+TGA_E-sym_Bel, Deckenleuchte 360mm, Decken-/Wandleuchte (Flur Treppenhaus)
+Layout_Schraffur_1, C14163e0d, A4
+TGA_E-sym_Bel, xyzc??, A5
+TGA_E-sym_Bel, Cc0ababe8, A6
+TGA_E-sym_Bel, C265032EC, A7
+TGA_E-sym_Bel, Blockreferenz, SL3 
+E-Leuchten SIBEL, IBMDB_LEUCHTE_SIBEL_Rettungszeichen, Rettungszeichenleuchte (Deckenmontage)
+E-Leuchten SIBEL, IBMDB_LEUCHTE_SIBEL_Rettungszeichen, Rettungszeichenleuchte (Wandmontage)
+E-Leuchten SIBEL, IBMDB_LEUCHTE_SIBEL_Rettungszeichen, Rettungszeichenleuchte (Decke/Außenanlagen)
+E-Leuchten SIBEL, IBMDB_LEUCHTE_SIBEL_Sicherheitsleuchte, LED-Sicherheitsleuchte (Deckenanbaumontage)
+E-Leuchten SIBEL, Cb575d53b, LED-Sicherheitsleuchte (Deckeneinbaumontage)
+E-Leuchten SIBEL, Sicherheitsleuchte 4, LED-Sicherheitsleuchte (Wandanbaumontage Außenanlagen)
+E-Leuchten SIBEL, Cc2f1e2a2, LED-Sicherheitsleuchte (Deckenanbaumontage)
+E-Leuchten SIBEL, Sicherheitsleuchte 2, LED-Sicherheitsleuchte (Standsäule Außenanlagen)

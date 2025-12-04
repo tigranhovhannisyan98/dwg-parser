@@ -61,6 +61,29 @@ LAYOUTS_Y = {
 "32":4797,
 "31":5151
 }
+
+LAYOUTS_X = {
+    "A": 1907, 
+    "B": 2962, 
+    "C": 3610,
+    "D": 5035,
+    "E": 5643,
+    "F": 6463,
+    "G": 7110,
+    "H": 8165
+}
+LAYOUTS_Y = {
+"10": 1952,
+"9": 3130,
+"8": 4428,
+"7": 4953,
+"6": 5970,
+"5": 6848,
+"4": 7832,
+"3": 8610,
+"2": 9272,
+"1": 10188
+}
 # ------------- chessboard ------------
 from typing import Dict, List, Tuple, Any, Iterable, Union
 import math
@@ -124,48 +147,48 @@ def _normalize(value: float, lo: float, hi: float) -> float:
     if hi == lo:
         return 0.5  # degenerate cell; treat as center
     return max(0.0, min(1.0, (value - lo) / (hi - lo)))
-def _describe_position(nx: float, ny: float,
-                            center_r: float = 0.22,
-                            corner_box: float = 0.28,
-                            edge_band: float = 0.05) -> str:
+
+def _describe_position(nx: float, ny: float,) -> str:
     """
     nx, ny in [0..1] within the cell (nx: left→right, ny: upper→lower).
     Priority: center > corners > edges > quadrants. No 'thirds' wording.
     Tweak center_r / corner_box / edge_band to taste.
     """
+    if nx < 1/3:
+        horiz = "left"
+    elif nx > 2/3:
+        horiz = "right"
+    else:
+        horiz = "center"
 
-    # 1) Center (big & clear)
-    if abs(nx - 0.5) <= center_r and abs(ny - 0.5) <= center_r:
+    # Vertical band: upper / center / lower
+    if ny < 1/3:
+        vert = "upper"
+    elif ny > 2/3:
+        vert = "lower"
+    else:
+        vert = "center"
+
+    # Match JavaScript return strings
+    if vert == "center" and horiz == "center":
         return "center"
-
-    # 2) Corners (box around each corner)
-    if nx <= corner_box and ny <= corner_box:
+    if vert == "upper" and horiz == "left":
         return "upper left corner"
-    if nx >= 1 - corner_box and ny <= corner_box:
+    if vert == "upper" and horiz == "right":
         return "upper right corner"
-    if nx <= corner_box and ny >= 1 - corner_box:
+    if vert == "lower" and horiz == "left":
         return "lower left corner"
-    if nx >= 1 - corner_box and ny >= 1 - corner_box:
+    if vert == "lower" and horiz == "right":
         return "lower right corner"
+    if vert == "upper" and horiz == "center":
+        return "upper center"
+    if vert == "lower" and horiz == "center":
+        return "lower center"
+    if vert == "center" and horiz == "left":
+        return "center left"
+    if vert == "center" and horiz == "right":
+        return "center right"
 
-    # 3) Edges (bands along edges, excluding corners already caught)
-    if nx <= edge_band:
-        return "left side"
-    if nx >= 1 - edge_band:
-        return "right side"
-    if ny <= edge_band:
-        return "upper side"
-    if ny >= 1 - edge_band:
-        return "lower side"
-
-    # 4) Quadrants (simple, human labels)
-    if ny < 0.5 and nx < 0.5:
-        return "upper left area"
-    if ny < 0.5 and nx >= 0.5:
-        return "upper right area"
-    if ny >= 0.5 and nx < 0.5:
-        return "lower left area"
-    return "lower right area"
 
 def assign_chessboard_and_position(
     items: List[dict],
@@ -432,6 +455,9 @@ def clean_data(elements):
     for k, element in elements.items():
         if "Polygonsäule" in element["name"] or "XREF" == element["name"][:4] or "*" == element["name"][0] or "_Oblique" in element["name"]:
             continue
+        #if "$" in element["name"] or "Legende" in element["name"] or "Text" in element["layer"]:
+        if "$" in element["name"] or"Legende" in element["name"] or "text" in element["layer"].lower():# or "TEXT" in element["layer"].lower():
+            continue
             #or element["layer"] == "ADE_ET_BEL_Lichtschiene" or element["layer"] == "E-Stromschiene Variante 2":
             #continue
         #elif element["pos_img"][0] < LAYOUTS_X['F'] or element["pos_img"][0] > LAYOUTS_X['I5'] or element["pos_dxf"][1] < 0:
@@ -441,8 +467,10 @@ def clean_data(elements):
                 element["name"] = extract_prefix(element["name"])
                 element["layer"] = remove_last_dash_part(extract_layer_suffix(element["layer"]))
                 clean_elements[k] = element
-            elif "-" in element["layer"] and element["layer"] != "E-Stromschiene Variante 2":
-                element["layer"] = remove_last_dash_part(element["layer"])
+            #elif "-" in element["layer"] and element["layer"] != "E-Stromschiene Variante 2":
+            elif element["layer"] != "E-Stromschiene Variante 2":
+                #element["layer"] = remove_last_dash_part(element["layer"])
+                #element["layer"] = element["layer"]
                 clean_elements[k] = element
             clean_elements[k] = element
     return clean_elements
@@ -467,7 +495,8 @@ def load_legend_mapping(legend_path: Path) -> List[Tuple[str, str, str]]:
                 continue  # skip header
             if len(parts) < 3:
                 continue
-            layer, name, legend_info = remove_last_dash_part(parts[0]), parts[1], ",".join(parts[2:]).strip()
+            #layer, name, legend_info = remove_last_dash_part(parts[0]), parts[1], ",".join(parts[2:]).strip()
+            layer, name, legend_info = parts[0], parts[1], ",".join(parts[2:]).strip()
             if name[-1] == "_":
                 name = name[:-1]
             entries.append((layer, name, legend_info))
@@ -484,6 +513,8 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
     for key, element in elements.items():
         interesting_field = None
         down = None
+        ka = False
+        candidate = None
 
         elem_layer = (element.get("layer") or "").strip()
         elem_name = (element.get("name") or "").strip()
@@ -493,7 +524,8 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
         if elem_layer == "E-Stromschiene Variante 2":
             group_id = elem_name
         else:
-            group_id = extract_prefix(elem_name)  # fallback
+            #group_id = extract_prefix(elem_name)  # fallback
+            group_id = elem_name  # fallback
 
         if elem_layer in ["ADE_ET_NSHV_Verteiler", "ADE_ET_NSV_Anschluss", "ADE_ET_NSV_Steckdose"]:
             for f in fields:
@@ -507,15 +539,29 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
                     break
                     
         for layer, legend_name, legend_info in legend_entries:
+            legend_name_clean = legend_name.strip().lower()
             if elem_layer == layer.strip():
-                legend_name_clean = legend_name.strip().lower()
                 if legend_name_clean and legend_name_clean in elem_name_lower:
-                    group_id = legend_info.strip() or extract_prefix(elem_name)
+                    #group_id = legend_info.strip() or extract_prefix(elem_name)
+                    group_id = legend_info.strip() or elem_name
                     if down:
                         group_id = "CEE-Steckdose 230V AP"
                     if interesting_field:
                         group_id = group_id + " " + f
+                    ka = True
                     break
+            elif legend_name_clean and legend_name_clean in elem_name_lower:
+                    #group_id = legend_info.strip() or extract_prefix(elem_name)
+                    candidate = legend_info.strip() or elem_name
+                    if down:
+                        candidate = "CEE-Steckdose 230V AP"
+                    if interesting_field:
+                        candidate = group_id + " " + f
+        if not ka and not candidate:
+            print("group_id: ", group_id, "element: ", element)
+        if not ka and candidate:
+            group_id = candidate
+        
         element["group_id"] = group_id
         elements[key] = element
     return elements
@@ -565,8 +611,10 @@ def main():
         print(f"Failed to read DXF: {e}", file=sys.stderr); sys.exit(1)
     
     proned_txt = []
-    legend_file = Path(__file__).resolve().with_name("legend_element_match.txt")
+    legend_file = Path(__file__).resolve().with_name("berlin_legend_element_match.txt")
     legend_entries = load_legend_mapping(legend_file)
+    #print(legend_entries)
+    #exit(0)
     
     print("Loaded: ", time.time() - tk)
     msp = doc.modelspace()

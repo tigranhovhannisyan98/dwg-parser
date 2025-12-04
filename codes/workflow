@@ -2,8 +2,11 @@ dwg -> small_dwg (vitor)
 small_dwg -> dxf odafileconverter
 dxf ->v3.py -> out.json
 
+pdftoppm -png -r 1000 DNG_24_XX_5_ELT_IBS_GR__01_000_04_F_05_BF24_1.OG_1-100-Model.pdf output
+
 v3.py
 
 1. extracts all layers (tarber layerner kan xref, logo, items) and their colors
 2. extracts all texts, mtexts with respective rgb and positions (from modelspace, modelspace is the place which contains the drawings)
+
 
