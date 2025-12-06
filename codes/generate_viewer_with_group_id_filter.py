@@ -101,6 +101,8 @@ def main():
     .edit-field input:focus {{ border-color: #4CAF50; outline: none; }}
     .btn-success {{ background: #4CAF50; color: white; border: none; }}
     .btn-success:hover {{ background: #45a049; }}
+    .btn-danger {{ background: #f44336; color: white; border: none; }}
+    .btn-danger:hover {{ background: #da190b; }}
     .changed-indicator {{ position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: #ff9800; border-radius: 50%; border: 2px solid white; }}
     #changesCount {{ margin-top: 8px; font-size: 11px; color: #856404; }}
   </style>
@@ -153,6 +155,7 @@ def main():
         <input type="text" id="editGroupId" placeholder="Enter group_id"/>
       </div>
       <button id="saveEdit" class="btn btn-success" style="width: 100%; margin-top: 8px;">Save Changes</button>
+      <button id="deleteElement" class="btn btn-danger" style="width: 100%; margin-top: 8px;">Delete Element</button>
       <div id="changesCount"></div>
     </div>
     <div style="margin-top: 12px;">
@@ -176,7 +179,8 @@ const THICKNESS = {args.thickness};
 const OUTPUT_JSON_NAME = {output_json_name_js};
 
 // Track changes
-let changes = new Map(); // key -> {{original: {{}}, modified: {{}}}}
+let changes = new Map(); // key -> {{original: {{}}, modified: {{}}, deleted: boolean}}
+let deletedElements = new Set(); // Track deleted element keys
 let originalData = JSON.parse(JSON.stringify(DATA)); // Deep copy
 
 // Build points
@@ -264,7 +268,8 @@ function calculateZoomAdaptiveRadius(currentScale, baseFitScale) {{
 // Apply group filter
 function applyGroupFilter() {{
   if (selectedGroupId === null) {{
-    points = [...allPoints];
+    // Filter out deleted elements
+    points = allPoints.filter(p => !deletedElements.has(p.key));
     useZoomAdaptiveRadius = false;
     // Reset all points to base radius
     for (const p of points) {{
@@ -272,7 +277,8 @@ function applyGroupFilter() {{
     }}
   }} else {{
     const keysInGroup = GROUP_ID_MAP[selectedGroupId] || [];
-    points = allPoints.filter(p => keysInGroup.includes(p.key));
+    // Filter out deleted elements
+    points = allPoints.filter(p => keysInGroup.includes(p.key) && !deletedElements.has(p.key));
     useZoomAdaptiveRadius = true;
   }}
   // Reset navigation when filter changes
@@ -365,6 +371,7 @@ img.src = IMG_SRC;
 
 let scale = 1, tx = 0, ty = 0;
 let isPanning = false, panStart = {{x:0, y:0, tx0:0, ty0:0}};
+let hasPanned = false; // Track if user actually panned
 let selectedKey = null;
 let baseFitScale = 1;
 
@@ -489,10 +496,14 @@ function updateDetails(p) {{
 }}
 
 function updateChangesCount() {{
-  const count = changes.size;
+  const modifiedCount = Array.from(changes.values()).filter(c => !c.deleted).length;
+  const deletedCount = deletedElements.size;
   const changesCount = document.getElementById('changesCount');
-  if (count > 0) {{
-    changesCount.textContent = `${{count}} element(s) modified`;
+  if (modifiedCount > 0 || deletedCount > 0) {{
+    let text = [];
+    if (modifiedCount > 0) text.push(`${{modifiedCount}} modified`);
+    if (deletedCount > 0) text.push(`${{deletedCount}} deleted`);
+    changesCount.textContent = text.join(", ");
     changesCount.style.color = "#d32f2f";
   }} else {{
     changesCount.textContent = "No changes";
@@ -658,14 +669,118 @@ function applyEdit() {{
   updateChangesCount();
 }}
 
+function deleteElement() {{
+  if (!selectedKey) return;
+  
+  if (!confirm(`Are you sure you want to delete element "${{selectedKey}}"? This action cannot be undone.`)) {{
+    return;
+  }}
+  
+  const p = points.find(pt => pt.key === selectedKey);
+  if (!p) return;
+  
+  // Track deletion
+  if (!changes.has(selectedKey)) {{
+    changes.set(selectedKey, {{
+      original: {{
+        ...p.payload
+      }},
+      deleted: true
+    }});
+  }} else {{
+    changes.get(selectedKey).deleted = true;
+  }}
+  deletedElements.add(selectedKey);
+  
+  // Get group_id before deletion
+  const groupId = (p.payload && p.payload.group_id) ? p.payload.group_id : null;
+  
+  // Remove from points array
+  const removedIndex = points.findIndex(pt => pt.key === selectedKey);
+  points = points.filter(pt => pt.key !== selectedKey);
+  
+  // Remove from allPoints array
+  allPoints = allPoints.filter(pt => pt.key !== selectedKey);
+  
+  // Remove from DATA
+  delete DATA[selectedKey];
+  
+  // Remove from GROUP_ID_MAP
+  if (groupId && GROUP_ID_MAP[groupId]) {{
+    const index = GROUP_ID_MAP[groupId].indexOf(selectedKey);
+    if (index > -1) {{
+      GROUP_ID_MAP[groupId].splice(index, 1);
+      // Remove group if empty
+      if (GROUP_ID_MAP[groupId].length === 0) {{
+        delete GROUP_ID_MAP[groupId];
+      }}
+    }}
+  }}
+  
+  // Rebuild group list
+  buildGroupList();
+  
+  // Update navigation - zoom to next element
+  if (removedIndex >= 0 && points.length > 0) {{
+    // Adjust index: if we deleted at current index, stay at same index (which now points to next element)
+    // If we deleted before current index, decrement current index
+    if (removedIndex < currentElementIndex) {{
+      currentElementIndex = currentElementIndex - 1;
+    }}
+    // Clamp to valid range
+    if (currentElementIndex >= points.length) {{
+      currentElementIndex = points.length - 1;
+    }}
+    if (currentElementIndex < 0) {{
+      currentElementIndex = 0;
+    }}
+    // Zoom to the element at the new index
+    if (currentElementIndex >= 0 && currentElementIndex < points.length) {{
+      zoomToElement(currentElementIndex, true);
+    }} else {{
+      selectedKey = null;
+      updateDetails(null);
+      updateNavButtons();
+    }}
+  }} else {{
+    // No elements left or element wasn't in filtered view
+    selectedKey = null;
+    updateDetails(null);
+    currentElementIndex = -1;
+    updateNavButtons();
+  }}
+  
+  // Recalculate collisions if needed
+  if (useZoomAdaptiveRadius && points.length > 0) {{
+    updateRadiiForZoom();
+    resolveCollisions(600, 1e-3);
+  }}
+  
+  // Update UI
+  updateChangesCount();
+  if (points.length > 0) {{
+    draw();
+  }} else {{
+    draw();
+  }}
+}}
+
 function saveToFile() {{
-  if (changes.size === 0) {{
+  const modifiedCount = Array.from(changes.values()).filter(c => !c.deleted).length;
+  const deletedCount = deletedElements.size;
+  
+  if (modifiedCount === 0 && deletedCount === 0) {{
     alert("No changes to save");
     return;
   }}
   
-  // Create the fixed data structure
-  const fixedData = JSON.parse(JSON.stringify(DATA));
+  // Create the fixed data structure - exclude deleted elements
+  const fixedData = {{}};
+  for (const [key, value] of Object.entries(DATA)) {{
+    if (!deletedElements.has(key)) {{
+      fixedData[key] = value;
+    }}
+  }}
   
   // Convert to JSON string
   const jsonStr = JSON.stringify(fixedData, null, 2);
@@ -681,7 +796,10 @@ function saveToFile() {{
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
   
-  alert(`Saved ${{changes.size}} change(s) to ${{OUTPUT_JSON_NAME}}`);
+  let message = [];
+  if (modifiedCount > 0) message.push(`${{modifiedCount}} modified`);
+  if (deletedCount > 0) message.push(`${{deletedCount}} deleted`);
+  alert(`Saved ${{message.join(" and ")}} to ${{OUTPUT_JSON_NAME}}`);
 }}
 
 // Zoom to a specific element
@@ -780,6 +898,7 @@ document.getElementById('navPrev').addEventListener('click', goToPrevious);
 document.getElementById('navNext').addEventListener('click', goToNext);
 document.getElementById('navLast').addEventListener('click', goToLast);
 document.getElementById('saveEdit').addEventListener('click', applyEdit);
+document.getElementById('deleteElement').addEventListener('click', deleteElement);
 document.getElementById('saveToFile').addEventListener('click', saveToFile);
 
 // Allow Enter key to save edit
@@ -813,12 +932,23 @@ window.addEventListener('keydown', (e) => {{
   }}
 }});
 canvas.addEventListener('mousedown', (e) => {{
-  isPanning = true; canvas.style.cursor="grabbing";
+  isPanning = true;
+  hasPanned = false;
+  canvas.style.cursor="grabbing";
   panStart = {{x:e.clientX, y:e.clientY, tx0:tx, ty0:ty}};
 }});
-window.addEventListener('mouseup', () => {{ isPanning=false; canvas.style.cursor="grab"; }});
+window.addEventListener('mouseup', () => {{
+  isPanning = false;
+  canvas.style.cursor="grab";
+}});
 window.addEventListener('mousemove', (e) => {{
   if (!isPanning) return;
+  const dx = Math.abs(e.clientX - panStart.x);
+  const dy = Math.abs(e.clientY - panStart.y);
+  // If mouse moved more than 5 pixels, consider it panning
+  if (dx > 5 || dy > 5) {{
+    hasPanned = true;
+  }}
   tx = panStart.tx0 + (e.clientX - panStart.x);
   ty = panStart.ty0 + (e.clientY - panStart.y);
   draw();
@@ -837,10 +967,34 @@ canvas.addEventListener('wheel', (e) => {{
   draw();
 }}, {{ passive:false }});
 canvas.addEventListener('click', (e) => {{
+  // Don't zoom if user was panning
+  if (hasPanned) {{
+    hasPanned = false;
+    return;
+  }}
+  
   const rect = canvas.getBoundingClientRect();
   const hit = pick(e.clientX - rect.left, e.clientY - rect.top);
-  selectedKey = hit ? hit.key : null;
-  updateDetails(hit); draw();
+  
+  if (hit) {{
+    // Find the element's index in the points array
+    const elementIndex = points.findIndex(p => p.key === hit.key);
+    if (elementIndex >= 0) {{
+      // Zoom to the selected element
+      zoomToElement(elementIndex, true);
+    }} else {{
+      // Element not in current filtered view, just select it
+      selectedKey = hit.key;
+      updateDetails(hit);
+      draw();
+    }}
+  }} else {{
+    selectedKey = null;
+    updateDetails(null);
+    currentElementIndex = -1;
+    updateNavButtons();
+    draw();
+  }}
 }});
 
 // Search filter redraw (dim non-matching)
