@@ -46,9 +46,14 @@ def main():
     # Sort group_ids for display
     sorted_group_ids = sorted(group_id_map.keys())
     
+    # Extract input JSON filename for output
+    input_json_name = os.path.basename(args.json)
+    output_json_name = f"fixed_{input_json_name}"
+    
     img_uri = b64_data_uri(args.image)
     data_json = json.dumps(data, ensure_ascii=False)
     group_id_map_json = json.dumps({k: v for k, v in group_id_map.items()}, ensure_ascii=False)
+    output_json_name_js = json.dumps(output_json_name)
 
     html = f"""<!doctype html>
 <html>
@@ -71,7 +76,7 @@ def main():
     #canvasWrap {{ width: 100%; height: 100%; }}
     canvas {{ display:block; width:100%; height:100%; cursor: grab; }}
     canvas:active {{ cursor: grabbing; }}
-    #right {{ border-left:1px solid #e5e7eb; padding:12px; overflow:auto; background:#fafafa; display: flex; flex-direction: column; }}
+    #right {{ border-left:1px solid #e5e7eb; padding:12px; overflow-y: auto; overflow-x: hidden; background:#fafafa; display: flex; flex-direction: column; height: 100%; }}
     #right h2 {{ margin:0 0 8px; }}
     #filterSection {{ margin-bottom: 16px; }}
     #filterSection h3 {{ margin: 0 0 8px; font-size: 14px; color: #333; }}
@@ -84,8 +89,20 @@ def main():
     #search {{ width: 100%; padding: 8px; border:1px solid #ddd; border-radius:8px; margin-bottom:8px; }}
     #info {{ font-size:13px; color:#555; margin-bottom:6px; }}
     .pill {{ display:inline-block; padding:2px 8px; border-radius:999px; background:#eee; font-size:12px; margin:0 6px 6px 0; }}
-    pre {{ background: #fff; border:1px solid #eee; border-radius:8px; padding:8px; max-height:45vh; overflow:auto; }}
+    #jsonSection {{ margin-top: 16px; }}
+    #jsonSection h3 {{ margin: 0 0 8px; font-size: 14px; color: #333; }}
+    pre {{ background: #fff; border:1px solid #eee; border-radius:8px; padding:12px; max-height:60vh; overflow:auto; font-size:11px; line-height:1.4; white-space: pre-wrap; word-wrap: break-word; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; }}
     #diagnostics {{ position:absolute; top:8px; right:8px; background:rgba(255,255,255,0.9); border:1px solid #ddd; border-radius:8px; padding:6px 10px; font-size:12px; }}
+    #editSection {{ margin-top: 12px; padding: 12px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; }}
+    #editSection h4 {{ margin: 0 0 8px; font-size: 13px; color: #856404; }}
+    .edit-field {{ margin-bottom: 8px; }}
+    .edit-field label {{ display: block; font-size: 12px; color: #666; margin-bottom: 4px; }}
+    .edit-field input {{ width: 100%; padding: 6px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; }}
+    .edit-field input:focus {{ border-color: #4CAF50; outline: none; }}
+    .btn-success {{ background: #4CAF50; color: white; border: none; }}
+    .btn-success:hover {{ background: #45a049; }}
+    .changed-indicator {{ position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: #ff9800; border-radius: 50%; border: 2px solid white; }}
+    #changesCount {{ margin-top: 8px; font-size: 11px; color: #856404; }}
   </style>
 </head>
 <body>
@@ -121,7 +138,30 @@ def main():
     <input id="search" placeholder="Filter by ID / layer / txt..."/>
     <div id="info">Click a circle to see details.</div>
     <div id="badges"></div>
-    <pre id="dump"></pre>
+    <div id="editSection" style="display: none;">
+      <h4>Edit Element</h4>
+      <div class="edit-field">
+        <label>X Position (pos_img[0]):</label>
+        <input type="number" id="editX" step="0.1"/>
+      </div>
+      <div class="edit-field">
+        <label>Y Position (pos_img[1]):</label>
+        <input type="number" id="editY" step="0.1"/>
+      </div>
+      <div class="edit-field">
+        <label>Group ID:</label>
+        <input type="text" id="editGroupId" placeholder="Enter group_id"/>
+      </div>
+      <button id="saveEdit" class="btn btn-success" style="width: 100%; margin-top: 8px;">Save Changes</button>
+      <div id="changesCount"></div>
+    </div>
+    <div style="margin-top: 12px;">
+      <button id="saveToFile" class="btn" style="width: 100%; background: #2196F3; color: white;">Save Fixed JSON</button>
+    </div>
+    <div id="jsonSection" style="display: none;">
+      <h3>Full Element Data (JSON)</h3>
+      <pre id="dump"></pre>
+    </div>
   </div>
 </div>
 
@@ -133,6 +173,11 @@ const BASE_R = {args.radius};
 const MIN_R = {args.min_radius};
 const PAD = {args.padding};
 const THICKNESS = {args.thickness};
+const OUTPUT_JSON_NAME = {output_json_name_js};
+
+// Track changes
+let changes = new Map(); // key -> {{original: {{}}, modified: {{}}}}
+let originalData = JSON.parse(JSON.stringify(DATA)); // Deep copy
 
 // Build points
 let points = [];
@@ -357,11 +402,22 @@ function draw() {{
   ctx.drawImage(img, 0, 0);
   for (const p of points) {{
     const [r,g,b] = p.rgb;
+    const isChanged = changes.has(p.key);
+    
+    // Draw circle with different style if changed
     ctx.lineWidth = THICKNESS / Math.max(scale, 0.0001);
-    ctx.strokeStyle = `rgb(${{r}}, ${{g}}, ${{b}})`;
+    if (isChanged) {{
+      // Changed elements: orange border
+      ctx.strokeStyle = `rgb(255, 152, 0)`;
+      ctx.lineWidth = (THICKNESS * 1.5) / Math.max(scale, 0.0001);
+    }} else {{
+      ctx.strokeStyle = `rgb(${{r}}, ${{g}}, ${{b}})`;
+    }}
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
     ctx.stroke();
+    
+    // Selected element highlight
     if (p.key === selectedKey) {{
       ctx.lineWidth = (THICKNESS*2) / Math.max(scale, 0.0001);
       ctx.strokeStyle = "yellow";
@@ -390,10 +446,23 @@ function updateDetails(p) {{
   const info = document.getElementById('info');
   const badges = document.getElementById('badges');
   const dump = document.getElementById('dump');
-  if (!p) {{ info.textContent = "Click a circle to see details."; badges.innerHTML=""; dump.textContent=""; return; }}
+  const editSection = document.getElementById('editSection');
+  const jsonSection = document.getElementById('jsonSection');
+  
+  if (!p) {{
+    info.textContent = "Click a circle to see details.";
+    badges.innerHTML = "";
+    dump.textContent = "";
+    editSection.style.display = "none";
+    jsonSection.style.display = "none";
+    return;
+  }}
+  
   const layer = p.payload && p.payload.layer ? p.payload.layer : "(no layer)";
   const groupId = p.payload && p.payload.group_id ? p.payload.group_id : "(no group)";
-  info.innerHTML = `<b>ID:</b> ${{p.key}}`;
+  const isChanged = changes.has(p.key);
+  
+  info.innerHTML = `<b>ID:</b> ${{p.key}} ${{isChanged ? '<span style="color: #ff9800;">(Modified)</span>' : ''}}`;
   badges.innerHTML = `
     <span class="pill">x=${{p.x.toFixed(1)}}</span>
     <span class="pill">y=${{p.y.toFixed(1)}}</span>
@@ -401,7 +470,218 @@ function updateDetails(p) {{
     <span class="pill">layer: ${{layer}}</span>
     <span class="pill">group: ${{groupId}}</span>
   `;
-  dump.textContent = JSON.stringify(p.payload, null, 2);
+  
+  // Show full JSON data
+  const fullData = {{
+    key: p.key,
+    ...p.payload
+  }};
+  dump.textContent = JSON.stringify(fullData, null, 2);
+  jsonSection.style.display = "block";
+  
+  // Show edit section
+  editSection.style.display = "block";
+  document.getElementById('editX').value = p.x;
+  document.getElementById('editY').value = p.y;
+  document.getElementById('editGroupId').value = groupId !== "(no group)" ? groupId : "";
+  
+  updateChangesCount();
+}}
+
+function updateChangesCount() {{
+  const count = changes.size;
+  const changesCount = document.getElementById('changesCount');
+  if (count > 0) {{
+    changesCount.textContent = `${{count}} element(s) modified`;
+    changesCount.style.color = "#d32f2f";
+  }} else {{
+    changesCount.textContent = "No changes";
+    changesCount.style.color = "#666";
+  }}
+}}
+
+function applyEdit() {{
+  if (!selectedKey) return;
+  
+  const p = points.find(pt => pt.key === selectedKey);
+  if (!p) return;
+  
+  const newX = parseFloat(document.getElementById('editX').value);
+  const newY = parseFloat(document.getElementById('editY').value);
+  const newGroupId = document.getElementById('editGroupId').value.trim();
+  
+  if (isNaN(newX) || isNaN(newY)) {{
+    alert("Please enter valid numbers for X and Y coordinates");
+    return;
+  }}
+  
+  // Track original values if this is first change
+  if (!changes.has(selectedKey)) {{
+    const originalGroupId = p.payload && p.payload.group_id ? p.payload.group_id : null;
+    changes.set(selectedKey, {{
+      original: {{
+        pos_img: [...(p.payload.pos_img || [p.x, p.y])],
+        group_id: originalGroupId
+      }},
+      modified: {{}}
+    }});
+  }}
+  
+  // Get old group_id before updating
+  const oldGroupId = (p.payload && p.payload.group_id) ? p.payload.group_id : null;
+  const normalizedNewGroupId = newGroupId || null;
+  
+  // Update point position in filtered points
+  p.x = newX;
+  p.y = newY;
+  
+  // Update payload
+  if (!p.payload.pos_img) p.payload.pos_img = [newX, newY];
+  p.payload.pos_img[0] = newX;
+  p.payload.pos_img[1] = newY;
+  
+  // Update group_id in payload
+  if (normalizedNewGroupId) {{
+    p.payload.group_id = normalizedNewGroupId;
+  }} else {{
+    delete p.payload.group_id;
+  }}
+  
+  // Update in allPoints array (so changes persist when filtering)
+  const allPoint = allPoints.find(pt => pt.key === selectedKey);
+  if (allPoint) {{
+    allPoint.x = newX;
+    allPoint.y = newY;
+    if (!allPoint.payload.pos_img) allPoint.payload.pos_img = [newX, newY];
+    allPoint.payload.pos_img[0] = newX;
+    allPoint.payload.pos_img[1] = newY;
+    if (normalizedNewGroupId) {{
+      allPoint.payload.group_id = normalizedNewGroupId;
+    }} else {{
+      delete allPoint.payload.group_id;
+    }}
+  }}
+  
+  // Update DATA
+  if (!DATA[selectedKey]) DATA[selectedKey] = {{}};
+  if (!DATA[selectedKey].pos_img) DATA[selectedKey].pos_img = [newX, newY];
+  DATA[selectedKey].pos_img[0] = newX;
+  DATA[selectedKey].pos_img[1] = newY;
+  if (normalizedNewGroupId) {{
+    DATA[selectedKey].group_id = normalizedNewGroupId;
+  }} else {{
+    delete DATA[selectedKey].group_id;
+  }}
+  
+  // Update GROUP_ID_MAP: remove from old group, add to new group
+  if (oldGroupId !== normalizedNewGroupId) {{
+    // Remove from old group
+    if (oldGroupId && GROUP_ID_MAP[oldGroupId]) {{
+      const index = GROUP_ID_MAP[oldGroupId].indexOf(selectedKey);
+      if (index > -1) {{
+        GROUP_ID_MAP[oldGroupId].splice(index, 1);
+        // Remove group if empty
+        if (GROUP_ID_MAP[oldGroupId].length === 0) {{
+          delete GROUP_ID_MAP[oldGroupId];
+        }}
+      }}
+    }}
+    
+    // Add to new group
+    if (normalizedNewGroupId) {{
+      if (!GROUP_ID_MAP[normalizedNewGroupId]) {{
+        GROUP_ID_MAP[normalizedNewGroupId] = [];
+      }}
+      if (!GROUP_ID_MAP[normalizedNewGroupId].includes(selectedKey)) {{
+        GROUP_ID_MAP[normalizedNewGroupId].push(selectedKey);
+      }}
+    }}
+    
+    // Rebuild group list to reflect changes
+    buildGroupList();
+    
+    // If currently filtering by a group_id, check if element should still be visible
+    if (selectedGroupId !== null) {{
+      if (normalizedNewGroupId === selectedGroupId) {{
+        // Element moved to currently selected group - it should be visible
+        // Reapply filter to ensure it's in the points array
+        applyGroupFilter();
+        // Find the element's new index after filtering
+        const newIndex = points.findIndex(pt => pt.key === selectedKey);
+        if (newIndex >= 0) {{
+          currentElementIndex = newIndex;
+          updateNavButtons();
+        }}
+      }} else if (oldGroupId === selectedGroupId) {{
+        // Element moved away from currently selected group - remove from view
+        const removedIndex = points.findIndex(pt => pt.key === selectedKey);
+        points = points.filter(pt => pt.key !== selectedKey);
+        // Update navigation if needed
+        if (removedIndex >= 0) {{
+          if (currentElementIndex >= points.length) {{
+            currentElementIndex = points.length - 1;
+          }}
+          if (currentElementIndex >= 0 && points.length > 0) {{
+            // Update details to show the element at new index
+            const newP = points[currentElementIndex];
+            selectedKey = newP.key;
+            updateDetails(newP);
+          }} else {{
+            selectedKey = null;
+            updateDetails(null);
+          }}
+        }}
+        updateNavButtons();
+      }}
+    }} else {{
+      // Viewing "All Groups" - element should always be visible, just update details
+      // No need to change points array since we're showing all
+    }}
+  }}
+  
+  // Track modification
+  const change = changes.get(selectedKey);
+  change.modified.pos_img = [newX, newY];
+  if (oldGroupId !== normalizedNewGroupId) {{
+    change.modified.group_id = normalizedNewGroupId;
+  }}
+  
+  // Recalculate collisions if needed
+  if (useZoomAdaptiveRadius) {{
+    updateRadiiForZoom();
+    resolveCollisions(600, 1e-3);
+  }}
+  
+  // Redraw
+  draw();
+  updateDetails(p);
+  updateChangesCount();
+}}
+
+function saveToFile() {{
+  if (changes.size === 0) {{
+    alert("No changes to save");
+    return;
+  }}
+  
+  // Create the fixed data structure
+  const fixedData = JSON.parse(JSON.stringify(DATA));
+  
+  // Convert to JSON string
+  const jsonStr = JSON.stringify(fixedData, null, 2);
+  
+  // Create blob and download
+  const blob = new Blob([jsonStr], {{ type: 'application/json' }});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = OUTPUT_JSON_NAME;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  alert(`Saved ${{changes.size}} change(s) to ${{OUTPUT_JSON_NAME}}`);
 }}
 
 // Zoom to a specific element
@@ -499,6 +779,19 @@ document.getElementById('navFirst').addEventListener('click', goToFirst);
 document.getElementById('navPrev').addEventListener('click', goToPrevious);
 document.getElementById('navNext').addEventListener('click', goToNext);
 document.getElementById('navLast').addEventListener('click', goToLast);
+document.getElementById('saveEdit').addEventListener('click', applyEdit);
+document.getElementById('saveToFile').addEventListener('click', saveToFile);
+
+// Allow Enter key to save edit
+document.getElementById('editX').addEventListener('keypress', (e) => {{
+  if (e.key === 'Enter') applyEdit();
+}});
+document.getElementById('editY').addEventListener('keypress', (e) => {{
+  if (e.key === 'Enter') applyEdit();
+}});
+document.getElementById('editGroupId').addEventListener('keypress', (e) => {{
+  if (e.key === 'Enter') applyEdit();
+}});
 
 // Keyboard shortcuts for navigation
 window.addEventListener('keydown', (e) => {{
@@ -559,9 +852,21 @@ document.getElementById('search').addEventListener('input', (e) => {{
   for (const p of points) {{
     const hay = (p.key + " " + (p.payload.layer||"") + " " + (p.payload.txt||"")).toLowerCase();
     const match = hay.includes(q);
+    const isChanged = changes.has(p.key);
     const [r,g,b] = p.rgb;
-    ctx.lineWidth = THICKNESS / Math.max(scale, 0.0001);
-    ctx.strokeStyle = match ? `rgb(${{r}}, ${{g}}, ${{b}})` : "rgba(200,200,200,0.35)";
+    
+    if (match) {{
+      ctx.lineWidth = THICKNESS / Math.max(scale, 0.0001);
+      if (isChanged) {{
+        ctx.strokeStyle = "rgb(255, 152, 0)";
+        ctx.lineWidth = (THICKNESS * 1.5) / Math.max(scale, 0.0001);
+      }} else {{
+        ctx.strokeStyle = `rgb(${{r}}, ${{g}}, ${{b}})`;
+      }}
+    }} else {{
+      ctx.lineWidth = THICKNESS / Math.max(scale, 0.0001);
+      ctx.strokeStyle = "rgba(200,200,200,0.35)";
+    }}
     ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.stroke();
     if (p.key === selectedKey) {{
       ctx.lineWidth = (THICKNESS*2) / Math.max(scale, 0.0001);
@@ -578,6 +883,7 @@ img.onload = () => {{
   resolveCollisions(600, 1e-3);
   buildGroupList();
   updateNavButtons();
+  updateChangesCount();
   draw();
 }};
 </script>
