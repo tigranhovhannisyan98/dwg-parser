@@ -81,6 +81,14 @@ def main():
     #filterSection {{ margin-bottom: 16px; }}
     #filterSection h3 {{ margin: 0 0 8px; font-size: 14px; color: #333; }}
     #groupList {{ max-height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 8px; background: #fff; }}
+    #bulkSection {{ margin-top: 16px; padding: 12px; background: #e8f5e9; border: 1px solid #4CAF50; border-radius: 8px; display: none; }}
+    #bulkSection h3 {{ margin: 0 0 8px; font-size: 14px; color: #2e7d32; }}
+    #bulkControls {{ display: flex; flex-direction: column; gap: 8px; }}
+    .bulk-field {{ margin-bottom: 8px; }}
+    .bulk-field label {{ display: block; font-size: 12px; color: #666; margin-bottom: 4px; }}
+    .bulk-field input {{ width: 100%; padding: 6px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; }}
+    .bulk-buttons {{ display: flex; gap: 8px; }}
+    .bulk-buttons button {{ flex: 1; }}
     .group-item {{ padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #eee; transition: background 0.2s; }}
     .group-item:hover {{ background: #f0f0f0; }}
     .group-item:last-child {{ border-bottom: none; }}
@@ -135,6 +143,20 @@ def main():
     <div id="filterSection">
       <h3>Filter by Group ID</h3>
       <div id="groupList"></div>
+    </div>
+    <div id="bulkSection">
+      <h3>Bulk Operations</h3>
+      <div id="bulkInfo" style="font-size: 12px; color: #666; margin-bottom: 8px;"></div>
+      <div id="bulkControls">
+        <div class="bulk-field">
+          <label>Rename Group ID to:</label>
+          <input type="text" id="bulkNewGroupId" placeholder="Enter new group_id"/>
+        </div>
+        <div class="bulk-buttons">
+          <button id="bulkRename" class="btn btn-success">Rename All in Group</button>
+          <button id="bulkDelete" class="btn btn-danger">Delete All in Group</button>
+        </div>
+      </div>
     </div>
     <h2>Details</h2>
     <input id="search" placeholder="Filter by ID / layer / txt..."/>
@@ -219,6 +241,7 @@ function buildGroupList() {{
     selectedGroupId = null;
     applyGroupFilter();
     buildGroupList();
+    updateBulkSection();
   }});
   groupList.appendChild(allItem);
   
@@ -236,9 +259,29 @@ function buildGroupList() {{
       selectedGroupId = groupId;
       applyGroupFilter();
       buildGroupList();
+      updateBulkSection();
     }});
     groupList.appendChild(item);
   }}
+  
+  updateBulkSection();
+}}
+
+// Update bulk operations section
+function updateBulkSection() {{
+  const bulkSection = document.getElementById('bulkSection');
+  const bulkInfo = document.getElementById('bulkInfo');
+  const bulkNewGroupId = document.getElementById('bulkNewGroupId');
+  
+  if (selectedGroupId === null) {{
+    bulkSection.style.display = 'none';
+    return;
+  }}
+  
+  bulkSection.style.display = 'block';
+  const count = GROUP_ID_MAP[selectedGroupId] ? GROUP_ID_MAP[selectedGroupId].length : 0;
+  bulkInfo.textContent = `Selected: "${{selectedGroupId}}" (${{count}} element(s))`;
+  bulkNewGroupId.value = selectedGroupId;
 }}
 
 // Calculate zoom-adaptive radius
@@ -765,6 +808,147 @@ function deleteElement() {{
   }}
 }}
 
+// Bulk rename all elements in a group
+function bulkRenameGroup() {{
+  if (selectedGroupId === null) {{
+    alert("Please select a group first");
+    return;
+  }}
+  
+  const newGroupId = document.getElementById('bulkNewGroupId').value.trim();
+  if (!newGroupId) {{
+    alert("Please enter a new group ID");
+    return;
+  }}
+  
+  if (newGroupId === selectedGroupId) {{
+    alert("New group ID is the same as the current one");
+    return;
+  }}
+  
+  const keysInGroup = GROUP_ID_MAP[selectedGroupId] || [];
+  if (keysInGroup.length === 0) {{
+    alert("No elements in this group");
+    return;
+  }}
+  
+  if (!confirm(`Rename group "${{selectedGroupId}}" to "${{newGroupId}}" for ${{keysInGroup.length}} element(s)?`)) {{
+    return;
+  }}
+  
+  // Update all elements in the group
+  for (const key of keysInGroup) {{
+    if (deletedElements.has(key)) continue; // Skip deleted elements
+    
+    const p = allPoints.find(pt => pt.key === key);
+    if (!p) continue;
+    
+    // Track change if not already tracked
+    if (!changes.has(key)) {{
+      changes.set(key, {{
+        original: {{
+          group_id: selectedGroupId
+        }},
+        modified: {{}}
+      }});
+    }}
+    
+    // Update payload
+    p.payload.group_id = newGroupId;
+    
+    // Update DATA
+    if (DATA[key]) {{
+      DATA[key].group_id = newGroupId;
+    }}
+    
+    // Track modification
+    const change = changes.get(key);
+    change.modified.group_id = newGroupId;
+  }}
+  
+  // Update GROUP_ID_MAP
+  // Remove old group
+  delete GROUP_ID_MAP[selectedGroupId];
+  
+  // Add to new group
+  if (!GROUP_ID_MAP[newGroupId]) {{
+    GROUP_ID_MAP[newGroupId] = [];
+  }}
+  GROUP_ID_MAP[newGroupId] = [...keysInGroup];
+  
+  // Update selected group ID
+  selectedGroupId = newGroupId;
+  
+  // Rebuild UI
+  buildGroupList();
+  applyGroupFilter();
+  updateChangesCount();
+  draw();
+  
+  alert(`Renamed ${{keysInGroup.length}} element(s) to group "${{newGroupId}}"`);
+}}
+
+// Bulk delete all elements in a group
+function bulkDeleteGroup() {{
+  if (selectedGroupId === null) {{
+    alert("Please select a group first");
+    return;
+  }}
+  
+  const keysInGroup = GROUP_ID_MAP[selectedGroupId] || [];
+  if (keysInGroup.length === 0) {{
+    alert("No elements in this group");
+    return;
+  }}
+  
+  if (!confirm(`Delete ALL ${{keysInGroup.length}} element(s) in group "${{selectedGroupId}}"? This action cannot be undone!`)) {{
+    return;
+  }}
+  
+  // Delete all elements in the group
+  for (const key of keysInGroup) {{
+    if (deletedElements.has(key)) continue; // Already deleted
+    
+    const p = allPoints.find(pt => pt.key === key);
+    if (!p) continue;
+    
+    // Track deletion
+    if (!changes.has(key)) {{
+      changes.set(key, {{
+        original: {{
+          ...p.payload
+        }},
+        deleted: true
+      }});
+    }} else {{
+      changes.get(key).deleted = true;
+    }}
+    deletedElements.add(key);
+    
+    // Remove from allPoints
+    allPoints = allPoints.filter(pt => pt.key !== key);
+    
+    // Remove from DATA
+    delete DATA[key];
+  }}
+  
+  // Remove group from GROUP_ID_MAP
+  delete GROUP_ID_MAP[selectedGroupId];
+  
+  // Clear selection
+  selectedGroupId = null;
+  selectedKey = null;
+  currentElementIndex = -1;
+  
+  // Rebuild UI
+  buildGroupList();
+  applyGroupFilter();
+  updateChangesCount();
+  draw();
+  
+  alert(`Deleted ${{keysInGroup.length}} element(s) from group`);
+}}
+
 function saveToFile() {{
   const modifiedCount = Array.from(changes.values()).filter(c => !c.deleted).length;
   const deletedCount = deletedElements.size;
@@ -900,6 +1084,13 @@ document.getElementById('navLast').addEventListener('click', goToLast);
 document.getElementById('saveEdit').addEventListener('click', applyEdit);
 document.getElementById('deleteElement').addEventListener('click', deleteElement);
 document.getElementById('saveToFile').addEventListener('click', saveToFile);
+document.getElementById('bulkRename').addEventListener('click', bulkRenameGroup);
+document.getElementById('bulkDelete').addEventListener('click', bulkDeleteGroup);
+
+// Allow Enter key to rename group
+document.getElementById('bulkNewGroupId').addEventListener('keypress', (e) => {{
+  if (e.key === 'Enter') bulkRenameGroup();
+}});
 
 // Allow Enter key to save edit
 document.getElementById('editX').addEventListener('keypress', (e) => {{
@@ -1038,6 +1229,7 @@ img.onload = () => {{
   buildGroupList();
   updateNavButtons();
   updateChangesCount();
+  updateBulkSection();
   draw();
 }};
 </script>
