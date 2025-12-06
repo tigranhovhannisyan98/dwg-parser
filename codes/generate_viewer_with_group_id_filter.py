@@ -60,9 +60,14 @@ def main():
     html, body {{ height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }}
     #app {{ display: grid; grid-template-columns: 1fr 380px; height: 100%; }}
     #left {{ position: relative; background: #111; }}
-    #toolbar {{ position: absolute; top: 8px; left: 8px; z-index: 10; display:flex; gap:8px; }}
+    #toolbar {{ position: absolute; top: 8px; left: 8px; z-index: 10; display:flex; gap:8px; flex-wrap: wrap; }}
     .btn {{ background:#fff; border:1px solid #ddd; border-radius:8px; padding:6px 10px; cursor:pointer; font-size:13px; }}
     .btn:active {{ transform: translateY(1px); }}
+    .btn:disabled {{ opacity: 0.5; cursor: not-allowed; }}
+    #navSection {{ margin-bottom: 16px; padding: 12px; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; }}
+    #navSection h3 {{ margin: 0 0 8px; font-size: 14px; color: #333; }}
+    #navControls {{ display: flex; gap: 8px; flex-wrap: wrap; }}
+    #navInfo {{ margin-top: 8px; font-size: 12px; color: #666; }}
     #canvasWrap {{ width: 100%; height: 100%; }}
     canvas {{ display:block; width:100%; height:100%; cursor: grab; }}
     canvas:active {{ cursor: grabbing; }}
@@ -96,6 +101,17 @@ def main():
     </div>
   </div>
   <div id="right">
+    <h2>Element Navigation</h2>
+    <div id="navSection">
+      <h3>Navigate Elements</h3>
+      <div id="navControls">
+        <button id="navFirst" class="btn">First</button>
+        <button id="navPrev" class="btn">Previous</button>
+        <button id="navNext" class="btn">Next</button>
+        <button id="navLast" class="btn">Last</button>
+      </div>
+      <div id="navInfo">Click buttons to zoom to elements</div>
+    </div>
     <h2>Group ID Filter</h2>
     <div id="filterSection">
       <h3>Filter by Group ID</h3>
@@ -133,6 +149,9 @@ for (const [key, obj] of Object.entries(DATA)) {{
 // Current filter state
 let selectedGroupId = null;
 let useZoomAdaptiveRadius = false;
+
+// Element navigation state
+let currentElementIndex = -1;
 
 // Build group list UI
 function buildGroupList() {{
@@ -211,10 +230,15 @@ function applyGroupFilter() {{
     points = allPoints.filter(p => keysInGroup.includes(p.key));
     useZoomAdaptiveRadius = true;
   }}
+  // Reset navigation when filter changes
+  currentElementIndex = -1;
+  selectedKey = null;
+  updateDetails(null);
   // Update radii based on current zoom if filtering
   updateRadiiForZoom();
   // Recalculate collisions for filtered points
   resolveCollisions(600, 1e-3);
+  updateNavButtons();
   draw();
 }}
 
@@ -380,10 +404,121 @@ function updateDetails(p) {{
   dump.textContent = JSON.stringify(p.payload, null, 2);
 }}
 
+// Zoom to a specific element
+function zoomToElement(elementIndex, animate = true) {{
+  if (points.length === 0) return;
+  if (elementIndex < 0 || elementIndex >= points.length) return;
+  
+  currentElementIndex = elementIndex;
+  const p = points[elementIndex];
+  selectedKey = p.key;
+  updateDetails(p);
+  
+  // Calculate target zoom level - zoom in enough to see the circle clearly
+  // Target scale: make the circle take up about 30% of the screen width
+  const w = canvas.width / dpr;
+  const h = canvas.height / dpr;
+  const targetRadius = Math.min(w, h) * 0.15; // 15% of smaller dimension
+  const targetScale = targetRadius / (p.r || BASE_R);
+  // Clamp scale to reasonable bounds
+  const clampedScale = Math.min(8, Math.max(0.5, targetScale));
+  
+  // Center the element on screen
+  const targetTx = w/2 - p.x * clampedScale;
+  const targetTy = h/2 - p.y * clampedScale;
+  
+  if (animate) {{
+    // Smooth animation
+    const startScale = scale;
+    const startTx = tx;
+    const startTy = ty;
+    const duration = 500; // milliseconds
+    const startTime = performance.now();
+    
+    function animate(currentTime) {{
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(1, elapsed / duration);
+      // Easing function (ease-in-out)
+      const eased = progress < 0.5 
+        ? 2 * progress * progress 
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      
+      scale = startScale + (clampedScale - startScale) * eased;
+      tx = startTx + (targetTx - startTx) * eased;
+      ty = startTy + (targetTy - startTy) * eased;
+      
+      updateRadiiForZoom();
+      draw();
+      
+      if (progress < 1) {{
+        requestAnimationFrame(animate);
+      }}
+    }}
+    requestAnimationFrame(animate);
+  }} else {{
+    scale = clampedScale;
+    tx = targetTx;
+    ty = targetTy;
+    updateRadiiForZoom();
+    draw();
+  }}
+  
+  updateNavButtons();
+}}
+
+// Update navigation button states
+function updateNavButtons() {{
+  const navInfo = document.getElementById('navInfo');
+  if (points.length === 0) {{
+    navInfo.textContent = "No elements to navigate";
+    document.getElementById('navFirst').disabled = true;
+    document.getElementById('navPrev').disabled = true;
+    document.getElementById('navNext').disabled = true;
+    document.getElementById('navLast').disabled = true;
+    return;
+  }}
+  
+  navInfo.textContent = `Element ${{currentElementIndex + 1}} of ${{points.length}}`;
+  document.getElementById('navFirst').disabled = currentElementIndex <= 0;
+  document.getElementById('navPrev').disabled = currentElementIndex <= 0;
+  document.getElementById('navNext').disabled = currentElementIndex >= points.length - 1;
+  document.getElementById('navLast').disabled = currentElementIndex >= points.length - 1;
+}}
+
+// Navigation functions
+function goToFirst() {{ if (points.length > 0) zoomToElement(0); }}
+function goToPrevious() {{ if (currentElementIndex > 0) zoomToElement(currentElementIndex - 1); }}
+function goToNext() {{ if (currentElementIndex < points.length - 1) zoomToElement(currentElementIndex + 1); }}
+function goToLast() {{ if (points.length > 0) zoomToElement(points.length - 1); }}
+
 // Events
 window.addEventListener('resize', () => {{ resizeCanvas(); draw(); }});
 document.getElementById('reset').addEventListener('click', () => {{ resetView(); draw(); }});
 document.getElementById('fit').addEventListener('click', () => {{ fitToScreen(); draw(); }});
+document.getElementById('navFirst').addEventListener('click', goToFirst);
+document.getElementById('navPrev').addEventListener('click', goToPrevious);
+document.getElementById('navNext').addEventListener('click', goToNext);
+document.getElementById('navLast').addEventListener('click', goToLast);
+
+// Keyboard shortcuts for navigation
+window.addEventListener('keydown', (e) => {{
+  // Only handle if not typing in an input field
+  if (e.target.tagName === 'INPUT') return;
+  
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {{
+    e.preventDefault();
+    goToPrevious();
+  }} else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {{
+    e.preventDefault();
+    goToNext();
+  }} else if (e.key === 'Home') {{
+    e.preventDefault();
+    goToFirst();
+  }} else if (e.key === 'End') {{
+    e.preventDefault();
+    goToLast();
+  }}
+}});
 canvas.addEventListener('mousedown', (e) => {{
   isPanning = true; canvas.style.cursor="grabbing";
   panStart = {{x:e.clientX, y:e.clientY, tx0:tx, ty0:ty}};
@@ -442,6 +577,7 @@ img.onload = () => {{
   resizeCanvas(); fitToScreen();
   resolveCollisions(600, 1e-3);
   buildGroupList();
+  updateNavButtons();
   draw();
 }};
 </script>
