@@ -111,8 +111,28 @@ def main():
     .btn-success:hover {{ background: #45a049; }}
     .btn-danger {{ background: #f44336; color: white; border: none; }}
     .btn-danger:hover {{ background: #da190b; }}
+    .btn-warning {{ background: #ff9800; color: white; border: none; }}
+    .btn-warning:hover {{ background: #f57c00; }}
     .changed-indicator {{ position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: #ff9800; border-radius: 50%; border: 2px solid white; }}
     #changesCount {{ margin-top: 8px; font-size: 11px; color: #856404; }}
+    #mergeSection {{ margin-top: 12px; padding: 12px; background: #fff3e0; border: 1px solid #ff9800; border-radius: 8px; }}
+    #mergeSection h4 {{ margin: 0 0 8px; font-size: 13px; color: #e65100; }}
+    #selectedForMerge {{ margin-bottom: 8px; font-size: 12px; color: #666; }}
+    #mergeModeActive {{ background: #ffeb3b !important; border: 2px solid #f57f17 !important; font-weight: 600; }}
+    #mergeList {{ max-height: 200px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px; padding: 8px; margin: 8px 0; background: #fff; }}
+    .merge-list-item {{ padding: 4px 8px; margin: 4px 0; background: #f5f5f5; border-radius: 4px; font-size: 11px; display: flex; justify-content: space-between; align-items: center; }}
+    .merge-list-item button {{ padding: 2px 6px; font-size: 10px; border: none; background: #f44336; color: white; border-radius: 3px; cursor: pointer; }}
+    .merge-list-item button:hover {{ background: #d32f2f; }}
+    #mergeDialog {{ display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border: 2px solid #ff9800; border-radius: 8px; padding: 20px; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 500px; width: 90%; }}
+    #mergeDialog h3 {{ margin: 0 0 16px; color: #e65100; }}
+    .merge-field {{ margin-bottom: 12px; }}
+    .merge-field label {{ display: block; font-size: 12px; color: #666; margin-bottom: 4px; font-weight: 600; }}
+    .merge-field input {{ width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; }}
+    .merge-field select {{ width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; }}
+    .merge-suggestions {{ font-size: 11px; color: #999; margin-top: 4px; }}
+    .merge-buttons {{ display: flex; gap: 8px; margin-top: 16px; }}
+    .merge-buttons button {{ flex: 1; }}
+    .selected-element {{ background: #e3f2fd; border: 2px solid #2196F3; }}
   </style>
 </head>
 <body>
@@ -180,8 +200,52 @@ def main():
       <button id="deleteElement" class="btn btn-danger" style="width: 100%; margin-top: 8px;">Delete Element</button>
       <div id="changesCount"></div>
     </div>
+    <div id="mergeSection">
+      <h4>Merge Elements</h4>
+      <button id="toggleMergeMode" class="btn btn-warning" style="width: 100%;">Enter Merge Mode</button>
+      <div id="mergeModeInfo" style="margin-top: 8px; font-size: 11px; color: #666; display: none;">
+        <strong>Merge Mode Active:</strong> Click elements to add them to merge list
+      </div>
+      <div id="selectedForMerge" style="display: none;">Selected elements for merge:</div>
+      <div id="mergeList" style="display: none;"></div>
+      <button id="finishMerge" class="btn btn-success" style="width: 100%; margin-top: 8px; display: none;">Finish & Merge</button>
+      <button id="clearMergeSelection" class="btn" style="width: 100%; margin-top: 4px; display: none;">Clear Selection</button>
+      <button id="unmergeElement" class="btn" style="width: 100%; margin-top: 8px; display: none;">Unmerge Element</button>
+    </div>
     <div style="margin-top: 12px;">
       <button id="saveToFile" class="btn" style="width: 100%; background: #2196F3; color: white;">Save Fixed JSON</button>
+    </div>
+    <div id="mergeDialog">
+      <h3>Merge Elements</h3>
+      <div class="merge-field">
+        <label>Name:</label>
+        <select id="mergeName" style="width: 100%; padding: 4px;">
+          <option value="">-- Select or enter manually --</option>
+        </select>
+        <input type="text" id="mergeNameManual" placeholder="Or enter manually" style="width: 100%; margin-top: 4px; padding: 4px; display: none;"/>
+      </div>
+      <div class="merge-field">
+        <label>Group ID:</label>
+        <select id="mergeGroupId" style="width: 100%; padding: 4px;">
+          <option value="">-- Select or enter manually --</option>
+        </select>
+        <input type="text" id="mergeGroupIdManual" placeholder="Or enter manually" style="width: 100%; margin-top: 4px; padding: 4px; display: none;"/>
+      </div>
+      <div class="merge-field">
+        <label>Color (RGB):</label>
+        <select id="mergeColor" style="width: 100%; padding: 4px;">
+          <option value="">-- Select color --</option>
+        </select>
+        <div id="mergeColorManual" style="display: none; margin-top: 8px;">
+          <input type="number" id="mergeColorR" placeholder="R" min="0" max="255" style="width: 30%; display: inline-block; margin-right: 3%; padding: 4px;"/>
+          <input type="number" id="mergeColorG" placeholder="G" min="0" max="255" style="width: 30%; display: inline-block; margin-right: 3%; padding: 4px;"/>
+          <input type="number" id="mergeColorB" placeholder="B" min="0" max="255" style="width: 30%; display: inline-block; padding: 4px;"/>
+        </div>
+      </div>
+      <div class="merge-buttons">
+        <button id="confirmMerge" class="btn btn-success">Merge</button>
+        <button id="cancelMerge" class="btn">Cancel</button>
+      </div>
     </div>
     <div id="jsonSection" style="display: none;">
       <h3>Full Element Data (JSON)</h3>
@@ -223,6 +287,10 @@ let useZoomAdaptiveRadius = false;
 
 // Element navigation state
 let currentElementIndex = -1;
+
+// Merge state
+let selectedForMerge = new Set(); // Set of element keys selected for merging
+let mergeModeActive = false; // Whether merge mode is currently active
 
 // Build group list UI
 function buildGroupList() {{
@@ -475,6 +543,15 @@ function draw() {{
       ctx.arc(p.x, p.y, p.r + 4, 0, Math.PI*2);
       ctx.stroke();
     }}
+    
+    // Highlight elements selected for merge
+    if (selectedForMerge.has(p.key)) {{
+      ctx.lineWidth = (THICKNESS*2) / Math.max(scale, 0.0001);
+      ctx.strokeStyle = "#2196F3";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r + 6, 0, Math.PI*2);
+      ctx.stroke();
+    }}
   }}
   document.getElementById('ovl').textContent = countOverlaps();
 }}
@@ -535,6 +612,9 @@ function updateDetails(p) {{
   document.getElementById('editY').value = p.y;
   document.getElementById('editGroupId').value = groupId !== "(no group)" ? groupId : "";
   
+  // Update merge section to show unmerge button if needed
+  updateMergeSection();
+  
   updateChangesCount();
 }}
 
@@ -553,6 +633,590 @@ function updateChangesCount() {{
     changesCount.style.color = "#666";
   }}
 }}
+
+// Toggle merge mode
+function toggleMergeMode() {{
+  mergeModeActive = !mergeModeActive;
+  const toggleBtn = document.getElementById('toggleMergeMode');
+  const mergeModeInfo = document.getElementById('mergeModeInfo');
+  const selectedInfo = document.getElementById('selectedForMerge');
+  const mergeList = document.getElementById('mergeList');
+  const finishBtn = document.getElementById('finishMerge');
+  const clearBtn = document.getElementById('clearMergeSelection');
+  
+  if (mergeModeActive) {{
+    toggleBtn.textContent = "Exit Merge Mode";
+    toggleBtn.classList.add('mergeModeActive');
+    mergeModeInfo.style.display = "block";
+    selectedInfo.style.display = "block";
+    mergeList.style.display = "block";
+    if (selectedForMerge.size > 0) {{
+      finishBtn.style.display = "block";
+      clearBtn.style.display = "block";
+    }}
+    updateMergeList();
+  }} else {{
+    toggleBtn.textContent = "Enter Merge Mode";
+    toggleBtn.classList.remove('mergeModeActive');
+    mergeModeInfo.style.display = "none";
+    selectedInfo.style.display = "none";
+    mergeList.style.display = "none";
+    finishBtn.style.display = "none";
+    clearBtn.style.display = "none";
+    selectedForMerge.clear();
+  }}
+  draw();
+}}
+
+// Update merge section UI
+function updateMergeSection() {{
+  const selectedInfo = document.getElementById('selectedForMerge');
+  const mergeList = document.getElementById('mergeList');
+  const finishBtn = document.getElementById('finishMerge');
+  const clearBtn = document.getElementById('clearMergeSelection');
+  const unmergeBtn = document.getElementById('unmergeElement');
+  
+  if (mergeModeActive) {{
+    if (selectedForMerge.size > 0) {{
+      selectedInfo.textContent = `Selected ${{selectedForMerge.size}} element(s) for merge:`;
+      selectedInfo.style.display = "block";
+      mergeList.style.display = "block";
+      finishBtn.style.display = "block";
+      clearBtn.style.display = "block";
+      updateMergeList();
+    }} else {{
+      selectedInfo.textContent = "Click elements to add them to merge list";
+      selectedInfo.style.display = "block";
+      mergeList.style.display = "none";
+      finishBtn.style.display = "none";
+      clearBtn.style.display = "none";
+    }}
+  }}
+  
+  // Show unmerge button if selected element is merged
+  if (selectedKey && DATA[selectedKey] && DATA[selectedKey].merged_elements) {{
+    unmergeBtn.style.display = "block";
+  }} else {{
+    unmergeBtn.style.display = "none";
+  }}
+}}
+
+// Update merge list display
+function updateMergeList() {{
+  const mergeList = document.getElementById('mergeList');
+  mergeList.innerHTML = '';
+  
+  for (const key of selectedForMerge) {{
+    const p = allPoints.find(pt => pt.key === key);
+    if (!p) continue;
+    
+    const item = document.createElement('div');
+    item.className = 'merge-list-item';
+    
+    const name = p.payload && p.payload.name ? p.payload.name : key;
+    const groupId = p.payload && p.payload.group_id ? p.payload.group_id : "(no group)";
+    
+    item.innerHTML = `
+      <span><strong>${{name}}</strong> (${{groupId}})</span>
+      <button onclick="removeFromMerge('${{key}}')">Remove</button>
+    `;
+    
+    mergeList.appendChild(item);
+  }}
+}}
+
+// Remove element from merge selection
+function removeFromMerge(key) {{
+  selectedForMerge.delete(key);
+  updateMergeSection();
+  draw();
+}}
+
+// Clear merge selection
+function clearMergeSelection() {{
+  selectedForMerge.clear();
+  updateMergeSection();
+  draw();
+}}
+
+// Finish merge (called from finish button)
+function finishMerge() {{
+  if (selectedForMerge.size < 2) {{
+    alert("Please select at least 2 elements to merge");
+    return;
+  }}
+  startMerge();
+}}
+
+// Start merge process
+function startMerge() {{
+  if (selectedForMerge.size < 2) {{
+    alert("Please select at least 2 elements to merge");
+    return;
+  }}
+  
+  // Get all elements to merge
+  const elementsToMerge = [];
+  for (const key of selectedForMerge) {{
+    const p = allPoints.find(pt => pt.key === key);
+    if (p) elementsToMerge.push(p);
+  }}
+  
+  if (elementsToMerge.length < 2) {{
+    alert("Could not find all selected elements");
+    return;
+  }}
+  
+  // Calculate mean position
+  let sumX = 0, sumY = 0;
+  for (const p of elementsToMerge) {{
+    sumX += p.x;
+    sumY += p.y;
+  }}
+  const meanX = sumX / elementsToMerge.length;
+  const meanY = sumY / elementsToMerge.length;
+  
+  // Suggest group_id from merging elements
+  const groupIds = elementsToMerge
+    .map(p => p.payload && p.payload.group_id ? p.payload.group_id : null)
+    .filter(g => g !== null);
+  const uniqueGroupIds = [...new Set(groupIds)];
+  
+  // Suggest color (average of all colors)
+  let sumR = 0, sumG = 0, sumB = 0;
+  for (const p of elementsToMerge) {{
+    sumR += p.rgb[0];
+    sumG += p.rgb[1];
+    sumB += p.rgb[2];
+  }}
+  const suggestedR = Math.round(sumR / elementsToMerge.length);
+  const suggestedG = Math.round(sumG / elementsToMerge.length);
+  const suggestedB = Math.round(sumB / elementsToMerge.length);
+  
+  // Get unique names from merged elements
+  const names = elementsToMerge
+    .map(p => p.payload && p.payload.name ? p.payload.name : null)
+    .filter(n => n !== null && n !== "");
+  const uniqueNames = [...new Set(names)];
+  
+  // Get unique colors from merged elements
+  const colorMap = new Map(); // RGB string -> [r, g, b]
+  for (const p of elementsToMerge) {{
+    const rgbStr = `${{p.rgb[0]}},${{p.rgb[1]}},${{p.rgb[2]}}`;
+    if (!colorMap.has(rgbStr)) {{
+      colorMap.set(rgbStr, p.rgb);
+    }}
+  }}
+  const uniqueColors = Array.from(colorMap.values());
+  
+  // Populate Name dropdown
+  const nameSelect = document.getElementById('mergeName');
+  nameSelect.innerHTML = '<option value="">-- Select or enter manually --</option>';
+  for (const name of uniqueNames) {{
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    nameSelect.appendChild(option);
+  }}
+  if (uniqueNames.length > 0) {{
+    nameSelect.value = uniqueNames[0];
+  }}
+  
+  // Populate Group ID dropdown
+  const groupIdSelect = document.getElementById('mergeGroupId');
+  groupIdSelect.innerHTML = '<option value="">-- Select or enter manually --</option>';
+  for (const gid of uniqueGroupIds) {{
+    const option = document.createElement('option');
+    option.value = gid;
+    option.textContent = gid;
+    groupIdSelect.appendChild(option);
+  }}
+  if (uniqueGroupIds.length > 0) {{
+    groupIdSelect.value = uniqueGroupIds[0];
+  }}
+  
+  // Populate Color dropdown
+  const colorSelect = document.getElementById('mergeColor');
+  colorSelect.innerHTML = '<option value="">-- Select color --</option>';
+  
+  // Add suggested (average) color
+  const suggestedColorStr = `${{suggestedR}},${{suggestedG}},${{suggestedB}}`;
+  const suggestedOption = document.createElement('option');
+  suggestedOption.value = suggestedColorStr;
+  suggestedOption.textContent = `Suggested: RGB(${{suggestedR}}, ${{suggestedG}}, ${{suggestedB}})`;
+  colorSelect.appendChild(suggestedOption);
+  
+  // Add unique colors from merged elements
+  for (const [rgbStr, rgb] of colorMap.entries()) {{
+    if (rgbStr !== suggestedColorStr) {{
+      const option = document.createElement('option');
+      option.value = rgbStr;
+      option.textContent = `RGB(${{rgb[0]}}, ${{rgb[1]}}, ${{rgb[2]}})`;
+      colorSelect.appendChild(option);
+    }}
+  }}
+  
+  // Add manual option
+  const manualOption = document.createElement('option');
+  manualOption.value = "manual";
+  manualOption.textContent = "Enter Manually";
+  colorSelect.appendChild(manualOption);
+  
+  // Set default to suggested color
+  colorSelect.value = suggestedColorStr;
+  document.getElementById('mergeColorR').value = suggestedR;
+  document.getElementById('mergeColorG').value = suggestedG;
+  document.getElementById('mergeColorB').value = suggestedB;
+  
+  // Show dialog
+  document.getElementById('mergeDialog').style.display = "block";
+}}
+
+// Confirm merge
+function confirmMerge() {{
+  if (selectedForMerge.size < 2) return;
+  
+  // Get name from dropdown or manual input
+  let name = document.getElementById('mergeName').value.trim();
+  if (!name) {{
+    name = document.getElementById('mergeNameManual').value.trim();
+  }}
+  if (!name) {{
+    alert("Please select or enter a name for the merged element");
+    return;
+  }}
+  
+  // Get group_id from dropdown or manual input
+  let groupId = document.getElementById('mergeGroupId').value.trim();
+  if (!groupId) {{
+    groupId = document.getElementById('mergeGroupIdManual').value.trim();
+  }}
+  if (!groupId) {{
+    alert("Please select or enter a group_id for the merged element");
+    return;
+  }}
+  
+  // Get color
+  let rgb;
+  const colorValue = document.getElementById('mergeColor').value;
+  if (colorValue === "manual") {{
+    const r = parseInt(document.getElementById('mergeColorR').value);
+    const g = parseInt(document.getElementById('mergeColorG').value);
+    const b = parseInt(document.getElementById('mergeColorB').value);
+    if (isNaN(r) || isNaN(g) || isNaN(b)) {{
+      alert("Please enter valid RGB values");
+      return;
+    }}
+    rgb = [r, g, b];
+  }} else if (colorValue && colorValue !== "") {{
+    // Parse RGB from "r,g,b" string
+    const parts = colorValue.split(',');
+    if (parts.length === 3) {{
+      rgb = [parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2])];
+    }} else {{
+      alert("Invalid color format");
+      return;
+    }}
+  }} else {{
+    alert("Please select a color");
+    return;
+  }}
+  
+  // Get all elements to merge
+  const elementsToMerge = [];
+  const originalData = [];
+  for (const key of selectedForMerge) {{
+    const p = allPoints.find(pt => pt.key === key);
+    if (p) {{
+      elementsToMerge.push(p);
+      // Save complete original element data from DATA (includes pos_img, rgb, and all other fields)
+      // Store key with the complete element data for restoration
+      const originalElement = {{
+        key: key,  // Store key for restoration
+        ...JSON.parse(JSON.stringify(DATA[key])) // Complete original element data (no duplication)
+      }};
+      originalData.push(originalElement);
+    }}
+  }}
+  
+  if (elementsToMerge.length < 2) return;
+  
+  // Calculate mean position
+  let sumX = 0, sumY = 0;
+  for (const p of elementsToMerge) {{
+    sumX += p.x;
+    sumY += p.y;
+  }}
+  const meanX = sumX / elementsToMerge.length;
+  const meanY = sumY / elementsToMerge.length;
+  
+  // Generate new key for merged element
+  const mergedKey = `merged_${{Date.now()}}_${{Math.random().toString(36).substr(2, 9)}}`;
+  
+  // Get first element's payload as base
+  const firstElementPayload = elementsToMerge[0].payload;
+  
+  // Create merged element - start with all fields from first element
+  const mergedElement = JSON.parse(JSON.stringify(firstElementPayload)); // Deep copy
+  
+  // Override with merge-specific values
+  mergedElement.name = name;
+  mergedElement.group_id = groupId;
+  mergedElement.pos_img = [meanX, meanY];
+  mergedElement.rgb = rgb;
+  mergedElement.merged_elements = originalData; // Save all original data
+  mergedElement.merged_at = new Date().toISOString();
+  
+  // Track changes for all original elements
+  for (const key of selectedForMerge) {{
+    const p = allPoints.find(pt => pt.key === key);
+    if (p) {{
+      if (!changes.has(key)) {{
+        changes.set(key, {{
+          original: {{
+            ...p.payload
+          }},
+          merged_into: mergedKey
+        }});
+      }} else {{
+        changes.get(key).merged_into = mergedKey;
+      }}
+      deletedElements.add(key);
+    }}
+  }}
+  
+  // Remove original elements from allPoints and points
+  for (const key of selectedForMerge) {{
+    allPoints = allPoints.filter(pt => pt.key !== key);
+    points = points.filter(pt => pt.key !== key);
+    delete DATA[key];
+    
+    // Remove from GROUP_ID_MAP
+    const p = elementsToMerge.find(e => e.key === key);
+    if (p && p.payload && p.payload.group_id) {{
+      const oldGroupId = p.payload.group_id;
+      if (GROUP_ID_MAP[oldGroupId]) {{
+        const index = GROUP_ID_MAP[oldGroupId].indexOf(key);
+        if (index > -1) {{
+          GROUP_ID_MAP[oldGroupId].splice(index, 1);
+          if (GROUP_ID_MAP[oldGroupId].length === 0) {{
+            delete GROUP_ID_MAP[oldGroupId];
+          }}
+        }}
+      }}
+    }}
+  }}
+  
+  // Add merged element to DATA
+  DATA[mergedKey] = mergedElement;
+  
+  // Add to GROUP_ID_MAP
+  if (!GROUP_ID_MAP[groupId]) {{
+    GROUP_ID_MAP[groupId] = [];
+  }}
+  GROUP_ID_MAP[groupId].push(mergedKey);
+  
+  // Create point for merged element
+  const mergedPoint = {{
+    key: mergedKey,
+    x: meanX,
+    y: meanY,
+    rgb: rgb,
+    payload: mergedElement,
+    r: BASE_R,
+    baseR: BASE_R
+  }};
+  allPoints.push(mergedPoint);
+  points.push(mergedPoint);
+  
+  // Clear selection and exit merge mode
+  selectedForMerge.clear();
+  mergeModeActive = false;
+  selectedKey = mergedKey;
+  currentElementIndex = points.findIndex(p => p.key === mergedKey);
+  
+  // Close dialog
+  document.getElementById('mergeDialog').style.display = "none";
+  
+  // Rebuild UI
+  buildGroupList();
+  applyGroupFilter();
+  toggleMergeMode(); // This will reset merge mode UI
+  updateMergeSection();
+  updateChangesCount();
+  updateDetails(mergedPoint);
+  updateNavButtons();
+  
+  // Zoom to merged element
+  if (currentElementIndex >= 0) {{
+    zoomToElement(currentElementIndex, true);
+  }} else {{
+    draw();
+  }}
+  
+  alert(`Merged ${{elementsToMerge.length}} element(s) into "${{name}}"`);
+}}
+
+// Cancel merge
+function cancelMerge() {{
+  document.getElementById('mergeDialog').style.display = "none";
+}}
+
+// Unmerge element
+function unmergeElement() {{
+  if (!selectedKey) return;
+  
+  const element = DATA[selectedKey];
+  if (!element || !element.merged_elements || element.merged_elements.length === 0) {{
+    alert("This element is not a merged element");
+    return;
+  }}
+  
+  if (!confirm(`Unmerge this element? This will restore ${{element.merged_elements.length}} original element(s).`)) {{
+    return;
+  }}
+  
+  const mergedElements = element.merged_elements;
+  const mergedGroupId = element.group_id;
+  
+  // Restore original elements
+  for (const origElement of mergedElements) {{
+    // origElement contains: key, pos_img, rgb, name, and all other fields
+    // Extract key and restore complete element
+    const key = origElement.key;
+    
+    // Create a copy without the key field for DATA (key is used as the DATA key, not stored inside)
+    const elementData = {{}};
+    for (const [k, v] of Object.entries(origElement)) {{
+      if (k !== 'key') {{
+        elementData[k] = v;
+      }}
+    }}
+    
+    // Restore to DATA
+    DATA[key] = elementData;
+    
+    // Create point from restored data
+    const posImg = elementData.pos_img || [0, 0];
+    const [x, y] = posImg;
+    const rgb = elementData.rgb || [255, 0, 0];
+    const point = {{
+      key: key,
+      x: x,
+      y: y,
+      rgb: rgb,
+      payload: elementData,
+      r: BASE_R,
+      baseR: BASE_R
+    }};
+    allPoints.push(point);
+    
+    // Add to GROUP_ID_MAP
+    const groupId = DATA[key].group_id;
+    if (groupId) {{
+      if (!GROUP_ID_MAP[groupId]) {{
+        GROUP_ID_MAP[groupId] = [];
+      }}
+      if (!GROUP_ID_MAP[groupId].includes(key)) {{
+        GROUP_ID_MAP[groupId].push(key);
+      }}
+    }}
+    
+    // Remove from deleted elements
+    deletedElements.delete(key);
+    
+    // Update change tracking
+    if (changes.has(key)) {{
+      delete changes.get(key).merged_into;
+      if (Object.keys(changes.get(key)).length === 1) {{
+        changes.delete(key);
+      }}
+    }}
+  }}
+  
+  // Remove merged element
+  deletedElements.add(selectedKey);
+  if (!changes.has(selectedKey)) {{
+    changes.set(selectedKey, {{
+      original: {{
+        ...element
+      }},
+      deleted: true
+    }});
+  }} else {{
+    changes.get(selectedKey).deleted = true;
+  }}
+  
+  // Remove from allPoints and points
+  allPoints = allPoints.filter(pt => pt.key !== selectedKey);
+  points = points.filter(pt => pt.key !== selectedKey);
+  delete DATA[selectedKey];
+  
+  // Remove from GROUP_ID_MAP
+  if (mergedGroupId && GROUP_ID_MAP[mergedGroupId]) {{
+    const index = GROUP_ID_MAP[mergedGroupId].indexOf(selectedKey);
+    if (index > -1) {{
+      GROUP_ID_MAP[mergedGroupId].splice(index, 1);
+      if (GROUP_ID_MAP[mergedGroupId].length === 0) {{
+        delete GROUP_ID_MAP[mergedGroupId];
+      }}
+    }}
+  }}
+  
+  // Clear selection
+  selectedKey = null;
+  currentElementIndex = -1;
+  
+  // Rebuild UI
+  buildGroupList();
+  applyGroupFilter();
+  updateMergeSection();
+  updateChangesCount();
+  updateDetails(null);
+  updateNavButtons();
+  draw();
+  
+  alert(`Unmerged element. Restored ${{mergedElements.length}} original element(s).`);
+}}
+
+// Handle color dropdown change
+document.getElementById('mergeColor').addEventListener('change', (e) => {{
+  const manualDiv = document.getElementById('mergeColorManual');
+  if (e.target.value === "manual") {{
+    manualDiv.style.display = "block";
+  }} else if (e.target.value && e.target.value !== "") {{
+    // Parse and populate RGB inputs
+    const parts = e.target.value.split(',');
+    if (parts.length === 3) {{
+      document.getElementById('mergeColorR').value = parseInt(parts[0]);
+      document.getElementById('mergeColorG').value = parseInt(parts[1]);
+      document.getElementById('mergeColorB').value = parseInt(parts[2]);
+    }}
+    manualDiv.style.display = "none";
+  }} else {{
+    manualDiv.style.display = "none";
+  }}
+}});
+
+// Handle name dropdown change - show manual input if empty selected
+document.getElementById('mergeName').addEventListener('change', (e) => {{
+  const manualInput = document.getElementById('mergeNameManual');
+  if (e.target.value === "") {{
+    manualInput.style.display = "block";
+  }} else {{
+    manualInput.style.display = "none";
+  }}
+}});
+
+// Handle group_id dropdown change - show manual input if empty selected
+document.getElementById('mergeGroupId').addEventListener('change', (e) => {{
+  const manualInput = document.getElementById('mergeGroupIdManual');
+  if (e.target.value === "") {{
+    manualInput.style.display = "block";
+  }} else {{
+    manualInput.style.display = "none";
+  }}
+}});
 
 function applyEdit() {{
   if (!selectedKey) return;
@@ -1086,6 +1750,15 @@ document.getElementById('deleteElement').addEventListener('click', deleteElement
 document.getElementById('saveToFile').addEventListener('click', saveToFile);
 document.getElementById('bulkRename').addEventListener('click', bulkRenameGroup);
 document.getElementById('bulkDelete').addEventListener('click', bulkDeleteGroup);
+document.getElementById('toggleMergeMode').addEventListener('click', toggleMergeMode);
+document.getElementById('finishMerge').addEventListener('click', finishMerge);
+document.getElementById('clearMergeSelection').addEventListener('click', clearMergeSelection);
+document.getElementById('confirmMerge').addEventListener('click', confirmMerge);
+document.getElementById('cancelMerge').addEventListener('click', cancelMerge);
+document.getElementById('unmergeElement').addEventListener('click', unmergeElement);
+
+// Make removeFromMerge available globally
+window.removeFromMerge = removeFromMerge;
 
 // Allow Enter key to rename group
 document.getElementById('bulkNewGroupId').addEventListener('keypress', (e) => {{
@@ -1168,22 +1841,53 @@ canvas.addEventListener('click', (e) => {{
   const hit = pick(e.clientX - rect.left, e.clientY - rect.top);
   
   if (hit) {{
-    // Find the element's index in the points array
-    const elementIndex = points.findIndex(p => p.key === hit.key);
-    if (elementIndex >= 0) {{
-      // Zoom to the selected element
-      zoomToElement(elementIndex, true);
-    }} else {{
-      // Element not in current filtered view, just select it
-      selectedKey = hit.key;
-      updateDetails(hit);
+    if (mergeModeActive) {{
+      // Merge mode: add/remove from merge list
+      if (selectedForMerge.has(hit.key)) {{
+        selectedForMerge.delete(hit.key);
+      }} else {{
+        selectedForMerge.add(hit.key);
+      }}
+      updateMergeSection();
       draw();
+    }} else if (e.ctrlKey || e.metaKey) {{
+      // Ctrl+Click or Cmd+Click for multi-select (legacy support)
+      if (selectedForMerge.has(hit.key)) {{
+        selectedForMerge.delete(hit.key);
+      }} else {{
+        selectedForMerge.add(hit.key);
+      }}
+      updateMergeSection();
+      draw();
+    }} else {{
+      // Single click - normal selection
+      selectedForMerge.clear();
+      updateMergeSection();
+      
+      // Find the element's index in the points array
+      const elementIndex = points.findIndex(p => p.key === hit.key);
+      if (elementIndex >= 0) {{
+        // Zoom to the selected element
+        zoomToElement(elementIndex, true);
+      }} else {{
+        // Element not in current filtered view, just select it
+        selectedKey = hit.key;
+        updateDetails(hit);
+        draw();
+      }}
     }}
   }} else {{
-    selectedKey = null;
-    updateDetails(null);
-    currentElementIndex = -1;
-    updateNavButtons();
+    // Click on empty space
+    if (!mergeModeActive && !(e.ctrlKey || e.metaKey)) {{
+      selectedForMerge.clear();
+      updateMergeSection();
+    }}
+    if (!mergeModeActive) {{
+      selectedKey = null;
+      updateDetails(null);
+      currentElementIndex = -1;
+      updateNavButtons();
+    }}
     draw();
   }}
 }});
@@ -1218,6 +1922,13 @@ document.getElementById('search').addEventListener('input', (e) => {{
       ctx.strokeStyle = "yellow";
       ctx.beginPath(); ctx.arc(p.x, p.y, p.r+4, 0, Math.PI*2); ctx.stroke();
     }}
+    
+    // Highlight elements selected for merge
+    if (selectedForMerge.has(p.key)) {{
+      ctx.lineWidth = (THICKNESS*2) / Math.max(scale, 0.0001);
+      ctx.strokeStyle = "#2196F3";
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r+6, 0, Math.PI*2); ctx.stroke();
+    }}
   }}
   document.getElementById('ovl').textContent = countOverlaps();
 }});
@@ -1230,6 +1941,9 @@ img.onload = () => {{
   updateNavButtons();
   updateChangesCount();
   updateBulkSection();
+  updateMergeSection();
+  // Initialize merge mode as inactive
+  mergeModeActive = false;
   draw();
 }};
 </script>
