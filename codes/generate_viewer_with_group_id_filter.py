@@ -1534,11 +1534,16 @@ function bulkRenameGroup() {{
   // Remove old group
   delete GROUP_ID_MAP[selectedGroupId];
   
-  // Add to new group
+  // Add to new group (merge if group already exists)
   if (!GROUP_ID_MAP[newGroupId]) {{
     GROUP_ID_MAP[newGroupId] = [];
   }}
-  GROUP_ID_MAP[newGroupId] = [...keysInGroup];
+  // Append keys to existing group (merge instead of replace)
+  for (const key of keysInGroup) {{
+    if (!GROUP_ID_MAP[newGroupId].includes(key)) {{
+      GROUP_ID_MAP[newGroupId].push(key);
+    }}
+  }}
   
   // Update selected group ID
   selectedGroupId = newGroupId;
