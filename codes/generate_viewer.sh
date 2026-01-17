@@ -1,1 +1,1 @@
-python generate_viewer.py --json extracted_elements.json --image /Users/tigran/workspace/dwg_parser/samson_5.1_eg/verjnakan/nkar.jpg --out int.html --radius 18 --min_radius 4 --padding 3 --thickness 2
+python generate_viewer.py --json extracted_elements_samson.json --image /Users/tigran/workspace/dwg_parser/samson_5.1_eg/verjnakan/nkar.jpg --out int_samson.html --radius 18 --min_radius 4 --padding 3 --thickness 2

@@ -6,3 +6,11 @@
 utils/hin_staff/
 !.gitignore
 
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+codes/cable_trays/__pycache__/
+
