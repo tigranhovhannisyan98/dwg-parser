@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable Tray Takeoff Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        
+        #toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: #2d2d2d;
+            border-bottom: 2px solid #444;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .toolbar-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .toolbar-group:not(:last-child) {
+            border-right: 1px solid #444;
+            padding-right: 20px;
+        }
+        
+        button {
+            padding: 8px 16px;
+            background: #4a9eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        
+        button:hover {
+            background: #357abd;
+        }
+        
+        button:active {
+            background: #2a5d8a;
+        }
+        
+        button.danger {
+            background: #ff4444;
+        }
+        
+        button.danger:hover {
+            background: #cc0000;
+        }
+        
+        button.success {
+            background: #44aa44;
+        }
+        
+        button.success:hover {
+            background: #338833;
+        }
+        
+        #status {
+            margin-left: auto;
+            color: #aaa;
+            font-size: 12px;
+        }
+        
+        #canvas-container {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            background: #1a1a1a;
+            cursor: crosshair;
+        }
+        
+        #canvas {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0 0;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        
+        .point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            transition: all 0.2s;
+            z-index: 10;
+        }
+        
+        .point:hover {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .point.selected {
+            width: 18px;
+            height: 18px;
+            border-width: 3px;
+            box-shadow: 0 0 10px rgba(74, 158, 255, 0.8);
+        }
+        
+        .point-label {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: bold;
+            pointer-events: none;
+            transform: translate(8px, -50%);
+            white-space: nowrap;
+            z-index: 11;
+        }
+        
+        #zoom-info {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 100;
+        }
+        
+        .connection-line {
+            position: absolute;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .file-label {
+            padding: 8px 16px;
+            background: #666;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: inline-block;
+        }
+        
+        .file-label:hover {
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <div class="toolbar-group">
+            <label for="image-input" class="file-label">Load Image</label>
+            <input type="file" id="image-input" accept="image/*">
+        </div>
+        <div class="toolbar-group">
+            <button id="zoom-in">Zoom In (+)</button>
+            <button id="zoom-out">Zoom Out (-)</button>
+            <button id="reset-zoom">Reset Zoom</button>
+        </div>
+        <div class="toolbar-group">
+            <button id="save-btn" class="success">Save (S)</button>
+            <button id="clear-btn" class="danger">Clear (C)</button>
+        </div>
+        <div class="toolbar-group">
+            <button id="load-btn">Load JSON</button>
+        </div>
+        <div id="status">Ready - Click to add points</div>
+    </div>
+    
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+    
+    <div id="zoom-info">
+        Zoom: <span id="zoom-level">100%</span>
+    </div>
+    
+    <script>
+        class CableTrayTakeoff {
+            constructor() {
+                this.canvas = document.getElementById('canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.container = document.getElementById('canvas-container');
+                this.image = null;
+                this.imagePath = null;
+                
+                // Transform state
+                this.scale = 1.0;
+                this.panX = 0;
+                this.panY = 0;
+                this.minScale = 0.1;
+                this.maxScale = 10.0;
+                
+                // Points and connections
+                this.points = [];
+                this.connections = [];
+                this.nextPointId = 0;
+                this.selectedPointIndex = null;
+                this.isPanning = false;
+                this.lastPanX = 0;
+                this.lastPanY = 0;
+                
+                // Load existing data
+                this.loadExistingData();
+                
+                // Setup event listeners
+                this.setupEventListeners();
+                
+                // Load image if provided via URL parameter or server
+                const urlParams = new URLSearchParams(window.location.search);
+                const imageParam = urlParams.get('image');
+                if (imageParam) {
+                    this.loadImage(imageParam);
+                } else {
+                    // Try to load from server endpoint
+                    fetch('/image')
+                        .then(response => {
+                            if (response.ok) {
+                                return response.blob();
+                            }
+                            return null;
+                        })
+                        .then(blob => {
+                            if (blob) {
+                                const url = URL.createObjectURL(blob);
+                                this.loadImageFromData(url);
+                            }
+                        })
+                        .catch(() => {
+                            // No image from server, user can load manually
+                        });
+                }
+            }
+            
+            setupEventListeners() {
+                // Image input
+                document.getElementById('image-input').addEventListener('change', (e) => {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            this.loadImageFromData(event.target.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+                
+                // Toolbar buttons
+                document.getElementById('zoom-in').addEventListener('click', () => this.zoom(1.2));
+                document.getElementById('zoom-out').addEventListener('click', () => this.zoom(0.8));
+                document.getElementById('reset-zoom').addEventListener('click', () => this.resetZoom());
+                document.getElementById('save-btn').addEventListener('click', () => this.saveData());
+                document.getElementById('clear-btn').addEventListener('click', () => this.clearAll());
+                document.getElementById('load-btn').addEventListener('click', () => this.loadJSON());
+                
+                // Canvas events
+                this.canvas.addEventListener('mousedown', (e) => this.onMouseDown(e));
+                this.canvas.addEventListener('mousemove', (e) => this.onMouseMove(e));
+                this.canvas.addEventListener('mouseup', (e) => this.onMouseUp(e));
+                this.canvas.addEventListener('wheel', (e) => this.onWheel(e));
+                this.canvas.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                    this.onRightClick(e);
+                });
+                
+                // Keyboard shortcuts
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 's' || e.key === 'S') {
+                        e.preventDefault();
+                        this.saveData();
+                    } else if (e.key === 'c' || e.key === 'C') {
+                        e.preventDefault();
+                        this.clearAll();
+                    } else if (e.key === 'Escape') {
+                        this.selectedPointIndex = null;
+                        this.updateStatus('Point deselected');
+                        this.draw();
+                    }
+                });
+                
+                // Prevent right-click menu
+                this.canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+            }
+            
+            loadImageFromData(imageData) {
+                const img = new Image();
+                img.onload = () => {
+                    this.image = img;
+                    this.canvas.width = img.width;
+                    this.canvas.height = img.height;
+                    this.resetZoom();
+                    this.draw();
+                };
+                img.src = imageData;
+            }
+            
+            loadImage(imagePath) {
+                this.imagePath = imagePath;
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.onload = () => {
+                    this.image = img;
+                    this.canvas.width = img.width;
+                    this.canvas.height = img.height;
+                    this.resetZoom();
+                    this.draw();
+                };
+                img.onerror = () => {
+                    alert('Failed to load image: ' + imagePath);
+                };
+                img.src = imagePath;
+            }
+            
+            loadExistingData() {
+                // Try to load from localStorage
+                const saved = localStorage.getItem('cableTrayData');
+                if (saved) {
+                    try {
+                        const data = JSON.parse(saved);
+                        if (data.points) {
+                            this.points = data.points.map(p => ({
+                                x: p.x,
+                                y: p.y,
+                                id: p.id
+                            }));
+                            this.nextPointId = Math.max(...this.points.map(p => p.id), -1) + 1;
+                        }
+                        if (data.connections) {
+                            this.connections = data.connections;
+                        }
+                    } catch (e) {
+                        console.error('Failed to load saved data:', e);
+                    }
+                }
+            }
+            
+            screenToCanvas(x, y) {
+                const rect = this.canvas.getBoundingClientRect();
+                const containerRect = this.container.getBoundingClientRect();
+                const canvasX = (x - containerRect.left - this.panX) / this.scale;
+                const canvasY = (y - containerRect.top - this.panY) / this.scale;
+                return { x: canvasX, y: canvasY };
+            }
+            
+            canvasToScreen(x, y) {
+                const rect = this.container.getBoundingClientRect();
+                const screenX = x * this.scale + this.panX + rect.left;
+                const screenY = y * this.scale + this.panY + rect.top;
+                return { x: screenX, y: screenY };
+            }
+            
+            findNearestPoint(x, y, threshold = 30) {
+                if (this.points.length === 0) return null;
+                
+                let minDist = Infinity;
+                let nearestIndex = null;
+                
+                for (let i = 0; i < this.points.length; i++) {
+                    const p = this.points[i];
+                    const dist = Math.sqrt((p.x - x) ** 2 + (p.y - y) ** 2);
+                    if (dist < threshold && dist < minDist) {
+                        minDist = dist;
+                        nearestIndex = i;
+                    }
+                }
+                
+                return nearestIndex;
+            }
+            
+            onMouseDown(e) {
+                if (!this.image) return;
+                
+                const rect = this.container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const canvasPos = this.screenToCanvas(x, y);
+                
+                if (e.button === 0) { // Left click
+                    const nearest = this.findNearestPoint(canvasPos.x, canvasPos.y, 30 / this.scale);
+                    
+                    if (nearest !== null) {
+                        if (this.selectedPointIndex === null) {
+                            this.selectedPointIndex = nearest;
+                            this.updateStatus(`Selected point ${this.points[nearest].id}`);
+                        } else {
+                            if (this.selectedPointIndex !== nearest) {
+                                this.connectPoints(this.selectedPointIndex, nearest);
+                            }
+                            this.selectedPointIndex = null;
+                        }
+                    } else {
+                        // Add new point
+                        this.addPoint(canvasPos.x, canvasPos.y);
+                    }
+                    this.draw();
+                } else if (e.button === 1 || (e.button === 0 && e.ctrlKey)) { // Middle click or Ctrl+click for panning
+                    this.isPanning = true;
+                    this.lastPanX = x;
+                    this.lastPanY = y;
+                    this.canvas.style.cursor = 'grabbing';
+                }
+            }
+            
+            onMouseMove(e) {
+                if (this.isPanning) {
+                    const rect = this.container.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    this.panX += x - this.lastPanX;
+                    this.panY += y - this.lastPanY;
+                    this.lastPanX = x;
+                    this.lastPanY = y;
+                    this.draw();
+                } else if (this.image) {
+                    const rect = this.container.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const canvasPos = this.screenToCanvas(x, y);
+                    const nearest = this.findNearestPoint(canvasPos.x, canvasPos.y, 30 / this.scale);
+                    this.canvas.style.cursor = nearest !== null ? 'pointer' : 'crosshair';
+                }
+            }
+            
+            onMouseUp(e) {
+                if (this.isPanning) {
+                    this.isPanning = false;
+                    this.canvas.style.cursor = 'crosshair';
+                }
+            }
+            
+            onWheel(e) {
+                e.preventDefault();
+                const rect = this.container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
+                this.zoomAt(zoomFactor, x, y);
+            }
+            
+            onRightClick(e) {
+                if (!this.image) return;
+                
+                const rect = this.container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const canvasPos = this.screenToCanvas(x, y);
+                
+                const nearest = this.findNearestPoint(canvasPos.x, canvasPos.y, 30 / this.scale);
+                if (nearest !== null) {
+                    this.deletePoint(nearest);
+                    this.draw();
+                }
+            }
+            
+            zoom(factor) {
+                const rect = this.container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                this.zoomAt(factor, centerX, centerY);
+            }
+            
+            zoomAt(factor, screenX, screenY) {
+                const newScale = Math.max(this.minScale, Math.min(this.maxScale, this.scale * factor));
+                const rect = this.container.getBoundingClientRect();
+                const canvasX = (screenX - rect.left - this.panX) / this.scale;
+                const canvasY = (screenY - rect.top - this.panY) / this.scale;
+                
+                this.panX = screenX - rect.left - canvasX * newScale;
+                this.panY = screenY - rect.top - canvasY * newScale;
+                this.scale = newScale;
+                
+                this.updateZoomInfo();
+                this.draw();
+            }
+            
+            resetZoom() {
+                if (!this.image) return;
+                
+                const containerRect = this.container.getBoundingClientRect();
+                const imgAspect = this.image.width / this.image.height;
+                const containerAspect = containerRect.width / containerRect.height;
+                
+                if (imgAspect > containerAspect) {
+                    this.scale = containerRect.width / this.image.width;
+                } else {
+                    this.scale = containerRect.height / this.image.height;
+                }
+                
+                this.scale *= 0.95; // Small padding
+                this.panX = (containerRect.width - this.image.width * this.scale) / 2;
+                this.panY = (containerRect.height - this.image.height * this.scale) / 2;
+                
+                this.updateZoomInfo();
+                this.draw();
+            }
+            
+            updateZoomInfo() {
+                document.getElementById('zoom-level').textContent = Math.round(this.scale * 100) + '%';
+            }
+            
+            addPoint(x, y) {
+                const point = {
+                    x: x,
+                    y: y,
+                    id: this.nextPointId++
+                };
+                
+                this.points.push(point);
+                
+                if (this.selectedPointIndex !== null) {
+                    this.connectPoints(this.selectedPointIndex, this.points.length - 1);
+                    this.selectedPointIndex = null;
+                } else {
+                    this.selectedPointIndex = this.points.length - 1;
+                }
+                
+                this.updateStatus(`Added point ${point.id} at (${Math.round(x)}, ${Math.round(y)})`);
+            }
+            
+            connectPoints(index1, index2) {
+                const conn = [Math.min(index1, index2), Math.max(index1, index2)];
+                const exists = this.connections.some(c => 
+                    c[0] === conn[0] && c[1] === conn[1]
+                );
+                
+                if (!exists) {
+                    this.connections.push(conn);
+                    this.updateStatus(`Connected point ${this.points[index1].id} to point ${this.points[index2].id}`);
+                } else {
+                    this.updateStatus('Connection already exists');
+                }
+            }
+            
+            deletePoint(index) {
+                const pointId = this.points[index].id;
+                this.points.splice(index, 1);
+                
+                // Remove connections involving this point
+                this.connections = this.connections.filter(conn => {
+                    const adjusted1 = conn[0] > index ? conn[0] - 1 : conn[0];
+                    const adjusted2 = conn[1] > index ? conn[1] - 1 : conn[1];
+                    return conn[0] !== index && conn[1] !== index;
+                }).map(conn => [
+                    conn[0] > index ? conn[0] - 1 : conn[0],
+                    conn[1] > index ? conn[1] - 1 : conn[1]
+                ]);
+                
+                if (this.selectedPointIndex === index) {
+                    this.selectedPointIndex = null;
+                } else if (this.selectedPointIndex > index) {
+                    this.selectedPointIndex--;
+                }
+                
+                this.updateStatus(`Deleted point ${pointId}`);
+            }
+            
+            clearAll() {
+                if (confirm('Clear all points and connections?')) {
+                    this.points = [];
+                    this.connections = [];
+                    this.selectedPointIndex = null;
+                    this.nextPointId = 0;
+                    this.updateStatus('Cleared all points');
+                    this.draw();
+                }
+            }
+            
+            updateStatus(message) {
+                document.getElementById('status').textContent = message;
+            }
+            
+            calculateIdealDiagonalPath(p1, p2) {
+                // Return ideal diagonal path (straight line for now, but can be extended)
+                // This ensures we save the shortest path between points
+                return {
+                    start: { x: p1.x, y: p1.y },
+                    end: { x: p2.x, y: p2.y },
+                    path: [{ x: p1.x, y: p1.y }, { x: p2.x, y: p2.y }]
+                };
+            }
+            
+            saveData() {
+                const cableTrays = this.connections.map(conn => {
+                    const p1 = this.points[conn[0]];
+                    const p2 = this.points[conn[1]];
+                    const path = this.calculateIdealDiagonalPath(p1, p2);
+                    const length = Math.sqrt((p2.x - p1.x) ** 2 + (p2.y - p1.y) ** 2);
+                    
+                    return {
+                        id: `CT_${p1.id}_${p2.id}`,
+                        start_point: [p1.x, p1.y],
+                        end_point: [p2.x, p2.y],
+                        length: length,
+                        point_ids: [p1.id, p2.id],
+                        path: path.path,
+                        metadata: {
+                            created_by: "web_takeoff",
+                            image_path: this.imagePath || "local"
+                        }
+                    };
+                });
+                
+                const outputData = {
+                    meta: {
+                        image_path: this.imagePath || "local",
+                        total_points: this.points.length,
+                        total_connections: this.connections.length,
+                        total_cable_trays: cableTrays.length,
+                        tool: "web_cable_tray_takeoff"
+                    },
+                    points: this.points.map(p => ({
+                        id: p.id,
+                        position: [p.x, p.y],
+                        connections: this.connections
+                            .filter(conn => conn[0] === this.points.indexOf(p) || conn[1] === this.points.indexOf(p))
+                            .map(conn => {
+                                const otherIdx = conn[0] === this.points.indexOf(p) ? conn[1] : conn[0];
+                                return this.points[otherIdx].id;
+                            })
+                    })),
+                    cable_trays: cableTrays
+                };
+                
+                // Save to localStorage
+                localStorage.setItem('cableTrayData', JSON.stringify({
+                    points: this.points,
+                    connections: this.connections,
+                    nextPointId: this.nextPointId
+                }));
+                
+                // Send to server
+                fetch('/save', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(outputData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    this.updateStatus(`✅ Saved ${cableTrays.length} cable trays to output.json`);
+                    console.log('Save response:', data);
+                })
+                .catch(error => {
+                    console.error('Save error:', error);
+                    // Fallback: download as file
+                    this.downloadJSON(outputData);
+                });
+            }
+            
+            downloadJSON(data) {
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'output.json';
+                a.click();
+                URL.revokeObjectURL(url);
+                this.updateStatus('✅ Downloaded output.json');
+            }
+            
+            loadJSON() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'application/json';
+                input.onchange = (e) => {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            try {
+                                const data = JSON.parse(event.target.result);
+                                this.loadData(data);
+                            } catch (error) {
+                                alert('Failed to load JSON: ' + error.message);
+                            }
+                        };
+                        reader.readAsText(file);
+                    }
+                };
+                input.click();
+            }
+            
+            loadData(data) {
+                if (data.points) {
+                    this.points = data.points.map(p => ({
+                        x: Array.isArray(p.position) ? p.position[0] : p.x,
+                        y: Array.isArray(p.position) ? p.position[1] : p.y,
+                        id: p.id
+                    }));
+                    this.nextPointId = Math.max(...this.points.map(p => p.id), -1) + 1;
+                }
+                
+                if (data.cable_trays) {
+                    // Reconstruct connections from cable_trays
+                    this.connections = [];
+                    const pointMap = new Map();
+                    this.points.forEach((p, idx) => pointMap.set(p.id, idx));
+                    
+                    data.cable_trays.forEach(tray => {
+                        const idx1 = pointMap.get(tray.point_ids[0]);
+                        const idx2 = pointMap.get(tray.point_ids[1]);
+                        if (idx1 !== undefined && idx2 !== undefined) {
+                            this.connections.push([Math.min(idx1, idx2), Math.max(idx1, idx2)]);
+                        }
+                    });
+                }
+                
+                this.draw();
+                this.updateStatus(`Loaded ${this.points.length} points and ${this.connections.length} connections`);
+            }
+            
+            draw() {
+                if (!this.image) return;
+                
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Apply transform
+                this.ctx.save();
+                this.ctx.translate(this.panX, this.panY);
+                this.ctx.scale(this.scale, this.scale);
+                
+                // Draw image
+                this.ctx.drawImage(this.image, 0, 0);
+                
+                // Draw connections (ideal diagonal paths)
+                this.ctx.strokeStyle = '#4a9eff';
+                this.ctx.lineWidth = 3 / this.scale;
+                this.ctx.lineCap = 'round';
+                this.ctx.lineJoin = 'round';
+                
+                this.connections.forEach(conn => {
+                    const p1 = this.points[conn[0]];
+                    const p2 = this.points[conn[1]];
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(p1.x, p1.y);
+                    this.ctx.lineTo(p2.x, p2.y);
+                    this.ctx.stroke();
+                });
+                
+                // Draw points
+                this.points.forEach((point, index) => {
+                    const isSelected = index === this.selectedPointIndex;
+                    this.ctx.fillStyle = isSelected ? '#ff4444' : '#44aa44';
+                    this.ctx.strokeStyle = '#000';
+                    this.ctx.lineWidth = 2 / this.scale;
+                    
+                    this.ctx.beginPath();
+                    this.ctx.arc(point.x, point.y, (isSelected ? 9 : 6) / this.scale, 0, Math.PI * 2);
+                    this.ctx.fill();
+                    this.ctx.stroke();
+                    
+                    // Draw point ID
+                    this.ctx.fillStyle = '#fff';
+                    this.ctx.font = `${12 / this.scale}px Arial`;
+                    this.ctx.textAlign = 'left';
+                    this.ctx.textBaseline = 'middle';
+                    this.ctx.fillText(point.id.toString(), point.x + 8 / this.scale, point.y);
+                });
+                
+                this.ctx.restore();
+            }
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            window.takeoff = new CableTrayTakeoff();
+        });
+    </script>
+</body>
+</html>
+
