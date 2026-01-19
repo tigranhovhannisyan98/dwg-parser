@@ -23,7 +23,7 @@ import colorsys
 import time
 
 LAYOUTS_X = {
-    "F": 460, 
+    "F": 468, 
     "F1": 590, 
     "G":  1236,
     "G1": 1886,
@@ -452,6 +452,12 @@ def remove_last_dash_part(text):
 
 def clean_data(elements):
     clean_elements = {}
+    # Calculate layout boundaries
+    min_x = min(LAYOUTS_X.values())
+    max_x = max(LAYOUTS_X.values())
+    min_y = min(LAYOUTS_Y.values())
+    max_y = max(LAYOUTS_Y.values())
+    
     for k, element in elements.items():
         if "Polygonsäule" in element["name"] or "XREF" == element["name"][:4] or "*" == element["name"][0] or "_Oblique" in element["name"]:
             continue
@@ -460,19 +466,23 @@ def clean_data(elements):
             continue
             #or element["layer"] == "ADE_ET_BEL_Lichtschiene" or element["layer"] == "E-Stromschiene Variante 2":
             #continue
-        #elif element["pos_img"][0] < LAYOUTS_X['F'] or element["pos_img"][0] > LAYOUTS_X['I5'] or element["pos_dxf"][1] < 0:
-        #    continue
-        else:
-            if "Vorplanung" in element["layer"] or "Vorplanung" in element["name"]:
-                element["name"] = extract_prefix(element["name"])
-                element["layer"] = remove_last_dash_part(extract_layer_suffix(element["layer"]))
-                clean_elements[k] = element
-            #elif "-" in element["layer"] and element["layer"] != "E-Stromschiene Variante 2":
-            elif element["layer"] != "E-Stromschiene Variante 2":
-                #element["layer"] = remove_last_dash_part(element["layer"])
-                #element["layer"] = element["layer"]
-                clean_elements[k] = element
+        # Filter out elements outside layout boundaries
+        pos_img = element.get("pos_img", [None, None])
+        if pos_img[0] is not None and pos_img[1] is not None:
+            if pos_img[0] < min_x or pos_img[0] > max_x or pos_img[1] < min_y or pos_img[1] > max_y:
+                continue
+        
+        # Process and add element if it passed all filters
+        if "Vorplanung" in element["layer"] or "Vorplanung" in element["name"]:
+            element["name"] = extract_prefix(element["name"])
+            element["layer"] = remove_last_dash_part(extract_layer_suffix(element["layer"]))
             clean_elements[k] = element
+        #elif "-" in element["layer"] and element["layer"] != "E-Stromschiene Variante 2":
+        elif element["layer"] != "E-Stromschiene Variante 2":
+            #element["layer"] = remove_last_dash_part(element["layer"])
+            #element["layer"] = element["layer"]
+            clean_elements[k] = element
+        clean_elements[k] = element
     return clean_elements
 
 
@@ -539,10 +549,27 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
                     interesting_field = f
                     break
                     
+        # Check if legend name matches as prefix of element name with word boundary
+        # This prevents "b3" from matching "b30" but allows "1xap-sd_ schuko" to match "1xap-sd_ schuko_a01u1f8ykh"
+        def matches_legend_name(elem_name_lower, legend_name_clean):
+            """Check if legend name matches element name with proper word boundary.
+            Legend name must be followed by underscore, end of string, or non-alphanumeric char."""
+            if not elem_name_lower.startswith(legend_name_clean):
+                return False
+            # Check what comes after the legend name
+            remaining = elem_name_lower[len(legend_name_clean):]
+            if not remaining:  # End of string - perfect match
+                return True
+            # Must be followed by underscore or non-alphanumeric character
+            return remaining[0] == '_' or not remaining[0].isalnum()
+        
         for layer, legend_name, legend_info in legend_entries:
             legend_name_clean = legend_name.strip().lower()
+            if not legend_name_clean:
+                continue
+                
             if elem_layer == layer.strip():
-                if legend_name_clean and legend_name_clean in elem_name_lower:
+                if matches_legend_name(elem_name_lower, legend_name_clean):
                     #FOR SAMSON
                     group_id = legend_info.strip() or extract_prefix(elem_name)
                     #group_id = legend_info.strip() or elem_name
@@ -552,7 +579,7 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
                         group_id = group_id + " " + f
                     ka = True
                     break
-            elif legend_name_clean and legend_name_clean in elem_name_lower:
+            elif matches_legend_name(elem_name_lower, legend_name_clean):
                     #FOR SAMSON
                     #group_id = legend_info.strip() or extract_prefix(elem_name)
                     candidate = legend_info.strip() or elem_name
