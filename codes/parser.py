@@ -24,66 +24,66 @@ import time
 
 LAYOUTS_X = {
     "F": 460, 
-    "F1": 529, 
-    "G":  884,
-    "G1": 1237,
-    "G2": 1593,
-    "G3": 1946,
-    "G4": 2300,
-    "G5": 2655,
-    "G6": 3009,
-    "G7": 3364,
-    "H":  3718,
-    "H1": 4072,
-    "H2": 4427,
-    "H3": 4782,
-    "I":  5135,
-    "I1": 5490,
-    "I2": 5845,
-    "I3": 6199,
-    "I4": 6553,
-    "I5": 6908
+    "F1": 590, 
+    "G":  1236,
+    "G1": 1886,
+    "G2": 2537,
+    "G3": 3188,
+    "G4": 3843,
+    "G5": 4491,
+    "G6": 5136,
+    "G7": 5790,
+    "H":  6440,
+    "H1": 7088,
+    "H2": 7739,
+    "H3": 8390,
+    "I":  9044,
+    "I1": 9690,
+    "I2": 10340,
+    "I3": 10990,
+    "I4": 11644,
+    "I5": 12300
 }
 LAYOUTS_Y = {
-"45":234,
-"44":543,
-"43":900,
-"42":1254,
-"41":1609,
-"40":1962,
-"39":2316,
-"38":2671,
-"37":3025,
-"36":3379,
-"35":3733,
-"34":4088,
-"33":4442,
-"32":4797,
-"31":5151
+"45":500,
+"44":1070,
+"43":1730,
+"42":2375,
+"41":3025,
+"40":3680,
+"39":4330,
+"38":4978,
+"37":5620,
+"36":6280,
+"35":6930,
+"34":7580,
+"33":8230,
+"32":8880,
+"31":9530
 }
 
-LAYOUTS_X = {
-    "A": 1907, 
-    "B": 2962, 
-    "C": 3610,
-    "D": 5035,
-    "E": 5643,
-    "F": 6463,
-    "G": 7110,
-    "H": 8165
-}
-LAYOUTS_Y = {
-"10": 1952,
-"9": 3130,
-"8": 4428,
-"7": 4953,
-"6": 5970,
-"5": 6848,
-"4": 7832,
-"3": 8610,
-"2": 9272,
-"1": 10188
-}
+#LAYOUTS_X = {
+#    "A": 1907, 
+#    "B": 2962, 
+#    "C": 3610,
+#    "D": 5035,
+#    "E": 5643,
+#    "F": 6463,
+#    "G": 7110,
+#    "H": 8165
+#}
+#LAYOUTS_Y = {
+#"10": 1952,
+#"9": 3130,
+#"8": 4428,
+#"7": 4953,
+#"6": 5970,
+#"5": 6848,
+#"4": 7832,
+#"3": 8610,
+#"2": 9272,
+#"1": 10188
+#}
 # ------------- chessboard ------------
 from typing import Dict, List, Tuple, Any, Iterable, Union
 import math
@@ -524,8 +524,9 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
         if elem_layer == "E-Stromschiene Variante 2":
             group_id = elem_name
         else:
-            #group_id = extract_prefix(elem_name)  # fallback
-            group_id = elem_name  # fallback
+            #FOR SAMSON
+            group_id = extract_prefix(elem_name)  # fallback
+            #group_id = elem_name  # fallback
 
         if elem_layer in ["ADE_ET_NSHV_Verteiler", "ADE_ET_NSV_Anschluss", "ADE_ET_NSV_Steckdose"]:
             for f in fields:
@@ -542,8 +543,9 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
             legend_name_clean = legend_name.strip().lower()
             if elem_layer == layer.strip():
                 if legend_name_clean and legend_name_clean in elem_name_lower:
-                    #group_id = legend_info.strip() or extract_prefix(elem_name)
-                    group_id = legend_info.strip() or elem_name
+                    #FOR SAMSON
+                    group_id = legend_info.strip() or extract_prefix(elem_name)
+                    #group_id = legend_info.strip() or elem_name
                     if down:
                         group_id = "CEE-Steckdose 230V AP"
                     if interesting_field:
@@ -551,6 +553,7 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
                     ka = True
                     break
             elif legend_name_clean and legend_name_clean in elem_name_lower:
+                    #FOR SAMSON
                     #group_id = legend_info.strip() or extract_prefix(elem_name)
                     candidate = legend_info.strip() or elem_name
                     if down:
@@ -558,7 +561,8 @@ def assign_group_ids(elements: Dict[str, dict], legend_entries: List[Tuple[str, 
                     if interesting_field:
                         candidate = group_id + " " + f
         if not ka and not candidate:
-            print("group_id: ", group_id, "element: ", element)
+            #print("group_id: ", group_id, "element: ", element)
+            pass
         if not ka and candidate:
             group_id = candidate
         
@@ -611,7 +615,8 @@ def main():
         print(f"Failed to read DXF: {e}", file=sys.stderr); sys.exit(1)
     
     proned_txt = []
-    legend_file = Path(__file__).resolve().with_name("berlin_legend_element_match.txt")
+    #legend_file = Path(__file__).resolve().with_name("berlin_legend_element_match.txt")
+    legend_file = Path(__file__).resolve().with_name("legend_element_match.txt")
     legend_entries = load_legend_mapping(legend_file)
     #print(legend_entries)
     #exit(0)
@@ -642,10 +647,10 @@ def main():
     elements = assign_chessboard_and_position(items_with_groups, LAYOUTS_X,  LAYOUTS_Y)
     #print('elements posle:', elements)
     #print('proned_txt: ', proned_txt)
-    with open("extracted_elements.json", "w", encoding="utf-8") as f:
+    with open("extracted_elements_samson.json", "w", encoding="utf-8") as f:
         json.dump(elements, f, ensure_ascii=False, indent=2)
-    with open("extracted_txt.json", "w", encoding="utf-8") as f:
-        json.dump(proned_txt, f, ensure_ascii=False, indent=2)
+    with open("extracted_txt_samson.json", "w", encoding="utf-8") as f:
+        json.dump(base_texts, f, ensure_ascii=False, indent=2)
 
 
 if __name__=="__main__":
