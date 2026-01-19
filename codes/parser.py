@@ -360,6 +360,103 @@ def collect_texts(msp,layer_table,M):
                     "pos_dxf":[x,y],"pos_img":[X,Y]}); tid+=1
     return out
 
+def merge_nearby_texts(texts, distance_threshold=10.0):
+    """
+    Merge text elements that are within distance_threshold units of each other.
+    Groups texts by proximity (including transitive relationships) and combines their content.
+    
+    Args:
+        texts: List of text dictionaries with 'pos_dxf' and 'content' keys
+        distance_threshold: Maximum distance (in DXF coordinates) to consider texts as nearby
+    
+    Returns:
+        List of merged text dictionaries
+    """
+    if not texts:
+        return []
+    
+    # Create a list of indices to track which texts have been merged
+    merged = [False] * len(texts)
+    merged_texts = []
+    merged_id = 0
+    
+    for i, text in enumerate(texts):
+        if merged[i]:
+            continue
+        
+        # Start a new group with this text
+        group = [i]
+        merged[i] = True
+        
+        # Use iterative expansion to find all transitively nearby texts
+        # This handles cases where A is close to B, B is close to C, but A is not close to C
+        changed = True
+        while changed:
+            changed = False
+            # Check all texts in current group against all unmerged texts
+            for group_idx in group:
+                pos_dxf = texts[group_idx].get("pos_dxf", [0, 0])
+                for j in range(len(texts)):
+                    if merged[j] or j in group:
+                        continue
+                    
+                    other_text = texts[j]
+                    other_pos = other_text.get("pos_dxf", [0, 0])
+                    
+                    # Calculate Euclidean distance in DXF coordinates
+                    distance = math.dist(pos_dxf, other_pos)
+                    
+                    if distance <= distance_threshold:
+                        group.append(j)
+                        merged[j] = True
+                        changed = True
+        
+        # Merge the group into a single text element
+        if len(group) == 1:
+            # Single text, just use it as-is but update id
+            merged_text = {**text, "id": f"T{merged_id}"}
+        else:
+            # Multiple texts to merge
+            group_texts = [texts[idx] for idx in group]
+            
+            # Sort by position (top to bottom, then left to right) for consistent ordering
+            # Using pos_dxf for consistency with distance calculation
+            group_texts.sort(key=lambda t: (t.get("pos_dxf", [0, 0])[1], t.get("pos_dxf", [0, 0])[0]))
+            
+            # Reverse the order to collect from end to beginning
+            group_texts.reverse()
+            
+            # Combine content with spaces
+            combined_content = " ".join(t.get("content", "").strip() for t in group_texts if t.get("content", "").strip())
+            
+            # Calculate centroid position (average of positions)
+            total_x = sum(t.get("pos_img", [0, 0])[0] for t in group_texts)
+            total_y = sum(t.get("pos_img", [0, 0])[1] for t in group_texts)
+            avg_x = total_x / len(group_texts)
+            avg_y = total_y / len(group_texts)
+            
+            # Calculate centroid for DXF coordinates too
+            total_dxf_x = sum(t.get("pos_dxf", [0, 0])[0] for t in group_texts)
+            total_dxf_y = sum(t.get("pos_dxf", [0, 0])[1] for t in group_texts)
+            avg_dxf_x = total_dxf_x / len(group_texts)
+            avg_dxf_y = total_dxf_y / len(group_texts)
+            
+            # Use the first text's metadata as base, but update content and position
+            merged_text = {
+                **group_texts[0],  # Copy all fields from first text
+                "id": f"T{merged_id}",
+                "content": combined_content,
+                "pos_img": [avg_x, avg_y],
+                "pos_dxf": [avg_dxf_x, avg_dxf_y],
+                "source": "merged_text",  # Mark as merged
+                "merged_count": len(group_texts)  # Track how many were merged
+            }
+        
+        merged_texts.append(merged_text)
+        merged_id += 1
+    
+    return merged_texts
+
 
 def collect_items(msp, layer_table, M):
     out=[]
@@ -660,6 +757,8 @@ def main():
 
     # Collect base
     base_texts = collect_texts(msp, layer_table, M)
+    # Merge nearby text elements to reduce JSON size
+    base_texts = merge_nearby_texts(base_texts, distance_threshold=10.0)
     items      = collect_items(msp, layer_table, M)
     #for i, v in items.items():
     #    print('item:', i, v)
